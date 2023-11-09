@@ -1,0 +1,59 @@
+[
+    {
+      "heading": "JavaScript",
+      "question": "Is it popular to use JS in IoT?",
+      "author": "Gargament",
+      "createdAt": "27th October 2023, 11:11 AM",
+      "comments": 11,
+      "link": "./detailsPage.html"
+    },
+    {
+      "heading": "React",
+      "question": "Is React good for scalability?",
+      "author": "Gargamull",
+      "createdAt": "27th October 2023, 11:11 AM",
+      "comments": 11,
+      "link": "./detailsPage.html"
+    },
+    {
+      "heading": "React",
+      "question": "Hooks solve a wide variety of seemingly unconnected problems in React that we’ve encountered over five years of writing and maintaining tens of thousands of components.",
+      "author": "Gargamux",
+      "createdAt": "27th October 2023, 11:11 AM",
+      "comments": 11,
+      "link": "./detailsPage.html"
+    },
+    {
+      "heading": "JavaScript",
+      "question": "Is it popular to use JS in IoT?",
+      "author": "Gargament",
+      "createdAt": "27th October 2023, 11:11 AM",
+      "comments": 11,
+      "link": "./detailsPage.html"
+    },
+    {
+      "heading": "React",
+      "question": "Is React good for scalability?",
+      "author": "Gargamull",
+      "createdAt": "27th October 2023, 11:11 AM",
+      "comments": 11,
+      "link": "./detailsPage.html"
+    },
+    {
+      "heading": "React",
+      "question": "Hooks solve a wide variety of seemingly unconnected problems...",
+      "author": "Gargamux",
+      "createdAt": "27th October 2023, 11:11 AM",
+      "comments": 11,
+      "link": "./detailsPage.html"
+    },
+    {
+      "heading": "HTML & CSS",
+      "question": "How to get rid of the default paddings of headings H1-H6?",
+      "author": "Gargamux",
+      "createdAt": "27th October 2023, 11:11 AM",
+      "comments": 11,
+      "link": "./detailsPage.html"
+    }
+  ]
+  

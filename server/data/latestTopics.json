@@ -1,0 +1,72 @@
+[
+  {
+    "heading": "JavaScript",
+    "question": "Is it popular to use JS in IoT?",
+    "author": "Gargament",
+    "createdAt": "27th October 2023, 11:11 AM",
+    "comments": 11,
+    "link": "./detailsPage.html"
+  },
+  {
+    "heading": "HTML & CSS",
+    "question": "What is the best reset for CSS? Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge fanny around butty, Richard spiffing a load of old tosh porkies hunky-dory ruddy dropped a clanger?",
+    "author": "Gargamux",
+    "createdAt": "27th October 2023, 11:11 AM",
+    "comments": 11,
+    "link": "./detailsPage.html"
+  },
+  {
+    "heading": "React",
+    "question": "Is React good for scalability?",
+    "author": "Gargamull",
+    "createdAt": "27th October 2023, 11:11 AM",
+    "comments": 11,
+    "link": "./detailsPage.html"
+  },
+  {
+    "heading": "HTML & CSS",
+    "question": "How to get rid of the default paddings of headings H1-H6?Tomfoolery crikey bits and bobs brilliant bamboozled?",
+    "author": "Gargamux",
+    "createdAt": "27th October 2023, 11:11 AM",
+    "comments": 11,
+    "link": "./detailsPage.html"
+  },
+  {
+    "heading": "React",
+    "question": "Hooks solve a wide variety of seemingly unconnected problems...",
+    "author": "Gargamux",
+    "createdAt": "27th October 2023, 11:11 AM",
+    "comments": 11,
+    "link": "./detailsPage.html"
+  },
+  {
+    "heading": "HTML & CSS",
+    "question": "What is the best reset for CSS? Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge fanny around butty, Richard spiffing a load of old tosh porkies hunky-dory ruddy dropped a clanger?",
+    "author": "Gargamux",
+    "createdAt": "27th October 2023, 11:11 AM",
+    "comments": 11,
+    "link": "./detailsPage.html"
+  },
+  {
+    "heading": "HTML & CSS",
+    "question": "What is the best reset for CSS? Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge fanny around butty, Richard spiffing a load of old tosh porkies hunky-dory ruddy dropped a clanger?",
+    "author": "Gargamux",
+    "createdAt": "27th October 2023, 11:11 AM",
+    "comments": 11,
+    "link": "./detailsPage.html"
+  },
+  {
+    "heading": "What is React and why it is used?",
+    "question": "React provides state-of-the-art functionality and is an excellent choice for developers looking for an easy-to-use and highly productive JavaScript framework. Using React, you can build complex UI interactions that communicate with the server in record time with JavaScript-driven pages.",
+    "createdAt": "2023-11-08T10:36:58.518Z",
+    "updatedAt": "2023-11-08T10:36:58.518Z",
+    "_id": "9c5a156e-4522-4617-8800-4a8f7284ec34"
+  },
+  {
+    "heading": "SPA  Application with React ?",
+    "question": "Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge fanny around butty, Richard spiffing a load of old tosh porkies hunky-dory ruddy dropped a clanger? Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge fanny around butty, Richard spiffing a load of old tosh porkies hunky-dory ruddy dropped a clanger? xexe",
+    "createdAt": "2023-11-08T10:38:26.184Z",
+    "updatedAt": "2023-11-08T10:38:26.184Z",
+    "_id": "dabac66d-e228-4d5f-86d6-bc2cc14a668b"
+  }
+]

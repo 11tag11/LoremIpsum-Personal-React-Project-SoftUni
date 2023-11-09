@@ -1,0 +1,247 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=PT+Serif&family=Roboto&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 16px/1.4 'Helvetica';
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.media {
+    padding: 0.5em;
+    margin-left: 1em;
+    border: 4px solid #fcf3e7;
+}
+
+.media img {
+    overflow: hidden;
+    max-width: 100%;
+}
+
+body {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    /* min-height: 100vh; */
+    background-color: #fcf3e7;
+}
+
+body, table, input, button, textarea {
+    font: inherit;
+}
+
+.site-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.section-site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00b894;
+}
+
+.site-logo {
+    margin-left: 2em;
+    max-width: 7em;
+}
+
+.main-nav ul {
+    display: flex;
+}
+
+.main-nav li,
+.main-nav a {
+    display: block;
+}
+
+.section-main-nav {
+    margin-right: 3em;
+}
+
+.main-nav a {
+    padding: 0.3em 0.8em;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #00b894;
+    border: 2px solid #00b894;
+}
+
+.main-nav a:hover {
+    padding: 0.3em 0.8em;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: 2px solid #fcf3e7;
+    border-radius: 5px;
+}
+
+.section-site-main {
+    /* max-width: 60em; */
+    min-width: 60em;
+    margin: 0 auto;
+}
+
+.site-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5em;
+    padding: 1em;
+    background-color: #313030;
+}
+
+.site-message .slogan {
+    font-size: 1.4em;
+    text-transform: uppercase;
+    color: #fcf3e7;
+    letter-spacing: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.green-text {
+    color: #00b894;
+}
+
+.all-rights .green-text {
+    margin-right: 0.3em;
+}
+
+.new-post-heading {
+    display: flex;
+    justify-content: center;
+    color: #313030;
+    font-size: 1.2em;
+    letter-spacing: 0.2em;
+    margin: 0.5em;
+}
+
+.section-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #313030;
+    color: #fcf3e7;
+    padding: 0.8em 1.3em;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 0px rgba(49, 49, 48, 0.75);
+    margin-bottom: 4em;
+    border-bottom: 4px solid #00b894;
+    border-top: 4px solid #00b894;
+}
+
+.create .section-article {
+    min-width: 60em;
+}
+
+.create-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+    padding: 1.5em 1em;
+    border-radius: 5px;
+}
+
+.create-form  textarea {
+    resize: vertical;
+}
+
+.create-form  input,
+.create-form  textarea {
+    padding: 0.7em;
+    border-radius: 5px;
+    border: none;
+}
+
+.login-button-container {
+    margin: 0 auto;
+}
+
+.post-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.new-post-button {
+    padding: 0.5em 2em;
+    border-radius: 5px;
+    border: none;
+    color: #fcf3e7;
+    background-color: #353534;
+    font-weight: bold;
+    border-bottom: 2px solid #00b894;
+    border-top: 2px solid #00b894;
+    margin-top: 0.2em;
+}
+
+.new-post-button:hover {
+    padding: 0.5em 2em;
+    border-radius: 5px;
+    border: none;
+    color: #00b894;
+    background-color: #313030;
+    border-bottom: 2px solid #00b894;
+    border-top: 2px solid #00b894;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer-wrapper {
+    display: block;
+}
+
+.footer-wrapper .site-footer .all-rights {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    background-color: #313030;
+    color: #fff;
+    /* border-bottom: 1px solid #fcf3e7; */
+}
+
+.footer-wrapper .socials {
+    display: flex;
+    justify-content: center;
+    padding: 0.5em;
+    background-color: #00b894;
+    color: #313030;
+}
+
+.footer-wrapper .socials .social-links i {
+    color: #313030;
+    font-size: 2em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+
+.footer-wrapper .socials .social-links i:hover {
+    color: #7cdac7;
+    font-size: 2em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+/* End Footer */
