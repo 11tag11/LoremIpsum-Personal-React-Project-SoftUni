@@ -10,13 +10,17 @@ import AllTopics from './components/AllTopics';
 import CreateTopic from './components/CreateTopic';
 import DetailsPage from './components/DetailsPage';
 import Profile from './components/Profile';
-
+import PageNotFound from './components/PageNotFound';
 import './components/styles.css';
+import './components/header.css';
+import './components/latestTopics.css';
 import './components/register.css';
 import './components/allTopics.css';
 import './components/createTopic.css';
 import './components/detailsPage.css';
-// import './components/profile.css';
+import './components/profile.css';
+import './components/pageNotFound.css'
+
 
 
 function App() {
@@ -29,13 +33,13 @@ function App() {
           <Route path='/allTopics' element={<AllTopics />} />
           <Route path='/createTopic' element={<CreateTopic />} />
           <Route path='/register' element={<Register />} />
-
-          {/* <Route path='/detailsPage' element={<DetailsPage />} /> */}
-
+          <Route path='/profile' element={<Profile />} />
+          <Route path='/detailsPage' element={<DetailsPage />} />
+          <Route path='*' element={<PageNotFound />} />
         </Routes>
         
         
-        {/* <Profile /> */}
+        
         <Footer />
       </div>
     </div>

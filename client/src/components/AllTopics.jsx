@@ -39,7 +39,7 @@ const AllTopics = () => {
                   <p className="comments">Likes: {topic.topic.likes}</p>
                   <p className="read-more">
                     {/* here CORRECTION AFTER I GOT ID'S */}
-                    <Link to={topic.topic.link}>
+                    <Link to="/detailsPage">
                       Read more <i className="fa-solid fa-square-arrow-up-right" />
                     </Link>
                   </p>

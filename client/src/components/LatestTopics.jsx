@@ -1,6 +1,7 @@
 // 07.11. Successful :)
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const LatestTopics = () => {
   // Here is the Array, converted from Object, to use MAP func :)
@@ -54,9 +55,9 @@ const LatestTopics = () => {
                 <div className="article-comments">
                   <p className="comments">Likes: {topic.topic.likes}</p>
                   <p className="read-more">
-                    <a href='#'>
+                    <Link to="/detailsPage">
                       Read more <i className="fa-solid fa-square-arrow-up-right" />
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </section>

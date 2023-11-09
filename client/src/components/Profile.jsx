@@ -9,9 +9,9 @@ const Profile = () => {
                 <div className="user-heading">
                     <h1 className="heading">User profile</h1>
                 </div>
-                <div className="section-article">
-                    <div className="media">
-                        <img src="" alt="user" />
+                <div className="section-article-profile">
+                    <div className="profile-media">
+                        <img src="./assets/user_img.jpg" alt="user" />
                     </div>
                     <section className="user-info">
                         <p className="email">Email: blep@abv.bg.com</p>
