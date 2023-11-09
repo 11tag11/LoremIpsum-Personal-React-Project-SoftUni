@@ -1,18 +1,19 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const AllTopics = () => {
-  const [articles, setArticles] = useState([]);
+  const [topics, setTopics] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:3030/jsonstore/latestTopics')
       .then((response) => response.json())
       .then((data) => {
-        const articlesArray = Object.values(data);
-        setArticles(articlesArray);
+        const topicsArray = Object.values(data);
+        setTopics(topicsArray);
       });
-  },[]);
+  }, []);
 
   return (
     <div className="section-site-main">
@@ -21,30 +22,35 @@ const AllTopics = () => {
           <h1 className="latest-topics">All Topics</h1>
         </div>
         <div className="section-articles all-articles">
-          {articles.map((article, index) => (
+          {topics.map((topic, index) => (
             <div className="section-article" key={index}>
               <section className="article">
                 <div className="article-content">
-                  <h2 className="article-heading">{article.heading}</h2>
-                  <p className="text-area">{article.question}</p>
+                  <h2 className="article-heading">{topic.topic.heading}</h2>
+                  <p className="text-area">{topic.topic.question}</p>
                 </div>
               </section>
               <section className="article-info">
                 <div className="author">
-                  <p className="author-name">Creator: {article.author}</p>
+                  <p className="author-name">Creator: {topic.topic.author}</p>
                 </div>
-                <p className="article-created">{article.createdAt}</p>
+                <p className="article-created">{topic.topic.createdAt}</p>
                 <div className="article-comments">
-                  <p className="comments">Comments: {article.comments}</p>
+                  <p className="comments">Likes: {topic.topic.likes}</p>
                   <p className="read-more">
-                    <a href={article.link}>
+                    {/* here CORRECTION AFTER I GOT ID'S */}
+                    <Link to={topic.topic.link}>
                       Read more <i className="fa-solid fa-square-arrow-up-right" />
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </section>
             </div>
-          ))}
+          ))};
+        </div>
+        <div class="go-to-top">
+          {/* correction here, it adds allTopics again... */}
+          <Link to="allTopics"><i class="fa-solid fa-circle-arrow-up"></i></Link>
         </div>
       </div>
     </div>

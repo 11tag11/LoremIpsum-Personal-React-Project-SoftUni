@@ -1,22 +1,24 @@
+import { Link } from 'react-router-dom';
+
 const Header = () => {
     return(
         <div class="section-site-header-wrapper">
             <div class="section-site-header">
                 <div class="site-logo">
                     <p class="media">
-                        <a href="./latestTopics"><img src="/assets/LipsLogo.png" alt=""/></a>
+                        <Link to="./latestTopics"><img src="/assets/LipsLogo.png" alt=""/></Link>
                     </p>
                 </div>
 
                 <div class="section-main-nav">
                     <nav class="main-nav">
                         <ul>
-                            <li><a href="./latestTopics">Home</a></li>
-                            <li><a href="./allTopics">All Topics</a></li>
-                            <li><a href="./createTopic">Create Topic</a></li>
-                            <li><a href="./profile">Profile</a></li>
-                            <li><a href="./login">Login</a></li>
-                            <li><a href="./register">Register</a></li>
+                            <li><Link to="./latestTopics">Home</Link></li>
+                            <li><Link to="./allTopics">All Topics</Link></li>
+                            <li><Link to="./createTopic">Create Topic</Link></li>
+                            <li><Link to="./profile">Profile</Link></li>
+                            <li><Link to="./login">Login</Link></li>
+                            <li><Link to="./register">Register</Link></li>
                         </ul>
                     </nav>
                 </div>

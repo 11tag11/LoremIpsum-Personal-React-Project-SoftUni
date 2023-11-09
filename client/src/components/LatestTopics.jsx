@@ -4,20 +4,20 @@ import { useState, useEffect } from 'react';
 
 const LatestTopics = () => {
   // Here is the Array, converted from Object, to use MAP func :)
-  const [articles, setArticles] = useState([]);
+  const [topics, setTopics] = useState([]);
 
 
-  // Define latestArticles in the component's scope
-  const [latestArticles, setLatestArticles] = useState([]); 
+  // Define latestTopics in the component's scope
+  const [latestTopics, setLatestTopics] = useState([]); 
 
   useEffect(() => {
     fetch('http://localhost:3030/jsonstore/latestTopics')
       .then((response) => response.json())
       .then((data) => {
         // Convert the object to an array
-        const articlesArray = Object.values(data);
+        const topicsArray = Object.values(data);
 
-        setArticles(articlesArray);
+        setTopics(topicsArray);
       });
     
   }, []);
@@ -27,9 +27,9 @@ const LatestTopics = () => {
   // const latestArticles = articles.slice(0, 3);
 
   useEffect(() => {
-    const latestArticlesData = articles.slice(-3);
-    setLatestArticles(latestArticlesData);
-  }, [articles]);
+    const latestTopicsData = topics.slice(-3);
+    setLatestTopics(latestTopicsData);
+  }, [topics]);
 
   return (
     <div className="section-site-main">
@@ -38,23 +38,23 @@ const LatestTopics = () => {
           <h1 className="latest-topics">Latest Topics</h1>
         </div>
         <div className="section-articles">
-          {latestArticles.map((article, index) => (
+          {latestTopics.map((topic, index) => (
             <div className="section-article" key={index}>
               <section className="article">
                 <div className="article-content">
-                  <h2 className="article-heading">{article.heading}</h2>
-                  <p className="text-area">{article.question}</p>
+                  <h2 className="article-heading">{topic.topic.heading}</h2>
+                  <p className="text-area">{topic.topic.question}</p>
                 </div>
               </section>
               <section className="article-info">
                 <div className="author">
-                  <p className="author-name">Creator: {article.author}</p>
+                  <p className="author-name">Creator: {topic.topic.author}</p>
                 </div>
-                <p className="article-created">{article.createdAt}</p>
+                <p className="article-created">{topic.topic.createdAt}</p>
                 <div className="article-comments">
-                  <p className="comments">Comments: {article.comments}</p>
+                  <p className="comments">Likes: {topic.topic.likes}</p>
                   <p className="read-more">
-                    <a href={article.link}>
+                    <a href='#'>
                       Read more <i className="fa-solid fa-square-arrow-up-right" />
                     </a>
                   </p>

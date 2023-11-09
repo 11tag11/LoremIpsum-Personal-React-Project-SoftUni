@@ -1,4 +1,5 @@
 // 07.11. Successful :)
+// pass: 123123
 const baseUrl = "http://localhost:3030/jsonstore/myUsers";
 
 export const createUser = async (userData) => {
@@ -8,6 +9,9 @@ export const createUser = async (userData) => {
     email: userData.email,
     createdAt: currentDate,
     updatedAt: currentDate,
+    questions: [],  // Initialize an empty array for questions
+    comments: [],   // Initialize an empty array for comments
+    likes: 0,       // Initialize the likes count to 0
   };
 
   const response = await fetch(baseUrl, {
@@ -23,6 +27,6 @@ export const createUser = async (userData) => {
   }
 
   const result = await response.json();
-  console.log('User is gay!');
+  console.log('User is here!');
   return result;
 };

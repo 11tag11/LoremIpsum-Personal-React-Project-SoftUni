@@ -1,72 +1,52 @@
-[
-  {
-    "heading": "JavaScript",
-    "question": "Is it popular to use JS in IoT?",
-    "author": "Gargament",
-    "createdAt": "27th October 2023, 11:11 AM",
-    "comments": 11,
-    "link": "./detailsPage.html"
+{
+  "2f24f34b-28a7-41c2-a46e-2608165f4786": {
+    "topic": {
+      "heading": "What is the MERN Stack?",
+      "question": "The MERN stack is a web development framework made up of the stack of MongoDB, Express.js, React.js, and Nodejs.",
+      "createdAt": "2023-11-09T11:51:01.725Z",
+      "updatedAt": "2023-11-09T11:51:01.725Z",
+      "comments": [],
+      "likes": 0
+    },
+    "_id": "2f24f34b-28a7-41c2-a46e-2608165f4786"
   },
-  {
-    "heading": "HTML & CSS",
-    "question": "What is the best reset for CSS? Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge fanny around butty, Richard spiffing a load of old tosh porkies hunky-dory ruddy dropped a clanger?",
-    "author": "Gargamux",
-    "createdAt": "27th October 2023, 11:11 AM",
-    "comments": 11,
-    "link": "./detailsPage.html"
+  "f602d683-8451-4a48-9d33-a39478746498": {
+    "topic": {
+      "heading": "What is IoT in simple words?",
+      "question": "What is the Internet of Things (IoT)? The term IoT, or Internet of Things, refers to the collective network of connected devices and the technology that facilitates communication between devices and the cloud, as well as between the devices themselves.",
+      "createdAt": "2023-11-09T11:55:52.824Z",
+      "updatedAt": "2023-11-09T11:55:52.824Z",
+      "comments": [
+        
+      ],
+      "likes": 0
+    },
+    "_id": "f602d683-8451-4a48-9d33-a39478746498"
   },
-  {
-    "heading": "React",
-    "question": "Is React good for scalability?",
-    "author": "Gargamull",
-    "createdAt": "27th October 2023, 11:11 AM",
-    "comments": 11,
-    "link": "./detailsPage.html"
+  "a5847ba1-844c-4270-a250-7a2e682625f5": {
+    "topic": {
+      "heading": "HTML & CSS question?",
+      "question": "How to get rid of the default paddings of headings H1-H6?",
+      "createdAt": "2023-11-09T11:57:00.944Z",
+      "updatedAt": "2023-11-09T11:57:00.944Z",
+      "comments": [
+        
+      ],
+      "likes": 0
+    },
+    "_id": "a5847ba1-844c-4270-a250-7a2e682625f5"
   },
-  {
-    "heading": "HTML & CSS",
-    "question": "How to get rid of the default paddings of headings H1-H6?Tomfoolery crikey bits and bobs brilliant bamboozled?",
-    "author": "Gargamux",
-    "createdAt": "27th October 2023, 11:11 AM",
-    "comments": 11,
-    "link": "./detailsPage.html"
-  },
-  {
-    "heading": "React",
-    "question": "Hooks solve a wide variety of seemingly unconnected problems...",
-    "author": "Gargamux",
-    "createdAt": "27th October 2023, 11:11 AM",
-    "comments": 11,
-    "link": "./detailsPage.html"
-  },
-  {
-    "heading": "HTML & CSS",
-    "question": "What is the best reset for CSS? Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge fanny around butty, Richard spiffing a load of old tosh porkies hunky-dory ruddy dropped a clanger?",
-    "author": "Gargamux",
-    "createdAt": "27th October 2023, 11:11 AM",
-    "comments": 11,
-    "link": "./detailsPage.html"
-  },
-  {
-    "heading": "HTML & CSS",
-    "question": "What is the best reset for CSS? Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge fanny around butty, Richard spiffing a load of old tosh porkies hunky-dory ruddy dropped a clanger?",
-    "author": "Gargamux",
-    "createdAt": "27th October 2023, 11:11 AM",
-    "comments": 11,
-    "link": "./detailsPage.html"
-  },
-  {
-    "heading": "What is React and why it is used?",
-    "question": "React provides state-of-the-art functionality and is an excellent choice for developers looking for an easy-to-use and highly productive JavaScript framework. Using React, you can build complex UI interactions that communicate with the server in record time with JavaScript-driven pages.",
-    "createdAt": "2023-11-08T10:36:58.518Z",
-    "updatedAt": "2023-11-08T10:36:58.518Z",
-    "_id": "9c5a156e-4522-4617-8800-4a8f7284ec34"
-  },
-  {
-    "heading": "SPA  Application with React ?",
-    "question": "Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge fanny around butty, Richard spiffing a load of old tosh porkies hunky-dory ruddy dropped a clanger? Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge fanny around butty, Richard spiffing a load of old tosh porkies hunky-dory ruddy dropped a clanger? xexe",
-    "createdAt": "2023-11-08T10:38:26.184Z",
-    "updatedAt": "2023-11-08T10:38:26.184Z",
-    "_id": "dabac66d-e228-4d5f-86d6-bc2cc14a668b"
+  "eead099e-ca49-4d76-8ffe-874cb55f9513": {
+    "topic": {
+      "heading": "Is it popular to use JS in IoT?",
+      "question": "Tomfoolery crikey bits and bobs brilliant bamboozled. Tomfoolery crikey bits and bobs brilliant bamboozled. Tomfoolery crikey bits and bobs brilliant bamboozled. Tomfoolery crikey bits and bobs brilliant bamboozled. Tomfoolery crikey bits and bobs brilliant bamboozled. ",
+      "createdAt": "2023-11-09T11:58:09.309Z",
+      "updatedAt": "2023-11-09T11:58:09.309Z",
+      "comments": [
+        
+      ],
+      "likes": 0
+    },
+    "_id": "eead099e-ca49-4d76-8ffe-874cb55f9513"
   }
-]
+}

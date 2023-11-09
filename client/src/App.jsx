@@ -29,10 +29,12 @@ function App() {
           <Route path='/allTopics' element={<AllTopics />} />
           <Route path='/createTopic' element={<CreateTopic />} />
           <Route path='/register' element={<Register />} />
+
+          {/* <Route path='/detailsPage' element={<DetailsPage />} /> */}
+
         </Routes>
         
         
-        {/* <DetailsPage />  */}
         {/* <Profile /> */}
         <Footer />
       </div>
