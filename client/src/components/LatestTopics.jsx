@@ -1,17 +1,36 @@
 // 07.11. Successful :)
 import React from 'react';
+import { useState, useEffect } from 'react';
 
-const LatestTopics = ({ articles }) => {
+const LatestTopics = () => {
   // Here is the Array, converted from Object, to use MAP func :)
-  console.log(articles);
+  const [articles, setArticles] = useState([]);
 
+
+  // Define latestArticles in the component's scope
+  const [latestArticles, setLatestArticles] = useState([]); 
+
+  useEffect(() => {
+    fetch('http://localhost:3030/jsonstore/latestTopics')
+      .then((response) => response.json())
+      .then((data) => {
+        // Convert the object to an array
+        const articlesArray = Object.values(data);
+
+        setArticles(articlesArray);
+      });
+    
+  }, []);
 
   // First sort in descendant order and than take the last 3
   // articles.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
   // const latestArticles = articles.slice(0, 3);
 
+  useEffect(() => {
+    const latestArticlesData = articles.slice(-3);
+    setLatestArticles(latestArticlesData);
+  }, [articles]);
 
-  const latestArticles = articles.slice(-3);
   return (
     <div className="section-site-main">
       <div className="container">

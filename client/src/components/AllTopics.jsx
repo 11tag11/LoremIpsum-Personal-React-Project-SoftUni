@@ -1,8 +1,18 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 
-const AllTopics = ({ articles }) => {
-  // Here is the Array, converted from Object, to use MAP func :)
-  console.log(articles);
+
+const AllTopics = () => {
+  const [articles, setArticles] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3030/jsonstore/latestTopics')
+      .then((response) => response.json())
+      .then((data) => {
+        const articlesArray = Object.values(data);
+        setArticles(articlesArray);
+      });
+  },[]);
 
   return (
     <div className="section-site-main">

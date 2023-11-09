@@ -1,5 +1,6 @@
 // 07.11. Successful :)
 import React, { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -19,34 +20,23 @@ import './components/detailsPage.css';
 
 
 function App() {
-  const [articles, setArticles] = useState([]);
-
-  useEffect(() => {
-    fetch('http://localhost:3030/jsonstore/latestTopics')
-      .then((response) => response.json())
-      .then((data) => {
-        // Convert the object to an array
-        const articlesArray = Object.values(data);
-
-        setArticles(articlesArray);
-      });
-    
-  }, []);
-
   return (
     <div>
       <div className="site-wrapper">
         <Header />
-        <LatestTopics articles={articles}/>
-        {/* <AllTopics articles={articles}/> */}
-        {/* <CreateTopic /> */}
-        {/* <Register /> */}
+        <Routes>
+          <Route path="/latestTopics" element={<LatestTopics />} />
+          <Route path='/allTopics' element={<AllTopics />} />
+          <Route path='/createTopic' element={<CreateTopic />} />
+          <Route path='/register' element={<Register />} />
+        </Routes>
+        
+        
         {/* <DetailsPage />  */}
         {/* <Profile /> */}
         <Footer />
       </div>
     </div>
-
   );
 }
 

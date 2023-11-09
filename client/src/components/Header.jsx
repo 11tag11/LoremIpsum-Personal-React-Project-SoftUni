@@ -4,19 +4,19 @@ const Header = () => {
             <div class="section-site-header">
                 <div class="site-logo">
                     <p class="media">
-                        <a href="#"><img src="/assets/LipsLogo.png" alt=""/></a>
+                        <a href="./latestTopics"><img src="/assets/LipsLogo.png" alt=""/></a>
                     </p>
                 </div>
 
                 <div class="section-main-nav">
                     <nav class="main-nav">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="./allTopics.html">All Topics</a></li>
-                            <li><a href="./createTopic.html">Create Topic</a></li>
-                            <li><a href="./profile.html">Profile</a></li>
-                            <li><a href="./login.html">Login</a></li>
-                            <li><a href="./register.html">Register</a></li>
+                            <li><a href="./latestTopics">Home</a></li>
+                            <li><a href="./allTopics">All Topics</a></li>
+                            <li><a href="./createTopic">Create Topic</a></li>
+                            <li><a href="./profile">Profile</a></li>
+                            <li><a href="./login">Login</a></li>
+                            <li><a href="./register">Register</a></li>
                         </ul>
                     </nav>
                 </div>
