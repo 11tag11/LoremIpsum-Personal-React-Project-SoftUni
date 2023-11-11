@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import LatestTopics from './components/LatestTopics';
+import Login from './components/Login';
 import Register from './components/Register';
 import AllTopics from './components/AllTopics';
 import CreateTopic from './components/CreateTopic';
@@ -14,6 +15,7 @@ import PageNotFound from './components/PageNotFound';
 import './components/styles.css';
 import './components/header.css';
 import './components/latestTopics.css';
+import './components/login.css';
 import './components/register.css';
 import './components/allTopics.css';
 import './components/createTopic.css';
@@ -32,6 +34,7 @@ function App() {
           <Route path="/latestTopics" element={<LatestTopics />} />
           <Route path='/allTopics' element={<AllTopics />} />
           <Route path='/createTopic' element={<CreateTopic />} />
+          <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path='/profile' element={<Profile />} />
           <Route path='/detailsPage' element={<DetailsPage />} />

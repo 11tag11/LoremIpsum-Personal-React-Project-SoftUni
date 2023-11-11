@@ -10,7 +10,13 @@ const DetailsPage = () => {
             <div className="section-article">
                 <section className="article">
                     <div className="article-content">
+                        <div className="heading-likes">
                         <h2 className="article-heading">JavaScript</h2>
+                        <div className="circle">
+                        <p className="likes-count">11</p>
+                        </div>
+                        </div>
+                        
                         <p className="text-area author-question">
                             Hooks solve a wide variety of seemingly unconnected problems in React
                             that we’ve encountered over five years of writing and maintaining tens

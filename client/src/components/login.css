@@ -1,0 +1,100 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=PT+Serif&family=Roboto&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 16px/1.4 'Helvetica';
+}
+
+body {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    /* min-height: 100vh; */
+    background-color: #fcf3e7;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.section-site-main {
+    display: flex;
+    margin-bottom: 2em;
+}
+
+/* Login form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    background-color: #fcf3e7;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    margin-bottom: 6em;
+}
+
+.login-form .login-heading {
+    color: #313030;
+    font-size: 2em;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    background-color: #313030;
+    color: #fcf3e7;
+    padding: 1.8em 1.3em;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 0px rgba(49, 49, 48, 0.75);
+    margin-bottom: 4em;
+    border-bottom: 4px solid #00b894;
+    border-top: 4px solid #00b894;
+}
+
+.login-form form input {
+    padding: 0.8em 0.7em;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #b4b4b4;
+    min-width: 40ch;
+}
+
+.login-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.login-form .login-button {
+    padding: 0.5em 2em;
+    border-radius: 5px;
+    border: none;
+    color: #fcf3e7;
+    background-color: #313030;
+    font-weight: bold;
+    border-bottom: 2px solid #00b894;
+    border-top: 2px solid #00b894;
+}
+
+.login-form .login-button:hover {
+    padding: 0.5em 2em;
+    border-radius: 5px;
+    border: none;
+    color: #00b894;
+    background-color: #3b3b3b;
+    border-bottom: 2px solid #00b894;
+    border-top: 2px solid #00b894;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* End Login form */
+
+
+

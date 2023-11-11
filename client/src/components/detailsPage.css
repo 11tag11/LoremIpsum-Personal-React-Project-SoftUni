@@ -29,6 +29,29 @@ body {
     align-items: center;
 }
 
+.heading-likes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #222222;
+    border-radius: 50%;
+}
+
+.likes-count {
+    padding: 0.2em;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #15f5c8;
+}
+
 /* Main Part */
 
 /* First child, AUTHOR Part*/
