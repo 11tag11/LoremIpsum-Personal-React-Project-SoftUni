@@ -11,7 +11,7 @@ const AllTopics = () => {
       .then((response) => response.json())
       .then((data) => {
         const topicsArray = Object.values(data);
-        setTopics(topicsArray);
+        setTopics(topicsArray.reverse());
       });
   }, []);
 

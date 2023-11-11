@@ -1,4 +1,3 @@
-// 07.11. Successful :)
 // pass: 123123
 const baseUrl = "http://localhost:3030/jsonstore/myUsers";
 

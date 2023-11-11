@@ -29,7 +29,7 @@ const LatestTopics = () => {
 
   useEffect(() => {
     const latestTopicsData = topics.slice(-3);
-    setLatestTopics(latestTopicsData);
+    setLatestTopics(latestTopicsData.reverse());
   }, [topics]);
 
   return (
@@ -49,7 +49,7 @@ const LatestTopics = () => {
               </section>
               <section className="article-info">
                 <div className="author">
-                  <p className="author-name">Creator: {topic.topic.author}</p>
+                  <p className="author-name">Creator: {topic._id}</p>
                 </div>
                 <p className="article-created">{topic.topic.createdAt}</p>
                 <div className="article-comments">
