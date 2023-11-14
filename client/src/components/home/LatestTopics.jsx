@@ -69,7 +69,7 @@ const LatestTopics = () => {
                 <div className="article-comments">
                   <p className="comments">Likes: {topic.topic.likes}</p>
                   <p className="read-more">
-                    <Link to="/detailsPage">
+                    <Link to={`/latestTopics/${topic._id}`}>
                       Read more <i className="fa-solid fa-square-arrow-up-right" />
                     </Link>
                   </p>

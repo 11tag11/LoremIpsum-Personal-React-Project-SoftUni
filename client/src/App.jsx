@@ -37,7 +37,8 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path='/profile' element={<Profile />} />
-          <Route path='/detailsPage' element={<DetailsPage />} />
+            {/* ?? */}
+          <Route path='/latestTopics/:topicId' element={<DetailsPage />} />
           <Route path='*' element={<PageNotFound />} />
         </Routes>
         

@@ -1,12 +1,15 @@
 import React from 'react';
 import DetailsPageAnswers from './DetailsPageAnswers';
 import YourAnswer from './YourAnswer';
+import TopicItem from '../allTopics/topicItem/topicItem';
 
 
 const DetailsPage = () => {
 
     return (
         <div className="container details">
+            <TopicItem />
+        {/* <div className="container details">
             <div className="section-article">
                 <section className="article">
                     <div className="article-content">
@@ -43,7 +46,7 @@ const DetailsPage = () => {
                         </a>
                     </div>
                 </section>
-            </div>
+            </div> */}
 
             <DetailsPageAnswers/>
             <YourAnswer />
