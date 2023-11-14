@@ -36,6 +36,7 @@ const CreateTopic = () => {
             console.log('Post created', response);
             resetNewPostForm();
         } catch (error) {
+            // Here will be err notification later
             console.log('Post did not created!', error);
         }
         navigate('/latestTopics');

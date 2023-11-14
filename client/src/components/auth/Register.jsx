@@ -1,13 +1,14 @@
-// 07.11. Successful :)
 import { useEffect, useState } from "react";
 import * as userService from '../../services/userService';
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    
+    const navigate = useNavigate();
+
     const resetRegisterForm = () => {
         setUsername('');
         setEmail('');
@@ -31,22 +32,23 @@ const Register = () => {
         setConfirmPassword(e.target.value);
     };
 
-    const submitHandler = () => {
+    const submitHandler = async (e) => {
         const userData = {
             username,
             email,
             password,
         };
 
-        userService.createUser(userData)
-        .then((response) => {
+        try {
+            await userService.createUser(userData);
             console.log('Successful registration!', response);
             resetRegisterForm();
-        })
-        .catch((error) => {
+        } catch (error) {
+            //Here will add notification message later
             console.log('Unsuccessful registration!', error);
-        })
-    }
+        };
+        navigate('/latestTopics');
+    };
 
     return (
         <div className="container">
