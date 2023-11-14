@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import * as createTopicService from '../../services/createTopicService';
+import { useNavigate } from "react-router-dom";
+import * as topicService from '../../services/topicService';
 
 const CreateTopic = () => {
 
     const [heading, setHeading] = useState('');
     const [question, setQuestion] = useState('');
+    const navigate = useNavigate();
 
     const resetNewPostForm = () => {
         setHeading('');
@@ -20,15 +22,15 @@ const CreateTopic = () => {
     };
 
 
-    const submitHandler = () => {
-        const userId = localStorage.getItem('userId'); // Retrieve user ID from local storage
+    const submitHandler = (e) => {
+        const userId = localStorage.getItem('userId'); 
         const topicData = {
             heading,
             question,
             author: userId,
             userId
         };
-        createTopicService.createTopic(topicData)
+        topicService.createTopic(topicData)
             .then((response) => {
                 console.log('Post created', response);
                 resetNewPostForm();
@@ -36,8 +38,8 @@ const CreateTopic = () => {
             .catch((error) => {
                 console.log('Post did not created!', error);
             })
-    }
-
+            navigate('/latestTopics');
+    };
 
     return (
         <div class="section-site-main">

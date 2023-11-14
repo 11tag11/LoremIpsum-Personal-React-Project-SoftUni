@@ -46,13 +46,6 @@ const LatestTopics = () => {
     fetchUsernamesAndUpdateTopics();
   }, [topics]); // This dependency should be carefully managed
 
- 
-
-  // useEffect(() => {
-  //   const latestTopicsData = topics.slice(-3);
-  //   setLatestTopics(latestTopicsData.reverse());
-  // }, [topics]);
-
   return (
     <div className="section-site-main">
       <div className="container">

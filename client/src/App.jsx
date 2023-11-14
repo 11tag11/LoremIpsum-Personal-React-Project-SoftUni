@@ -1,5 +1,5 @@
 // 07.11. Successful :)
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Footer from './components/footer/Footer';
@@ -21,7 +21,7 @@ import './components/allTopics/allTopics.css';
 import './components/createTopic/createTopic.css';
 import './components/detailsPage/detailsPage.css';
 import './components/profile/profile.css';
-import './components/pageNotFound/pageNotFound.css'
+import './components/pageNotFound/pageNotFound.css';
 
 
 

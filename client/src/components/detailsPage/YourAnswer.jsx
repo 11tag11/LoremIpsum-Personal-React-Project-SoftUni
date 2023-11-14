@@ -26,7 +26,7 @@ const YourAnswer = () => {
                 </div>
             </div>
             <div className="go-to-top">
-                <a href="./detailsPage.html">
+                <a href="./detailsPage">
                     <i className="fa-solid fa-circle-arrow-up" />
                 </a>
             </div>

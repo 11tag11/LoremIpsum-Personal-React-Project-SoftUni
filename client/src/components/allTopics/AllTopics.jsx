@@ -48,9 +48,9 @@ const AllTopics = () => {
             </div>
           ))};
         </div>
-        <div class="go-to-top">
+        <div className="go-to-top">
           {/* correction here, it adds allTopics again... */}
-          <Link to="allTopics"><i class="fa-solid fa-circle-arrow-up"></i></Link>
+          <Link to="./allTopics"><i className="fa-solid fa-circle-arrow-up"></i></Link>
         </div>
       </div>
     </div>

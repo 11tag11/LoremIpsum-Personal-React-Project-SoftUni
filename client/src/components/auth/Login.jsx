@@ -47,7 +47,7 @@ const Login = () => {
                         value={email}
                         onChange={emailChangeHandler}
                         name="email"
-                        placeholder="Enter your email" />
+                        placeholder="email" />
 
 
                         <input 
@@ -56,7 +56,7 @@ const Login = () => {
                         value={password}
                         onChange={passwordChangeHandler}
                         name="password"
-                        placeholder="Enter your password" />
+                        placeholder="password" />
 
                         <div className="login-button-container">
                             <button 
