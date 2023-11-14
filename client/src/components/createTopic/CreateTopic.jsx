@@ -33,7 +33,7 @@ const CreateTopic = () => {
 
         try {
             await topicService.createTopic(topicData);
-            console.log('Post created', response);
+            console.log('Post created', topicData);
             resetNewPostForm();
         } catch (error) {
             // Here will be err notification later
