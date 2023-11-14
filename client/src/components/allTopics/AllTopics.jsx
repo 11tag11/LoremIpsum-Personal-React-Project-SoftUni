@@ -1,18 +1,22 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
+import * as topicService from '../../services/topicService';
 
 const AllTopics = () => {
   const [topics, setTopics] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3030/jsonstore/latestTopics')
-      .then((response) => response.json())
-      .then((data) => {
-        const topicsArray = Object.values(data);
+    const fetchTopics = async () => {
+      try {
+        const topicsArray = await topicService.getAll();
         setTopics(topicsArray.reverse());
-      });
+      } catch (error) {
+        console.error('Error fetching topics:', error.message);
+      }
+    };
+
+    fetchTopics();
   }, []);
 
   return (

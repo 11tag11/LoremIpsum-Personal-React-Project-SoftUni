@@ -1,6 +1,12 @@
 import { formatDate } from "../utils/dateUtils";
 const baseUrl = 'http://localhost:3030/jsonstore';
 
+export const getAll = async () => {
+  const response = await fetch(`${baseUrl}/latestTopics`);
+  const result = await response.json();
+  return Object.values(result);
+};
+
 export const createTopic = async (topicData) => {
     const currentDate = new Date(); 
     const displayedDate = formatDate(currentDate); 
@@ -27,7 +33,7 @@ export const createTopic = async (topicData) => {
   };
 
     const body = {
-        topic: topicObject,  // Wrap the topic data in a 'topic' field
+        topic: topicObject,  // Wrap the topic data in a 'topic' obj
     };
 
     const response = await fetch((`${baseUrl}/latestTopics`), {
@@ -40,10 +46,8 @@ export const createTopic = async (topicData) => {
 
     if (!response.ok) {
         throw new Error('Post creation failed!');
-    }
-
+    };
     const result = await response.json();
     console.log('Topic is created:', result);
-
     return result;
 };
