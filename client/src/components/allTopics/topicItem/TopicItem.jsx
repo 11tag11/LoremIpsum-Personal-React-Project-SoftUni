@@ -26,7 +26,7 @@ const TopicItem = ({
                 <div className="article-comments">
                   <p className="comments">Likes: {likes}</p>
                   <p className="read-more">
-                    {/* here CORRECTION AFTER I GOT ID'S */}
+                    {/* here CORRECTION T ID'S */}
                     <Link to={`/latestTopics/${_id}`}>
                       Read more <i className="fa-solid fa-square-arrow-up-right" />
                     </Link>
