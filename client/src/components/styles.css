@@ -271,6 +271,9 @@ body {
     color: #fff;
     /* border-bottom: 1px solid #fcf3e7; */
 }
+.all-rights span {
+    font-weight: bold;
+}
 
 .footer-wrapper .socials {
     display: flex;

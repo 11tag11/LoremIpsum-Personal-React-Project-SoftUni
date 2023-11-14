@@ -1,16 +1,16 @@
 const Footer = () => {
     return(
-        <div class="footer-wrapper">
-            <div class="site-footer">
-                <p class="all-rights">
-                    &copy; 2023 Georgi Ivanov: Lorem<span class="green-text">Ipsum </span>Forum 
+        <div className="footer-wrapper">
+            <div className="site-footer">
+                <p className="all-rights">
+                    &copy; 2023 Georgi Ivanov:<span className="bold"> Lorem</span><span className="green-text">Ipsum </span><span>Forum</span> 
                 </p>
             </div>
-            <div class="socials">
-                <p class="social-links">
-                    <a href="#"><i class="fa-brands fa-github"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <div className="socials">
+                <p className="social-links">
+                    <a href="#"><i className="fa-brands fa-github"></i></a>
+                    <a href="#"><i className="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i className="fa-brands fa-instagram"></i></a>
                 </p>
             </div>
         </div>
