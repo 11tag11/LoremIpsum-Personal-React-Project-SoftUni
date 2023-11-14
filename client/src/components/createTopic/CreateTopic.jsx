@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import * as createTopicService from '../services/createTopicService';
+import * as createTopicService from '../../services/createTopicService';
 
 const CreateTopic = () => {
 
@@ -21,9 +21,12 @@ const CreateTopic = () => {
 
 
     const submitHandler = () => {
+        const userId = localStorage.getItem('userId'); // Retrieve user ID from local storage
         const topicData = {
             heading,
-            question
+            question,
+            author: userId,
+            userId
         };
         createTopicService.createTopic(topicData)
             .then((response) => {

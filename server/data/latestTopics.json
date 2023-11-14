@@ -5,8 +5,10 @@
       "question": "The MERN stack is a web development framework made up of the stack of MongoDB, Express.js, React.js, and Nodejs.",
       "createdAt": "2023-11-09T11:51:01.725Z",
       "updatedAt": "2023-11-09T11:51:01.725Z",
+      "author": "GeorgeIvanov11",
       "comments": [],
-      "likes": 0
+      "likes": 0,
+      "userId": "c3e2648b-e024-4d31-9164-a01ca32cf82e"
     },
     "_id": "2f24f34b-28a7-41c2-a46e-2608165f4786"
   },
@@ -16,10 +18,10 @@
       "question": "What is the Internet of Things (IoT)? The term IoT, or Internet of Things, refers to the collective network of connected devices and the technology that facilitates communication between devices and the cloud, as well as between the devices themselves.",
       "createdAt": "2023-11-09T11:55:52.824Z",
       "updatedAt": "2023-11-09T11:55:52.824Z",
-      "comments": [
-        
-      ],
-      "likes": 0
+      "author": "GeorgeIvanov11",
+      "comments": [],
+      "likes": 0,
+      "userId": "c3e2648b-e024-4d31-9164-a01ca32cf82e"
     },
     "_id": "f602d683-8451-4a48-9d33-a39478746498"
   },
@@ -29,10 +31,10 @@
       "question": "How to get rid of the default paddings of headings H1-H6?",
       "createdAt": "2023-11-09T11:57:00.944Z",
       "updatedAt": "2023-11-09T11:57:00.944Z",
-      "comments": [
-        
-      ],
-      "likes": 0
+      "author": "GeorgeIvanov11",
+      "comments": [],
+      "likes": 0,
+      "userId": "c3e2648b-e024-4d31-9164-a01ca32cf82e"
     },
     "_id": "a5847ba1-844c-4270-a250-7a2e682625f5"
   },
@@ -42,10 +44,10 @@
       "question": "Tomfoolery crikey bits and bobs brilliant bamboozled. Tomfoolery crikey bits and bobs brilliant bamboozled. Tomfoolery crikey bits and bobs brilliant bamboozled. Tomfoolery crikey bits and bobs brilliant bamboozled. Tomfoolery crikey bits and bobs brilliant bamboozled. ",
       "createdAt": "2023-11-09T11:58:09.309Z",
       "updatedAt": "2023-11-09T11:58:09.309Z",
-      "comments": [
-        
-      ],
-      "likes": 0
+      "author": "George",
+      "comments": [],
+      "likes": 0,
+      "userId": "bef3b0fa-208b-402e-b92b-4c4596b114a7"
     },
     "_id": "eead099e-ca49-4d76-8ffe-874cb55f9513"
   },
@@ -55,10 +57,10 @@
       "question": "What is a blob?",
       "createdAt": "2023-11-09T12:27:13.372Z",
       "updatedAt": "2023-11-09T12:27:13.372Z",
-      "comments": [
-        
-      ],
-      "likes": 0
+      "author": "George",
+      "comments": [],
+      "likes": 0,
+      "userId": "bef3b0fa-208b-402e-b92b-4c4596b114a7"
     },
     "_id": "554ac950-c7b0-465e-8cc3-bd6a5fdda6c2"
   }

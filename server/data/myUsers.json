@@ -2,6 +2,7 @@
 {
   "c3e2648b-e024-4d31-9164-a01ca32cf82e": {
     "username": "GeorgeIvanov11",
+    "password": "123123",
     "email": "gushter@mail.bg",
     "createdAt": "2023-11-09T11:41:26.370Z",
     "updatedAt": "2023-11-09T11:41:26.370Z",
@@ -16,9 +17,38 @@
   },
   "bef3b0fa-208b-402e-b92b-4c4596b114a7": {
     "username": "George",
+    "password": "123123",
     "email": "george@gmail.com",
     "createdAt": "2023-11-09T11:44:21.865Z",
     "updatedAt": "2023-11-09T11:44:21.865Z",
+    "questions": [
+      {
+      "554ac950-c7b0-465e-8cc3-bd6a5fdda6c2": {
+        "topic": {
+          "heading": "Blob",
+          "question": "What is a blob?",
+          "createdAt": "2023-11-09T12:27:13.372Z",
+          "updatedAt": "2023-11-09T12:27:13.372Z",
+          "comments": [],
+          "likes": 0,
+          "userId": "bef3b0fa-208b-402e-b92b-4c4596b114a7"
+        },
+        "_id": "554ac950-c7b0-465e-8cc3-bd6a5fdda6c2"
+      }
+    }
+  ],
+    "comments": [
+      
+    ],
+    "likes": 0,
+    "_id": "bef3b0fa-208b-402e-b92b-4c4596b114a7"
+  },
+  "08a11580-8ffc-4b42-896d-fdd50a63a1cb": {
+    "username": "Patka",
+    "email": "patka@abv.bg",
+    "password": "123123",
+    "createdAt": "2023-11-13T13:58:07.679Z",
+    "updatedAt": "2023-11-13T13:58:07.679Z",
     "questions": [
       
     ],
@@ -26,6 +56,6 @@
       
     ],
     "likes": 0,
-    "_id": "bef3b0fa-208b-402e-b92b-4c4596b114a7"
+    "_id": "08a11580-8ffc-4b42-896d-fdd50a63a1cb"
   }
 }

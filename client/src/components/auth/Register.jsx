@@ -1,6 +1,6 @@
 // 07.11. Successful :)
 import { useEffect, useState } from "react";
-import * as userService from '../services/userService';
+import * as userService from '../../services/userService';
 
 const Register = () => {
     const [username, setUsername] = useState('');

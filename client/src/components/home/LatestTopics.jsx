@@ -1,36 +1,57 @@
-// 07.11. Successful :)
-import React from 'react';
-import { useState, useEffect } from 'react';
+
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const LatestTopics = () => {
-  // Here is the Array, converted from Object, to use MAP func :)
   const [topics, setTopics] = useState([]);
-
-
-  // Define latestTopics in the component's scope
-  const [latestTopics, setLatestTopics] = useState([]); 
+  const [latestTopics, setLatestTopics] = useState([]);
 
   useEffect(() => {
+    // Fetch topics
     fetch('http://localhost:3030/jsonstore/latestTopics')
       .then((response) => response.json())
       .then((data) => {
-        // Convert the object to an array
         const topicsArray = Object.values(data);
-
-        setTopics(topicsArray);
+        setTopics((prevTopics) => [...prevTopics, ...topicsArray]); // Use functional update
       });
-    
-  }, []);
+  }, []); // Empty dependency array to fetch topics only once
 
-  // First sort in descendant order and than take the last 3
-  // articles.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-  // const latestArticles = articles.slice(0, 3);
+  const fetchUsernamesAndUpdateTopics = () => {
+    // Fetch user data
+    fetch('http://localhost:3030/jsonstore/myUsers')
+      .then((response) => response.json())
+      .then((userData) => {
+        // Map user ID to username
+        const userIdToUsername = {};
+        Object.values(userData).forEach((user) => {
+          userIdToUsername[user._id] = user.username;
+        });
+
+        // Update topics with username
+        const topicsWithUsername = topics.map((topic) => ({
+          ...topic,
+          topic: {
+            ...topic.topic,
+            username: userIdToUsername[topic.topic.userId],
+          },
+        }));
+
+        // Set latest topics
+        const latestTopicsData = topicsWithUsername.slice(-3).reverse();
+        setLatestTopics(latestTopicsData);
+      });
+  };
 
   useEffect(() => {
-    const latestTopicsData = topics.slice(-3);
-    setLatestTopics(latestTopicsData.reverse());
-  }, [topics]);
+    fetchUsernamesAndUpdateTopics();
+  }, [topics]); // This dependency should be carefully managed
+
+ 
+
+  // useEffect(() => {
+  //   const latestTopicsData = topics.slice(-3);
+  //   setLatestTopics(latestTopicsData.reverse());
+  // }, [topics]);
 
   return (
     <div className="section-site-main">
@@ -49,7 +70,7 @@ const LatestTopics = () => {
               </section>
               <section className="article-info">
                 <div className="author">
-                  <p className="author-name">Creator: {topic._id}</p>
+                  <p className="author-name">Creator: {topic.topic.username}</p>
                 </div>
                 <p className="article-created">{topic.topic.createdAt}</p>
                 <div className="article-comments">
@@ -70,7 +91,3 @@ const LatestTopics = () => {
 };
 
 export default LatestTopics;
-
-
-
-

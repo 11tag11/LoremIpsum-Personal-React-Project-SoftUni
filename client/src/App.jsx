@@ -2,26 +2,26 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import Footer from './components/Footer';
-import Header from './components/Header';
-import LatestTopics from './components/LatestTopics';
-import Login from './components/Login';
-import Register from './components/Register';
-import AllTopics from './components/AllTopics';
-import CreateTopic from './components/CreateTopic';
-import DetailsPage from './components/DetailsPage';
-import Profile from './components/Profile';
-import PageNotFound from './components/PageNotFound';
+import Footer from './components/footer/Footer';
+import Header from './components/header/Header';
+import LatestTopics from './components/home/LatestTopics';
+import Login from './components/auth/Login';
+import Register from './components/auth/Register';
+import AllTopics from './components/allTopics/AllTopics';
+import CreateTopic from './components/createTopic/CreateTopic';
+import DetailsPage from './components/detailsPage/DetailsPage';
+import Profile from './components/profile/Profile';
+import PageNotFound from './components/pageNotFound/PageNotFound';
 import './components/styles.css';
-import './components/header.css';
-import './components/latestTopics.css';
-import './components/login.css';
-import './components/register.css';
-import './components/allTopics.css';
-import './components/createTopic.css';
-import './components/detailsPage.css';
-import './components/profile.css';
-import './components/pageNotFound.css'
+import './components/header/header.css';
+import './components/home/latestTopics.css';
+import './components/auth/login.css';
+import './components/auth/register.css';
+import './components/allTopics/allTopics.css';
+import './components/createTopic/createTopic.css';
+import './components/detailsPage/detailsPage.css';
+import './components/profile/profile.css';
+import './components/pageNotFound/pageNotFound.css'
 
 
 
