@@ -8,7 +8,7 @@ export const formatDate = (isoDate) => {
     hour: "numeric",
     minute: "numeric",
     seconds: "numeric",
-    hour24: true,
+    hour12: true,
   };
 
   return new Date(isoDate).toLocaleDateString("en-US", options);

@@ -22,23 +22,23 @@ const CreateTopic = () => {
     };
 
 
-    const submitHandler = (e) => {
-        const userId = localStorage.getItem('userId'); 
+    const submitHandler = async (e) => {
+        const userId = localStorage.getItem('userId');
         const topicData = {
             heading,
             question,
             author: userId,
             userId
         };
-        topicService.createTopic(topicData)
-            .then((response) => {
-                console.log('Post created', response);
-                resetNewPostForm();
-            })
-            .catch((error) => {
-                console.log('Post did not created!', error);
-            })
-            navigate('/latestTopics');
+
+        try {
+            await topicService.createTopic(topicData);
+            console.log('Post created', response);
+            resetNewPostForm();
+        } catch (error) {
+            console.log('Post did not created!', error);
+        }
+        navigate('/latestTopics');
     };
 
     return (
@@ -70,10 +70,10 @@ const CreateTopic = () => {
                                     placeholder="Topic"
                                 />
                                 <div className="post-button-container">
-                                    <button 
-                                    type="button"
-                                    className="new-post-button"
-                                    onClick={submitHandler}>Post</button>
+                                    <button
+                                        type="button"
+                                        className="new-post-button"
+                                        onClick={submitHandler}>Post</button>
                                 </div>
                             </form>
                         </section>
