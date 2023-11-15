@@ -1,38 +1,54 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import DetailsPageAnswers from './DetailsPageAnswers';
 import YourAnswer from './YourAnswer';
 import TopicItem from '../allTopics/topicItem/topicItem';
-
+import { useParams } from 'react-router-dom';
+import * as topicService from '../../services/topicService';
 
 const DetailsPage = () => {
 
+    const  [ topic, setTopic ]  = useState({});
+    const { topicId } = useParams();
+
+    useEffect(() => {
+        
+        topicService.getOne(topicId)
+        .then(data => {
+            setTopic(data.topic); // Access the topic property
+        })
+        .catch(error => {
+            console.error('Error fetching topic:', error);
+        });
+    }, [topicId]);
+
+    // console.log('Component Rerendered');
+    // console.log('Topic:', topic);
+
+
     return (
+        // <TopicItem />
         <div className="container details">
-            <TopicItem />
-        {/* <div className="container details">
             <div className="section-article">
                 <section className="article">
                     <div className="article-content">
                         <div className="heading-likes">
-                        <h2 className="article-heading">JavaScript</h2>
-                        <div className="circle">
-                        <p className="likes-count">11</p>
+                            <h2 className="article-heading">{topic.heading}</h2>
+                            <div className="circle">
+                                <p className="likes-count">{topic.likes}</p>
+                            </div>
                         </div>
-                        </div>
-                        
+
                         <p className="text-area author-question">
-                            Hooks solve a wide variety of seemingly unconnected problems in React
-                            that we’ve encountered over five years of writing and maintaining tens
-                            of thousands of components.
+                            {topic.question}
                         </p>
                     </div>
                 </section>
                 <section className="article-info question">
                     <div className="left-info">
                         <div className="author">
-                            <p className="author-name">Author: Gargament</p>
+                            <p className="author-name">Author: {topic.author}</p>
                         </div>
-                        <p className="article-created">27th October 2023, 11:11 AM</p>
+                        <p className="article-created">{topic.createdAt}</p>
                     </div>
                     <div className="likes-delete right">
                         <a href="./editPost.html" className="edit">
@@ -46,9 +62,9 @@ const DetailsPage = () => {
                         </a>
                     </div>
                 </section>
-            </div> */}
+            </div>
 
-            <DetailsPageAnswers/>
+            <DetailsPageAnswers />
             <YourAnswer />
         </div>
 

@@ -7,6 +7,14 @@ export const getAll = async () => {
   return Object.values(result);
 };
 
+export const getOne = async (topicId) => {
+  const response = await fetch(`${baseUrl}/latestTopics/${topicId}`);
+  // console.log('Response:', response);
+  const result = await response.json();
+  // console.log('Result:', result);
+  return result;
+};
+
 export const createTopic = async (topicData) => {
     const currentDate = new Date(); 
     const displayedDate = formatDate(currentDate); 
