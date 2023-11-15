@@ -39,7 +39,7 @@ const CreateTopic = () => {
             // Here will be err notification later
             console.log('Post did not created!', error);
         }
-        navigate('/latestTopics');
+        navigate('/allTopics');
     };
 
     return (

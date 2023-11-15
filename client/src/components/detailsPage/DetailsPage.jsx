@@ -7,7 +7,7 @@ import * as topicService from '../../services/topicService';
 
 const DetailsPage = () => {
 
-    const  [ topic, setTopic ]  = useState({});
+    const  [topic, setTopic]  = useState({});
     const { topicId } = useParams();
 
     useEffect(() => {
@@ -65,7 +65,7 @@ const DetailsPage = () => {
             </div>
 
             <DetailsPageAnswers />
-            <YourAnswer />
+            {/* <YourAnswer /> */}
         </div>
 
 
