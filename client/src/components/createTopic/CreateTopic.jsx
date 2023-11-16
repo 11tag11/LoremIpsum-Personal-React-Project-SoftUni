@@ -43,7 +43,7 @@ const CreateTopic = () => {
     };
 
     return (
-        <div class="section-site-main">
+        <div className="section-site-main">
             <div className="container create">
                 <div className="new-post-heading">
                     <h1 className="new-heading">New Topic</h1>
