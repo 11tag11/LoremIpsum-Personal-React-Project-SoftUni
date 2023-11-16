@@ -37,9 +37,9 @@ const AllTopics = () => {
               author={topic.topic.author}
               createdAt={topic.topic.createdAt}
               likes={topic.topic.likes} />
-          ))};
+          ))}
 
-          {topics.length === 0 && <h3 className='no-topics'>There is no topics yet.</h3>};
+          {topics.length === 0 && <h3 className='no-topics'>There is no topics yet.</h3>}
         </div>
 
         <div className="go-to-top">
