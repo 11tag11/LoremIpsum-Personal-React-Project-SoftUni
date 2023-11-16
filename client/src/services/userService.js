@@ -13,7 +13,6 @@ export const createUser = async (userData) => {
     createdAt: displayedDate,
     updatedAt: displayedDate,
     questions: [], // Initialize an empty array for questions
-    comments: [], // Initialize an empty array for comments
     likes: 0, // Initialize the likes count to 0
   };
 
@@ -54,7 +53,7 @@ export const loginUser = async (userData) => {
   }
 
   // Store user ID in local storage
-  localStorage.setItem("userId", user._id);
+  // localStorage.setItem("userId", user._id);
 
   console.log("User is here!", user);
   return user;

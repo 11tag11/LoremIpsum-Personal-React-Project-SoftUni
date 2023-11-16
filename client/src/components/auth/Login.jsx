@@ -28,7 +28,7 @@ const Login = () => {
 
         try {
             await userService.loginUser(userData);
-            console.log('Successful login!', response);
+            console.log('Successful login!');
             resetLoginForm();
         } catch (error) {
             //Here will add notification message later

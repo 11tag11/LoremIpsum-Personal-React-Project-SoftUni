@@ -23,12 +23,12 @@ const CreateTopic = () => {
 
 
     const submitHandler = async (e) => {
-        const userId = localStorage.getItem('userId');
+        // const userId = localStorage.getItem('userId');
         const topicData = {
             heading,
             question,
-            author: userId,
-            userId
+            // author: userId,
+            // userId
         };
 
         try {

@@ -3,48 +3,21 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const LatestTopics = () => {
-  const [topics, setTopics] = useState([]);
   const [latestTopics, setLatestTopics] = useState([]);
 
   useEffect(() => {
-    // Fetch topics
+    // Fetch latest topics
     fetch('http://localhost:3030/jsonstore/latestTopics')
       .then((response) => response.json())
       .then((data) => {
         const topicsArray = Object.values(data);
-        setTopics((prevTopics) => [...prevTopics, ...topicsArray]); // Use functional update
+        const latestTopicsData = topicsArray.slice(-3).reverse();
+        setLatestTopics(latestTopicsData);
+      })
+      .catch((error) => {
+        console.error('Error fetching latest topics:', error);
       });
   }, []); // Empty dependency array to fetch topics only once
-
-  const fetchUsernamesAndUpdateTopics = () => {
-    // Fetch user data
-    fetch('http://localhost:3030/jsonstore/myUsers')
-      .then((response) => response.json())
-      .then((userData) => {
-        // Map user ID to username
-        const userIdToUsername = {};
-        Object.values(userData).forEach((user) => {
-          userIdToUsername[user._id] = user.username;
-        });
-
-        // Update topics with username
-        const topicsWithUsername = topics.map((topic) => ({
-          ...topic,
-          topic: {
-            ...topic.topic,
-            username: userIdToUsername[topic.topic.userId],
-          },
-        }));
-
-        // Set latest topics
-        const latestTopicsData = topicsWithUsername.slice(-3).reverse();
-        setLatestTopics(latestTopicsData);
-      });
-  };
-
-  useEffect(() => {
-    fetchUsernamesAndUpdateTopics();
-  }, [topics]); // This dependency should be carefully managed
 
   return (
     <div className="section-site-main">

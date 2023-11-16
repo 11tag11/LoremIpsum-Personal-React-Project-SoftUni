@@ -41,7 +41,7 @@ const Register = () => {
 
         try {
             await userService.createUser(userData);
-            console.log('Successful registration!', response);
+            console.log('Successful registration!');
             resetRegisterForm();
         } catch (error) {
             //Here will add notification message later

@@ -9,9 +9,6 @@
     "questions": [
       
     ],
-    "comments": [
-      
-    ],
     "likes": 0,
     "_id": "c3e2648b-e024-4d31-9164-a01ca32cf82e"
   },
@@ -29,7 +26,7 @@
           "question": "What is a blob?",
           "createdAt": "2023-11-09T12:27:13.372Z",
           "updatedAt": "2023-11-09T12:27:13.372Z",
-          "comments": [],
+          "answers": [],
           "likes": 0,
           "userId": "bef3b0fa-208b-402e-b92b-4c4596b114a7"
         },
@@ -37,9 +34,6 @@
       }
     }
   ],
-    "comments": [
-      
-    ],
     "likes": 0,
     "_id": "bef3b0fa-208b-402e-b92b-4c4596b114a7"
   },
@@ -50,9 +44,6 @@
     "createdAt": "2023-11-13T13:58:07.679Z",
     "updatedAt": "2023-11-13T13:58:07.679Z",
     "questions": [
-      
-    ],
-    "comments": [
       
     ],
     "likes": 0,
