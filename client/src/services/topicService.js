@@ -9,6 +9,8 @@ export const getAll = async () => {
 
 export const getOne = async (topicId) => {
   const response = await fetch(`${baseUrl}/latestTopics/${topicId}`);
+  // console.log('Server Response:', response);
+
   const result = await response.json();
   return result;
 };
@@ -23,7 +25,8 @@ export const createTopic = async (topicData) => {
     createdAt: displayedDate,
     updatedAt: displayedDate,
     likes: 0,  // Initialize the likes count to 0
-    answers: [],  // Initialize an empty array for answers
+    answers: [],  // Initialize an empty array for answers,
+    _id: topicData._id,
   };
 
   const body = {
@@ -46,3 +49,5 @@ export const createTopic = async (topicData) => {
   console.log('Topic is created:', result);
   return result;
 };
+
+

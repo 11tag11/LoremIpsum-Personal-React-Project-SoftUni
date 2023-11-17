@@ -2,7 +2,7 @@ import { formatDate } from "../utils/dateUtils";
 
 const baseUrl = "http://localhost:3030/jsonstore";
 
-export const createAnswer = async (topicId, author, answer) => {
+export const createAnswer = async (topicId, answer) => {
   const currentDate = new Date();
   const displayedDate = formatDate(currentDate);
 
@@ -10,10 +10,8 @@ export const createAnswer = async (topicId, author, answer) => {
     topicId,
     createdAt: displayedDate,
     updatedAt: displayedDate,
-    author,
     answer,
   };
-  
 
   const response = await fetch(`${baseUrl}/answers`, {
     method: "POST",
@@ -26,7 +24,14 @@ export const createAnswer = async (topicId, author, answer) => {
   if (!response.ok) {
     throw new Error("Answer creation failed!");
   }
+
   const result = await response.json();
-  console.log("Answer is created:", result);
+  // console.log("Answer is created:", result);
   return result;
+};
+
+export const getAnswersForTopic = async (topicId) => {
+  const response = await fetch(`${baseUrl}/answers?topicId=${topicId}`);
+  const result = await response.json();
+  return Object.values(result);
 };

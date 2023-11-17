@@ -164,7 +164,7 @@ body {
 .section-article {
     display: flex;
     flex-direction: column;
-    min-width: 400px;
+    min-width: 500px;
     min-height: 300px;
     justify-content: space-between;
     background-color: #313030;

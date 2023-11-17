@@ -28,16 +28,20 @@ const AllTopics = () => {
         </div>
         <div className="section-articles all-articles">
 
-          {topics.map(topic => (
-            <TopicItem
-              _id={topic._id}
-              key={topic._id}
-              heading={topic.topic.heading}
-              question={topic.topic.question}
-              author={topic.topic.author}
-              createdAt={topic.topic.createdAt}
-              likes={topic.topic.likes} />
-          ))}
+          {topics.map((topic) => {
+            // console.log('Topic ID:', topic._id); 
+            return (
+              <TopicItem
+                _id={topic._id}
+                key={topic._id}
+                heading={topic.topic.heading}
+                question={topic.topic.question}
+                author={topic.topic.author}
+                createdAt={topic.topic.createdAt}
+                likes={topic.topic.likes}
+              />
+            );
+          })}
 
           {topics.length === 0 && <h3 className='no-topics'>There is no topics yet.</h3>}
         </div>

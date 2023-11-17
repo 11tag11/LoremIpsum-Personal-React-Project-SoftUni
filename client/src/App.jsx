@@ -10,6 +10,8 @@ import Register from './components/auth/Register';
 import AllTopics from './components/allTopics/AllTopics';
 import CreateTopic from './components/createTopic/CreateTopic';
 import DetailsPage from './components/detailsPage/DetailsPage';
+// import DetailsPageAnswers from './components/detailsPage/DetailsPageAnswers';
+
 import Profile from './components/profile/Profile';
 import PageNotFound from './components/pageNotFound/PageNotFound';
 import './components/styles.css';
@@ -20,6 +22,9 @@ import './components/auth/register.css';
 import './components/allTopics/allTopics.css';
 import './components/createTopic/createTopic.css';
 import './components/detailsPage/detailsPage.css';
+
+import './components/detailsPage/detailsPageAnswers.css';
+
 import './components/profile/profile.css';
 import './components/pageNotFound/pageNotFound.css';
 
