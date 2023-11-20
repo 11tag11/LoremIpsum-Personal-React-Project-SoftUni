@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import * as topicService from '../../services/topicService';
 import * as answerService from '../../services/answerService';
+import styles from './YourAnswer.module.css';
 
 const YourAnswer = ({ fetchData, setAnswers }) => {
   const [topic, setTopic] = useState({});
@@ -51,27 +52,29 @@ const YourAnswer = ({ fetchData, setAnswers }) => {
   };
 
   return (
-    <div className="container details">
-      <div className="answers-section">
-        <div className="section-article answer">
-          <section className="article">
+    <div className={`${styles.container} ${styles.details}`}>
+      <div className={styles.answersSection}>
+        <div className={`${styles.sectionArticle} ${styles.answer}`}>
+          <section className={styles.article}>
             <form action="">
-              <div className="article-content user-answer">
-                <h2 className="article-heading user-name your-answer">Your answer</h2>
-                <div className="answer-area">
+              <div className={`${styles.articleContent} ${styles.userAnswer}`}>
+                <h2 className={`${styles.articleHeading} ${styles.userName} ${styles.yourAnswer}`}>
+                  Your answer
+                </h2>
+                <div className={styles.answerArea}>
                   <textarea
                     name="answer"
-                    id=""
+                    id="answer"
                     cols={30}
                     rows={10}
                     value={answer}
                     onChange={answerChangeHandler}
                   />
                 </div>
-                <div className="post-button-container">
+                <div className={styles.postButtonContainer}>
                   <button
                     type="button"
-                    className="new-post-button"
+                    className={styles.newPostButton}
                     onClick={addAnswerHandler}
                   >
                     Post
@@ -82,7 +85,7 @@ const YourAnswer = ({ fetchData, setAnswers }) => {
           </section>
         </div>
       </div>
-      <div className="go-to-top">
+      <div className={styles.goToTop}>
         <a href="./detailsPage">
           <i className="fa-solid fa-circle-arrow-up" />
         </a>

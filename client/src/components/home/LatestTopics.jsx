@@ -1,6 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import styles from './LatestTopics.module.css';
+
+
 
 const LatestTopics = () => {
   const [latestTopics, setLatestTopics] = useState([]);
@@ -20,28 +23,28 @@ const LatestTopics = () => {
   }, []); // Empty dependency array to fetch topics only once
 
   return (
-    <div className="section-site-main">
-      <div className="container">
-        <div className="topics-heading">
-          <h1 className="latest-topics">Latest Topics</h1>
+    <div className={styles.sectionSiteMain}>
+      <div className={styles.container}>
+        <div className={styles.topicsHeading}>
+          <h1 className={styles.latestTopics}>Latest Topics</h1>
         </div>
-        <div className="section-articles">
+        <div className={styles.sectionArticles}>
           {latestTopics.map((topic, index) => (
-            <div className="section-article" key={index}>
-              <section className="article">
-                <div className="article-content">
-                  <h2 className="article-heading">{topic.topic.heading}</h2>
-                  <p className="text-area">{topic.topic.question}</p>
+            <div className={styles.sectionArticle} key={index}>
+              <section className={styles.article}>
+                <div className={styles.articleContent}>
+                  <h2 className={styles.articleHeading}>{topic.topic.heading}</h2>
+                  <p className={styles.textArea}>{topic.topic.question}</p>
                 </div>
               </section>
-              <section className="article-info">
-                <div className="author">
-                  <p className="author-name">Creator: {topic.topic.username}</p>
+              <section className={styles.articleInfo}>
+                <div className={styles.author}>
+                  <p className={styles.authorName}>Creator: {topic.topic.username}</p>
                 </div>
-                <p className="article-created">{topic.topic.createdAt}</p>
-                <div className="article-comments">
-                  <p className="comments">Likes: {topic.topic.likes}</p>
-                  <p className="read-more">
+                <p className={styles.articleCreated}>{topic.topic.createdAt}</p>
+                <div className={styles.articleComments}>
+                  <p className={styles.comments}>Likes: {topic.topic.likes}</p>
+                  <p className={styles.readMore}>
                     <Link to={`/latestTopics/${topic._id}`}>
                       Read more <i className="fa-solid fa-square-arrow-up-right" />
                     </Link>

@@ -1,17 +1,17 @@
 import { Link } from 'react-router-dom';
-
+import styles from './Header.module.css';
 const Header = () => {
     return(
         <div className="section-site-header-wrapper">
-            <div className="section-site-header">
-                <div className="site-logo">
-                    <p className="media">
+            <div className={styles.sectionSiteHeader}>
+                <div className={styles.siteLogo}>
+                    <p className={styles.media}>
                         <Link to="./latestTopics"><img src="/assets/LipsLogo.png" alt=""/></Link>
                     </p>
                 </div>
 
-                <div className="section-main-nav">
-                    <nav className="main-nav">
+                <div className={styles.sectionMainNav}>
+                    <nav className={styles.mainNav}>
                         <ul>
                             <li><Link to="./latestTopics">Home</Link></li>
                             <li><Link to="./allTopics">All Topics</Link></li>
@@ -28,16 +28,16 @@ const Header = () => {
 
             </div>
 
-            <div className="site-message">
-                <p className="slogan">Developer's daily<span className="green-text"><strong> topics </strong></span>forum</p>
-                <div className="site-search">
-                    <form action="#" className="search">
-                        <p className="input-field">
+            <div className={styles.siteMessage}>
+                <p className={styles.slogan}>Developer's daily<span className={styles.greenText}><strong> topics </strong></span>forum</p>
+                <div className={styles.siteSearch}>
+                    <form action="#" className={styles.search}>
+                        <p className={styles.inputField}>
                             <i className="fa-solid fa-magnifying-glass"></i>
                             <input type="text" placeholder="Search"/>
                         </p>
                     </form>
-                    <button className="search-button">Search</button>
+                    <button className={styles.searchButton}>Search</button>
                 </div>
             </div>
         </div>

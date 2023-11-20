@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import styles from './TopicItem.module.css';
+
 
 const TopicItem = ({
     _id,
@@ -11,21 +13,21 @@ const TopicItem = ({
     // console.log('_id:', _id);
     // console.log('heading:', heading);
     return(
-            <div className="section-article" >
-              <section className="article">
-                <div className="article-content">
-                  <h2 className="article-heading">{heading}</h2>
-                  <p className="text-area">{question}</p>
+            <div className={styles.sectionArticle} >
+              <section className={styles.article}>
+                <div className={styles.articleContent}>
+                  <h2 className={styles.articleHeading}>{heading}</h2>
+                  <p className={styles.textArea}>{question}</p>
                 </div>
               </section>
-              <section className="article-info">
-                <div className="author">
-                  <p className="author-name">Creator: {author}</p>
+              <section className={styles.articleInfo}>
+                <div className={styles.author}>
+                  <p className={styles.authorName}>Creator: {author}</p>
                 </div>
-                <p className="article-created">{createdAt}</p>
-                <div className="article-comments">
-                  <p className="comments">Likes: {likes}</p>
-                  <p className="read-more">
+                <p className={styles.articleCreated}>{createdAt}</p>
+                <div className={styles.articleComments}>
+                  <p className={styles.comments}>Likes: {likes}</p>
+                  <p className={styles.readMore}>
                     <Link to={`/latestTopics/${_id}`}>
                       Read more <i className="fa-solid fa-square-arrow-up-right" />
                     </Link>

@@ -29,7 +29,7 @@ body {
     align-items: center;
 }
 
-.heading-likes {
+.headingLikes {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -45,7 +45,7 @@ body {
     border-radius: 50%;
 }
 
-.likes-count {
+.likesCount {
     padding: 0.2em;
     font-size: 1.3em;
     font-weight: bold;
@@ -55,7 +55,7 @@ body {
 /* Main Part */
 
 /* First child, AUTHOR Part*/
-.details .section-article:first-child {
+.details .sectionArticle:first-child {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -71,7 +71,7 @@ body {
 }
 /* End First child, AUTHOR Part*/
 
-.section-article {
+.sectionArticle {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -85,33 +85,33 @@ body {
     border-top: 4px solid #00b894;
 }
 
-.article .article-heading {
+.article .articleHeading {
     color: #00b894;
     margin-bottom: 0.2em;
 }
 
-.article-info {
+.articleInfo {
     margin-top: 0.5em;
     padding-top: 0.5em;
     border-top: 1px solid #9f9e9e;
     color: #fcf3e7;
 }
 
-.article-info .article-created {
+.articleInfo .articleCreated {
     margin-bottom: 0.3em;
     margin-top: 0.3em;
 
 }
 
-.article-info .author .author-name,
-.article-info .article-created,
-.article-info .article-comments .comments {
+.articleInfo .author .authorName,
+.articleInfo .articleCreated,
+.articleInfo .article-comments .comments {
     font-size: 0.9em;
     font-family: 'PT Sans', serif;
 }
 
-.article-info .article-created,
-.article-info .article-comments {
+.articleInfo .articleCreated,
+.articleInfo .article-comments {
     color: #9f9e9e;
 }
 
@@ -128,19 +128,19 @@ body {
     align-items: center;
 }
 
-.details .section-article .article .author-question {
+.details .sectionArticle .article .authorQuestion {
     width: 70em;
 }
 
-.details .answers-section .article .answer-area {
+.details .answersSection .article .answerArea {
     width: 60em;
 }
 
-.details .answers-section .article .text-area {
+.details .answersSection .article .textArea {
     width: 60em;
 }
 
-.details .section-article {
+.details .sectionArticle {
     margin-bottom: 1em;
 }
 
@@ -150,41 +150,41 @@ body {
     align-items: center;
 }
 
-.likes-delete {
+.likesDelete {
     margin-top: 0.2em;
 }
 
-.likes-delete i {
+.likesDelete i {
     font-size: 1.2em;
     color: #fcf3e7;
     margin-left: 0.5em;
 }
 
-.likes-delete .likes i:hover {
+.likesDelete .likes i:hover {
     font-size: 1.2em;
     color: #00b894;
     margin-left: 0.5em;
 }
 
-.likes-delete .edit i:hover {
+.likesDelete .edit i:hover {
     font-size: 1.2em;
     color: #00b894;
     margin-left: 0.5em;
 }
 
-.likes-delete .delete i:hover {
+.likesDelete .delete i:hover {
     font-size: 1.2em;
     color: #eb3b5a;
     margin-left: 0.5em;
 }
 
-.left-info .author .author-name {
+.leftInfo .author .authorName {
     font-size: 1.5em;
 }
 /* End Main Part */
 
 /* Go Top*/
-.go-to-top {
+.goToTop {
     display: flex;
     justify-content: center;
     margin-top: 1em;
@@ -192,12 +192,12 @@ body {
 
 }
 
-.go-to-top i {
+.goToTop i {
     font-size: 1.5em;
     padding: 0.2em 0em;
 }
 
-.go-to-top a {
+.goToTop a {
     padding: 0.5em 3em;
     border-radius: 5px;
     text-decoration: none;
@@ -209,7 +209,7 @@ body {
     border-top: 2px solid #00b894;
 }
 
-.go-to-top a:hover {
+.goToTop a:hover {
     padding: 0.5em 3em;
     border-radius: 5px;
     border: none;
@@ -232,11 +232,11 @@ body {
 }
 
 /*2.11.*/
-.your-answer {
+.yourAnswer {
     border-bottom: 1px solid #9f9e9e;
 }
 
-.answers-section textarea {
+.answersSection textarea {
     resize: vertical;
     padding: 1em;
     color: #313030;
@@ -246,12 +246,12 @@ body {
     width: 100%;
 }
 
-.post-button-container {
+.postButtonContainer {
     display: flex;
     justify-content: center;
 }
 
-.new-post-button {
+.newPostButton {
     padding: 0.5em 2em;
     border-radius: 5px;
     border: none;
@@ -263,7 +263,7 @@ body {
     margin-top: 0.2em;
 }
 
-.new-post-button:hover {
+.newPostButton:hover {
     padding: 0.5em 2em;
     border-radius: 5px;
     border: none;
@@ -274,3 +274,43 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
+
+/* Go Top*/
+.goToTop {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+}
+
+.goToTop i {
+    font-size: 1.5em;
+    padding: 0.2em 0em;
+}
+
+.goToTop a {
+    padding: 0.5em 3em;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    color: #9f9e9e;
+    background-color: #313030;
+    font-weight: bold;
+    border-bottom: 2px solid #00b894;
+    border-top: 2px solid #00b894;
+}
+
+.goToTop a:hover {
+    padding: 0.5em 3em;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    color: #00b894;
+    background-color: #313030;
+    border-bottom: 2px solid #00b894;
+    border-top: 2px solid #00b894;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* End Go Top */

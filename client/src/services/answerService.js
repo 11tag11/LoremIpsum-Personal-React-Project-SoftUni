@@ -29,7 +29,7 @@ export const createAnswer = async (topicId, answer) => {
   // console.log("Answer is created:", result);
   return result;
 };
-
+// todo: check this question mark in url
 export const getAnswersForTopic = async (topicId) => {
   const response = await fetch(`${baseUrl}/answers?topicId=${topicId}`);
   const result = await response.json();

@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import * as topicService from '../../services/topicService';
 import TopicItem from './topicItem/topicItem';
+import styles from './AllTopics.module.css';
+
 
 const AllTopics = () => {
   const [topics, setTopics] = useState([]);
@@ -21,12 +23,12 @@ const AllTopics = () => {
   }, []);
 
   return (
-    <div className="section-site-main">
-      <div className="container all-topics">
-        <div className="topics-heading">
-          <h1 className="latest-topics">All Topics</h1>
+    <div className={styles.sectionSiteMain}>
+      <div className={`${styles.container} ${styles.allTopics}`}>
+        <div className={styles.topicsHeading}>
+          <h1 className={styles.latestTopics}>All Topics</h1>
         </div>
-        <div className="section-articles all-articles">
+        <div className={`${styles.sectionArticles} ${styles.allArticles}`}>
 
           {topics.map((topic) => {
             // console.log('Topic ID:', topic._id); 
@@ -46,7 +48,7 @@ const AllTopics = () => {
           {topics.length === 0 && <h3 className='no-topics'>There is no topics yet.</h3>}
         </div>
 
-        <div className="go-to-top">
+        <div className={styles.goToTop}>
           {/* correction here, it adds allTopics again... */}
           <Link to="./allTopics"><i className="fa-solid fa-circle-arrow-up"></i></Link>
         </div>
