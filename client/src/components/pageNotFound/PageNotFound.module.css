@@ -19,17 +19,17 @@ body {
     background-color: #fcf3e7;
 }
 
-.container {
+.containerProfile {
     max-width: 1600px;
     margin: 0 auto;
 }
 
-.section-site-main {
+.sectionSiteMain {
     display: flex;
-    /* margin-bottom: 2em; */
+    margin-bottom: 2em;
 }
 
-.section-article-not-found {
+.sectionArticleNotFound {
     display: flex;
     max-width: 30em;
     justify-content: space-between;
@@ -46,7 +46,7 @@ body {
     border-top: 4px solid #00b894;
 }
 
-.not-found {
+.notFound {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,16 +55,16 @@ body {
 }
 
 .green-text,
-.not-found p {
+.notFound p {
     color: #00b894;
 }
 
-.text-not-found {
+.textNotFound {
     font-size: 2em;
     font-weight: bold;
 }
 
-.four-zero-four {
+.fourZeroFour {
     font-size: 10em;
     /* letter-spacing: 0.2em; */
 }

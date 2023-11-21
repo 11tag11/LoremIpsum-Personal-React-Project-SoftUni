@@ -42,15 +42,19 @@ body {
     justify-content: space-between;
 }
 
-.container {
+/* .container {
     max-width: 1600px;
     margin: 0 auto;
-}
+} */
 
+/* Nav */
 .section-site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.section-site-header {
     background-color: #00b894;
 }
 
@@ -91,11 +95,9 @@ body {
     border: 2px solid #fcf3e7;
     border-radius: 5px;
 }
+/* End Nav */
 
-.section-site-main {
-    display: flex;
-}
-
+/* Site Message*/
 .site-message {
     display: flex;
     flex-direction: column;
@@ -114,57 +116,120 @@ body {
     margin-top: 1em;
     margin-bottom: 1em;
 }
+/* End Site Message*/
 
-.green-text {
-    color: #00b894;
-}
-
-.all-rights .green-text {
-    margin-right: 0.3em;
-}
-
-/* Search */
-.site-message .site-search {
+.section-site-main {
     display: flex;
+}
+
+/* Register form */
+.registerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 1em;
     background-color: #fcf3e7;
     padding: 0.5em 1em;
     border-radius: 5px;
 }
 
-.site-search .input-field {
-    display: flex;
-    align-items: center;
-}
-
-.input-field i {
-    margin-right: 1em;
+.registerForm .registerHeading {
     color: #313030;
+    font-size: 2em;
 }
 
-.input-field input {
-    padding: 0.5em 0.7em;
+.registerForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    background-color: #313030;
+    color: #fcf3e7;
+    padding: 1.8em 1.3em;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 0px rgba(49, 49, 48, 0.75);
+    margin-bottom: 4em;
+    border-bottom: 4px solid #00b894;
+    border-top: 4px solid #00b894;
+}
+
+.registerForm form input {
+    padding: 0.8em 0.7em;
     border-radius: 5px;
     border: none;
     border: 1px solid #b4b4b4;
-    min-width: 50ch;
+    /* width: 100%; */
+    min-width: 40ch;
 }
 
-.search-button {
-    padding: 0.5em 1em;
+.registerButtonContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.registerForm .registerButton {
+    padding: 0.5em 2em;
     border-radius: 5px;
     border: none;
     color: #fcf3e7;
     background-color: #313030;
+    border-top: 2px solid #00b894;
+    border-bottom: 2px solid #00b894;
     font-weight: bold;
 }
 
-.search-button:hover {
-    padding: 0.5em 1em;
+.registerForm .registerButton:hover {
+    padding: 0.5em 2em;
     border-radius: 5px;
     border: none;
     color: #00b894;
+    background-color: #3b3b3b;
+    border-top: 2px solid #00b894;
+    border-bottom: 2px solid #00b894;
     font-weight: bold;
     cursor: pointer;
 }
-/* End Search */
+/* End Register form */
+
+/* Footer */
+/* .footer-wrapper {
+    display: block;
+}
+
+.footer-wrapper .site-footer .all-rights {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    background-color: #313030;
+    color: #fff;
+}
+
+.footer-wrapper .socials {
+    display: flex;
+    justify-content: center;
+    padding: 0.5em;
+    background-color: #00b894;
+    color: #313030;
+}
+
+.footer-wrapper .socials .social-links i {
+    color: #313030;
+    font-size: 2em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+
+.footer-wrapper .socials .social-links i:hover {
+    color: #7cdac7;
+    font-size: 2em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+} */
+/* End Footer */
+
+/* .green-text {
+    color: #00b894;
+}
+
+.all-rights .green-text {
+    margin-right: 0.3em;
+} */

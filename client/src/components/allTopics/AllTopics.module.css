@@ -168,7 +168,7 @@ body {
     padding: 0.8em 1.3em;
     border-radius: 10px;
     box-shadow: 3px 3px 5px 0px rgba(49, 49, 48, 0.75);
-    margin-bottom: 4em;
+    /* margin-bottom: 4em; */
     border-bottom: 4px solid #00b894;
     border-top: 4px solid #00b894;
 }

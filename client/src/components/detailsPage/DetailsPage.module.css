@@ -130,6 +130,12 @@ body {
 
 .details .sectionArticle .article .authorQuestion {
     width: 70em;
+    overflow: hidden;
+    word-break: break-all;
+    /* white-space: nowrap; */
+    text-overflow: ellipsis;
+    max-width: 70em;
+    max-height: 10ch;
 }
 
 .details .answers-section .article .answer-area {
@@ -138,6 +144,7 @@ body {
 
 .details .answers-section .article .textArea {
     width: 60em;
+    
 }
 
 .details .sectionArticle {

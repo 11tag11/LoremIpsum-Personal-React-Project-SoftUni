@@ -175,6 +175,7 @@ body {
     color: #313030;
     font-size: 1.2em;
     letter-spacing: 0.2em;
+    margin-top: -1.5em;
 }
 
 .allTopics .latestTopics {
@@ -212,6 +213,15 @@ body {
 .article .articleHeading {
     color: #00b894;
     margin-bottom: 0.2em;
+}
+
+.textArea {
+overflow: hidden;
+word-break: break-all;
+  /* white-space: nowrap; */
+  text-overflow: ellipsis;
+  max-width: 400px;
+  max-height: 10ch;
 }
 
 .articleInfo {

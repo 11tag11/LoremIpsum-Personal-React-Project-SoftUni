@@ -11,8 +11,6 @@ html {
     font: 16px/1.4 'Helvetica';
 }
 
-
-
 body {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
@@ -20,39 +18,41 @@ body {
     background-color: #fcf3e7;
 }
 
-
-
 .container {
     max-width: 1600px;
     margin: 0 auto;
 }
 
-
-
-.green-text {
-    color: #00b894;
-}
-
-.all-rights .green-text {
-    margin-right: 0.3em;
-}
-
-.new-post-heading {
+.section-site-main {
     display: flex;
-    justify-content: center;
-    color: #313030;
-    font-size: 1.2em;
-    letter-spacing: 0.2em;
-    margin: 0.5em;
+    margin-bottom: 2em;
 }
 
-.section-article {
+/* Login form */
+.loginForm {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    background-color: #fcf3e7;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    margin-bottom: 6em;
+}
+
+.loginForm .loginHeading {
+    color: #313030;
+    font-size: 2em;
+    margin-top: -1.5em;
+}
+
+.loginForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
     background-color: #313030;
     color: #fcf3e7;
-    padding: 0.8em 1.3em;
+    padding: 1.8em 1.3em;
     border-radius: 10px;
     box-shadow: 3px 3px 5px 0px rgba(49, 49, 48, 0.75);
     margin-bottom: 4em;
@@ -60,57 +60,42 @@ body {
     border-top: 4px solid #00b894;
 }
 
-.create .section-article {
-    min-width: 60em;
-}
-
-.create-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2em;
-    padding: 1.5em 1em;
-    border-radius: 5px;
-}
-
-.create-form textarea {
-    resize: vertical;
-}
-
-.create-form  input,
-.create-form  textarea {
-    padding: 0.7em;
+.loginForm form input {
+    padding: 0.8em 0.7em;
     border-radius: 5px;
     border: none;
+    border: 1px solid #b4b4b4;
+    min-width: 40ch;
 }
 
-.post-button-container {
+.loginButtonContainer {
     display: flex;
     justify-content: center;
 }
 
-.new-post-button {
+.loginForm .loginButton {
     padding: 0.5em 2em;
     border-radius: 5px;
     border: none;
     color: #fcf3e7;
-    background-color: #353534;
+    background-color: #313030;
     font-weight: bold;
     border-bottom: 2px solid #00b894;
     border-top: 2px solid #00b894;
-    margin-top: 0.2em;
 }
 
-.new-post-button:hover {
+.loginForm .loginButton:hover {
     padding: 0.5em 2em;
     border-radius: 5px;
     border: none;
     color: #00b894;
-    background-color: #313030;
+    background-color: #3b3b3b;
     border-bottom: 2px solid #00b894;
     border-top: 2px solid #00b894;
     font-weight: bold;
     cursor: pointer;
 }
+/* End Login form */
+
 
 

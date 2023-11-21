@@ -1,4 +1,3 @@
-// 07.11. Successful :)
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
@@ -15,34 +14,14 @@ import DetailsPage from './components/detailsPage/DetailsPage';
 import Profile from './components/profile/Profile';
 import PageNotFound from './components/pageNotFound/PageNotFound';
 
-// import './components/styles.css';
 import styles from './components/styles.module.css';
-
-// import './components/header/header.css';
-
-// import './components/home/latestTopics.css';
-
-import './components/auth/login.css';
-import './components/auth/register.css';
-
-// import './components/allTopics/allTopics.css';
-
-import './components/createTopic/createTopic.css';
-
-// import './components/detailsPage/detailsPage.css';
-
-// import './components/detailsPage/detailsPageAnswers.css';
-
-import './components/profile/profile.css';
-import './components/pageNotFound/pageNotFound.css';
-
-
 
 function App() {
   return (
     <div>
       <div className={styles.siteWrapper}>
         <Header />
+
         <Routes>
           <Route path="/latestTopics" element={<LatestTopics />} />
           <Route path='/allTopics' element={<AllTopics />} />
@@ -54,8 +33,6 @@ function App() {
           <Route path='/latestTopics/:topicId' element={<DetailsPage />} />
           <Route path='*' element={<PageNotFound />} />
         </Routes>
-        
-        
         
         <Footer />
       </div>

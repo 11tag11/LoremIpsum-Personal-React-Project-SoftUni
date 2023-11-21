@@ -83,6 +83,7 @@ body {
     margin-bottom: 4em;
     border-bottom: 4px solid #00b894;
     border-top: 4px solid #00b894;
+    max-width: 65em;
 }
 
 .article .articleHeading {
@@ -133,7 +134,16 @@ body {
 }
 
 .details .answersSection .article .answerArea {
+    width: 65em;
+}
+
+.textArea {
+    overflow: hidden;
+    word-break: break-all;
+    /* white-space: nowrap; */
+    text-overflow: ellipsis;
     width: 60em;
+    max-height: 10ch;
 }
 
 .details .answersSection .article .textArea {
@@ -243,7 +253,7 @@ body {
     background-color: #fcf3e7;
     border-radius: 0.5em;
     margin: 1em 0em;
-    width: 100%;
+    
 }
 
 .post-button-container {

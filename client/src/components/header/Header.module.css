@@ -68,7 +68,7 @@ body {
     display: block;
 }
 
-.sectionmainNav {
+.sectionMainNav {
     margin-right: 3em;
 }
 
@@ -111,7 +111,7 @@ body {
     text-transform: uppercase;
     color: #fcf3e7;
     letter-spacing: 0.5em;
-    margin-top: 1em;
+    margin-top: 0.5em;
     margin-bottom: 1em;
 }
 
@@ -130,6 +130,7 @@ body {
     background-color: #fcf3e7;
     padding: 0.5em 1em;
     border-radius: 5px;
+    margin-bottom: 0.5em;
 }
 
 .siteSearch.inputField {
