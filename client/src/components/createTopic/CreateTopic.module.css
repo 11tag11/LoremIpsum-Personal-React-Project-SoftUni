@@ -107,4 +107,7 @@ body {
     cursor: pointer;
 }
 
-
+.specific {
+    font-size: 0.8em;
+    margin-bottom: -2em;
+}

@@ -54,6 +54,7 @@ const CreateTopic = () => {
                         <section className="new-topic-form">
 
                             <form className={styles.createForm} action="#" method="">
+                                <p className={styles.specific}>Be specific and imagine you’re asking a question to another person, e.g. What are React Hooks good for?</p>
                                 <input
                                     type="text"
                                     id="heading"
