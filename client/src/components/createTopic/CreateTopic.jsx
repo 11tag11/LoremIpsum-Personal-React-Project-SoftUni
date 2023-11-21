@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as topicService from '../../services/topicService';
+import styles from './CreateTopic.module.css';
 
 const CreateTopic = () => {
 
@@ -44,15 +45,15 @@ const CreateTopic = () => {
 
     return (
         <div className="section-site-main">
-            <div className="container create">
-                <div className="new-post-heading">
-                    <h1 className="new-heading">New Topic</h1>
+            <div className={styles.containerCreate}>
+                <div className={styles.newPostHeading}>
+                    <h1 className={styles.newHeading}>New Topic</h1>
                 </div>
-                <div className="section-articles">
-                    <div className="section-article">
+                <div className={styles.sectionArticles}>
+                    <div className={styles.sectionArticle}>
                         <section className="new-topic-form">
 
-                            <form className="create-form" action="#" method="">
+                            <form className={styles.createForm} action="#" method="">
                                 <input
                                     type="text"
                                     id="heading"
@@ -70,10 +71,10 @@ const CreateTopic = () => {
                                     rows={10}
                                     placeholder="Topic"
                                 />
-                                <div className="post-button-container">
+                                <div className={styles.postButtonContainer}>
                                     <button
                                         type="button"
-                                        className="new-post-button"
+                                        className={styles.newPostButton}
                                         onClick={submitHandler}>Post</button>
                                 </div>
                             </form>

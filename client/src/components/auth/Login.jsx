@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import * as userService from '../../services/userService';
 import { useNavigate } from "react-router-dom";
+import styles from './Login.module.css';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -38,9 +39,9 @@ const Login = () => {
     };
 
     return (
-        <div className="container">
-            <section className="login-form">
-                <h1 className="login-heading">Log In</h1>
+        <div className={styles.container}>
+            <section className={styles.loginForm}>
+                <h1 className={styles.loginHeading}>Log In</h1>
                 <form action="#" method="">
                     <input
                         type="email"
@@ -59,10 +60,10 @@ const Login = () => {
                         name="password"
                         placeholder="password" />
 
-                    <div className="login-button-container">
+                    <div className={styles.loginButtonContainer}>
                         <button
                             type="button"
-                            className="login-button"
+                            className={styles.loginButton}
                             onClick={submitHandler}>Log In</button>
                     </div>
                 </form>

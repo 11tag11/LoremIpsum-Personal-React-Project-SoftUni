@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import * as userService from '../../services/userService';
 import { useNavigate } from "react-router-dom";
+import styles from './Register.module.css';
 
 const Register = () => {
     const [username, setUsername] = useState('');
@@ -51,9 +52,9 @@ const Register = () => {
     };
 
     return (
-        <div className="container">
-            <section className="register-form">
-                <h1 className="register-heading">Sign Up</h1>
+        <div className={styles.container}>
+            <section className={styles.registerForm}>
+                <h1 className={styles.registerHeading}>Sign Up</h1>
                 <form action="#" method="">
                     <input 
                     type="text" 
@@ -87,10 +88,10 @@ const Register = () => {
                     name="confirm-password" 
                     placeholder="confirm password" />
 
-                    <div className="register-button-container">
+                    <div className={styles.registerButtonContainer}>
                         <button 
                         type="button" 
-                        className="register-button"
+                        className={styles.registerButton}
                         onClick={submitHandler}>Sign Up</button>
                     </div>
                 </form>

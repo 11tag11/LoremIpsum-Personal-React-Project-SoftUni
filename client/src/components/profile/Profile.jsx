@@ -1,23 +1,23 @@
 import React from 'react';
-
+import styles from './Profile.module.css';
 
 const Profile = () => {
     return (
 
-        <div className="section-site-main">
-            <div className="container profile">
-                <div className="user-heading">
-                    <h1 className="heading">User profile</h1>
+        <div className={styles.sectionSiteMain}>
+            <div className={styles.containerProfile}>
+                <div className={styles.userHeading}>
+                    <h1 className={styles.heading}>User profile</h1>
                 </div>
-                <div className="section-article-profile">
-                    <div className="profile-media">
+                <div className={styles.sectionArticleProfile}>
+                    <div className={styles.profileMedia}>
                         <img src="./assets/user_img.jpg" alt="user" />
                     </div>
-                    <section className="user-info">
-                        <p className="email">Email: blep@abv.bg.com</p>
-                        <p className="username">username: Gargamell</p>
-                        <p className="created-topics">Created topics: 11</p>
-                        <p className="comments">Comments: 11</p>
+                    <section className={styles.userInfo}>
+                        <p className={styles.email}>Email: blep@abv.bg.com</p>
+                        <p className={styles.username}>username: Gargamell</p>
+                        <p className={styles.createdTopics}>Created topics: 11</p>
+                        <p className={styles.comments}>Comments: 11</p>
                     </section>
                 </div>
             </div>
