@@ -1,6 +1,6 @@
 import { formatDate } from "../utils/dateUtils";
 
-const baseUrl = "http://localhost:3030/jsonstore";
+const baseUrl = "http://localhost:3030/jsonstore"; //here data/jsonstore
 
 export const createAnswer = async (topicId, answer) => {
   const currentDate = new Date();

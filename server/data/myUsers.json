@@ -6,10 +6,12 @@
     "email": "gushter@mail.bg",
     "createdAt": "2023-11-09T11:41:26.370Z",
     "updatedAt": "2023-11-09T11:41:26.370Z",
-    "questions": [
+    "createdTopics": [
       
     ],
-    "likes": 0,
+    "answers": [
+      
+    ],
     "_id": "c3e2648b-e024-4d31-9164-a01ca32cf82e"
   },
   "bef3b0fa-208b-402e-b92b-4c4596b114a7": {
@@ -18,7 +20,7 @@
     "email": "george@gmail.com",
     "createdAt": "2023-11-09T11:44:21.865Z",
     "updatedAt": "2023-11-09T11:44:21.865Z",
-    "questions": [
+    "createdTopics": [
       {
       "554ac950-c7b0-465e-8cc3-bd6a5fdda6c2": {
         "topic": {
@@ -34,7 +36,9 @@
       }
     }
   ],
-    "likes": 0,
+  "answers": [
+      
+  ],
     "_id": "bef3b0fa-208b-402e-b92b-4c4596b114a7"
   },
   "08a11580-8ffc-4b42-896d-fdd50a63a1cb": {
@@ -43,10 +47,12 @@
     "password": "123123",
     "createdAt": "2023-11-13T13:58:07.679Z",
     "updatedAt": "2023-11-13T13:58:07.679Z",
-    "questions": [
+    "createdTopics": [
       
     ],
-    "likes": 0,
+    "answers": [
+      
+    ],
     "_id": "08a11580-8ffc-4b42-896d-fdd50a63a1cb"
   }
 }

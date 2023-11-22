@@ -1339,7 +1339,133 @@
     	sessions: {
     	}
     };
-    var seedData = {};
+    var seedData = {
+        // latestTopics: {
+        //     "2f24f34b-28a7-41c2-a46e-2608165f4786": {
+        //       "topic": {
+        //         "heading": "What is the MERN Stack?",
+        //         "question": "The MERN stack is a web development framework made up of the stack of MongoDB, Express.js, React.js, and Nodejs.",
+        //         "createdAt": "2023-11-09T11:51:01.725Z",
+        //         "updatedAt": "2023-11-09T11:51:01.725Z",
+        //         "author": "GeorgeIvanov11",
+        //         "answers": [],
+        //         "likes": 0,
+        //         "userId": "c3e2648b-e024-4d31-9164-a01ca32cf82e"
+        //       },
+        //       "_id": "2f24f34b-28a7-41c2-a46e-2608165f4786"
+        //     },
+        //     "f602d683-8451-4a48-9d33-a39478746498": {
+        //       "topic": {
+        //         "heading": "What is IoT in simple words?",
+        //         "question": "What is the Internet of Things (IoT)? The term IoT, or Internet of Things, refers to the collective network of connected devices and the technology that facilitates communication between devices and the cloud, as well as between the devices themselves.",
+        //         "createdAt": "2023-11-09T11:55:52.824Z",
+        //         "updatedAt": "2023-11-09T11:55:52.824Z",
+        //         "author": "GeorgeIvanov11",
+        //         "answers": [],
+        //         "likes": 0,
+        //         "userId": "c3e2648b-e024-4d31-9164-a01ca32cf82e"
+        //       },
+        //       "_id": "f602d683-8451-4a48-9d33-a39478746498"
+        //     },
+        //     "a5847ba1-844c-4270-a250-7a2e682625f5": {
+        //       "topic": {
+        //         "heading": "HTML & CSS question?",
+        //         "question": "How to get rid of the default paddings of headings H1-H6?",
+        //         "createdAt": "2023-11-09T11:57:00.944Z",
+        //         "updatedAt": "2023-11-09T11:57:00.944Z",
+        //         "author": "GeorgeIvanov11",
+        //         "answers": [],
+        //         "likes": 0,
+        //         "userId": "c3e2648b-e024-4d31-9164-a01ca32cf82e"
+        //       },
+        //       "_id": "a5847ba1-844c-4270-a250-7a2e682625f5"
+        //     },
+        //     "eead099e-ca49-4d76-8ffe-874cb55f9513": {
+        //       "topic": {
+        //         "heading": "Is it popular to use JS in IoT?",
+        //         "question": "Tomfoolery crikey bits and bobs brilliant bamboozled. Tomfoolery crikey bits and bobs brilliant bamboozled. Tomfoolery crikey bits and bobs brilliant bamboozled. Tomfoolery crikey bits and bobs brilliant bamboozled. Tomfoolery crikey bits and bobs brilliant bamboozled. ",
+        //         "createdAt": "2023-11-09T11:58:09.309Z",
+        //         "updatedAt": "2023-11-09T11:58:09.309Z",
+        //         "author": "George",
+        //         "answers": [],
+        //         "likes": 0,
+        //         "userId": "bef3b0fa-208b-402e-b92b-4c4596b114a7"
+        //       },
+        //       "_id": "eead099e-ca49-4d76-8ffe-874cb55f9513"
+        //     },
+        //     "554ac950-c7b0-465e-8cc3-bd6a5fdda6c2": {
+        //       "topic": {
+        //         "heading": "Blob",
+        //         "question": "What is a blob?",
+        //         "createdAt": "2023-11-09T12:27:13.372Z",
+        //         "updatedAt": "2023-11-09T12:27:13.372Z",
+        //         "author": "George",
+        //         "answers": [],
+        //         "likes": 0,
+        //         "userId": "bef3b0fa-208b-402e-b92b-4c4596b114a7"
+        //       },
+        //       "_id": "554ac950-c7b0-465e-8cc3-bd6a5fdda6c2"
+        //     }
+        //   },
+        //   myUsers: 
+        //   {
+        //     "c3e2648b-e024-4d31-9164-a01ca32cf82e": {
+        //       "username": "GeorgeIvanov11",
+        //       "password": "123123",
+        //       "email": "gushter@mail.bg",
+        //       "createdAt": "2023-11-09T11:41:26.370Z",
+        //       "updatedAt": "2023-11-09T11:41:26.370Z",
+        //       "createdTopics": [
+                
+        //       ],
+        //       "answers": [
+                
+        //       ],
+        //       "_id": "c3e2648b-e024-4d31-9164-a01ca32cf82e"
+        //     },
+        //     "bef3b0fa-208b-402e-b92b-4c4596b114a7": {
+        //       "username": "George",
+        //       "password": "123123",
+        //       "email": "george@gmail.com",
+        //       "createdAt": "2023-11-09T11:44:21.865Z",
+        //       "updatedAt": "2023-11-09T11:44:21.865Z",
+        //       "createdTopics": [
+        //         {
+        //         "554ac950-c7b0-465e-8cc3-bd6a5fdda6c2": {
+        //           "topic": {
+        //             "heading": "Blob",
+        //             "question": "What is a blob?",
+        //             "createdAt": "2023-11-09T12:27:13.372Z",
+        //             "updatedAt": "2023-11-09T12:27:13.372Z",
+        //             "answers": [],
+        //             "likes": 0,
+        //             "userId": "bef3b0fa-208b-402e-b92b-4c4596b114a7"
+        //           },
+        //           "_id": "554ac950-c7b0-465e-8cc3-bd6a5fdda6c2"
+        //         }
+        //       }
+        //     ],
+        //     "answers": [
+                
+        //     ],
+        //       "_id": "bef3b0fa-208b-402e-b92b-4c4596b114a7"
+        //     },
+        //     "08a11580-8ffc-4b42-896d-fdd50a63a1cb": {
+        //       "username": "Patka",
+        //       "email": "patka@abv.bg",
+        //       "password": "123123",
+        //       "createdAt": "2023-11-13T13:58:07.679Z",
+        //       "updatedAt": "2023-11-13T13:58:07.679Z",
+        //       "createdTopics": [
+                
+        //       ],
+        //       "answers": [
+                
+        //       ],
+        //       "_id": "08a11580-8ffc-4b42-896d-fdd50a63a1cb"
+        //     }
+        //   }
+    };
     var rules$1 = {
     	users: {
     		".create": false,
