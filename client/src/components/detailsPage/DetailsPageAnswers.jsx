@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './DetailsPageAnswers.module.css';
+
 const DetailsPageAnswers = ({ answers, topicId }) => {
     // console.log('Answers in DetailsPageAnswers:', answers);
     // console.log(topicId);
@@ -8,7 +9,7 @@ const DetailsPageAnswers = ({ answers, topicId }) => {
     const filteredAnswers = Object.values(answers)
         .filter(answer => answer.topicId === topicId);
     return (
-        <div className={`${styles.details} ${styles.answersSection}`}> 
+        <div className={`${styles.details} ${styles.answersSection}`}>
             {filteredAnswers && Array.isArray(filteredAnswers) && filteredAnswers.length > 0 ? (
                 <>
                     {filteredAnswers.map((answer) => (

@@ -14,13 +14,18 @@ import DetailsPage from './components/detailsPage/DetailsPage';
 import Profile from './components/profile/Profile';
 import PageNotFound from './components/pageNotFound/PageNotFound';
 
+
+
 import styles from './components/styles.module.css';
+// import Loader from './components/shared/Loader';
 
 function App() {
   return (
     <div>
       <div className={styles.siteWrapper}>
         <Header />
+
+        {/* <Loader /> */}
 
         <Routes>
           <Route path="/latestTopics" element={<LatestTopics />} />

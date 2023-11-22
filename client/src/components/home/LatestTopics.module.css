@@ -265,6 +265,11 @@ word-break: break-all;
     font-weight: bold;
 }
 
+.noTopics {
+    margin: 0 auto;
+    color: #313030;
+}
+
 /* Footer */
 .footer-wrapper {
     display: block;

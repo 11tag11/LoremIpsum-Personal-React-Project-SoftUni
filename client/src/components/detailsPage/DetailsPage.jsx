@@ -7,7 +7,6 @@ import * as topicService from '../../services/topicService';
 import * as answerService from '../../services/answerService';
 import styles from './DetailsPage.module.css';
 
-
 const DetailsPage = () => {
   const [topic, setTopic] = useState({});
   const [answers, setAnswers] = useState([]);
@@ -15,19 +14,12 @@ const DetailsPage = () => {
   const { topicId } = useParams();
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const topicData = await topicService.getOne(topicId);
-        setTopic(topicData.topic);
+    topicService.getOne(topicId)
+      .then(result => setTopic(result.topic))
 
-        const answersData = await answerService.getAnswersForTopic(topicId);
-        setAnswers(answersData);
-      } catch (error) {
-        console.error('Error fetching topic and answers:', error);
-      }
-    };
-
-    fetchData();
+    answerService.getAnswersForTopic(topicId)
+      .then(result => setAnswers(result))
+      .catch(error => console.error('Error fetching topic and answers:', error))
   }, [topicId]);
 
   return (
@@ -67,7 +59,7 @@ const DetailsPage = () => {
       </div>
 
       {/* Passes answers to DetailsPageAnswers directly */}
-      <DetailsPageAnswers answers={answers} topicId={topicId}/>
+      <DetailsPageAnswers answers={answers} topicId={topicId} />
 
       <YourAnswer
         topicId={topicId}

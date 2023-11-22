@@ -22,8 +22,8 @@ const CreateTopic = () => {
         setQuestion(e.target.value);
     };
 
-
     const submitHandler = async (e) => {
+        e.preventDefault();
         // const userId = localStorage.getItem('userId');
         const topicData = {
             heading,
@@ -32,15 +32,11 @@ const CreateTopic = () => {
             // userId
         };
 
-        try {
-            await topicService.createTopic(topicData);
-            console.log('Post created', topicData);
-            resetNewPostForm();
-        } catch (error) {
+        topicService.createTopic(topicData)
+        .then(() => navigate('/allTopics'))
+        .catch (error => console.log('Post did not created!', error)) 
             // Here will be err notification later
-            console.log('Post did not created!', error);
-        }
-        navigate('/allTopics');
+        resetNewPostForm();
     };
 
     return (
@@ -86,8 +82,6 @@ const CreateTopic = () => {
         </div>
 
     );
-}
-
-
+};
 
 export default CreateTopic;

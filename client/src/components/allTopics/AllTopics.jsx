@@ -10,16 +10,9 @@ const AllTopics = () => {
   const [topics, setTopics] = useState([]);
 
   useEffect(() => {
-    const fetchTopics = async () => {
-      try {
-        const topicsArray = await topicService.getAll();
-        setTopics(topicsArray.reverse());
-      } catch (error) {
-        console.error('Error fetching topics:', error.message);
-      }
-    };
-
-    fetchTopics();
+    topicService.getAll()
+    .then(result => setTopics(result))    
+    .catch (error => console.error('Error fetching topics:', error.message)) 
   }, []);
 
   return (
@@ -45,7 +38,7 @@ const AllTopics = () => {
             );
           })}
 
-          {topics.length === 0 && <h3 className='no-topics'>There is no topics yet.</h3>}
+          {topics.length === 0 && <h3 className={styles.noTopics}>There is no topics yet.</h3>}
         </div>
 
         <div className={styles.goToTop}>

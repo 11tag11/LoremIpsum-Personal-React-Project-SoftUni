@@ -4,9 +4,9 @@ import * as topicService from '../../services/topicService';
 import * as answerService from '../../services/answerService';
 import styles from './YourAnswer.module.css';
 
-const YourAnswer = ({ fetchData, setAnswers }) => {
-  const [topic, setTopic] = useState({});
+const YourAnswer = ({ setAnswers }) => {
   const [answer, setAnswer] = useState('');
+
   const { topicId } = useParams();
 
   const resetAnswerForm = () => {
@@ -14,19 +14,13 @@ const YourAnswer = ({ fetchData, setAnswers }) => {
   };
 
   useEffect(() => {
-    const fetchDataAndAnswers = async () => {
-      try {
-        const topicData = await topicService.getOne(topicId);
-        setTopic(topicData.topic);
+    topicService.getOne(topicId)
+      .then(result => setAnswers(result))
+      .catch(error => console.error('Error fetching topic:', error));
 
-        const answersData = await answerService.getAnswersForTopic(topicId);
-        setAnswers(answersData);
-      } catch (error) {
-        console.error('Error fetching topic and answers:', error);
-      }
-    };
-
-    fetchDataAndAnswers();
+    answerService.getAnswersForTopic(topicId)
+      .then(result => setAnswers(result))
+      .catch(error => console.error('Error fetching answers:', error)); 
   }, [topicId, setAnswers]);
 
   const answerChangeHandler = (e) => {
@@ -36,19 +30,14 @@ const YourAnswer = ({ fetchData, setAnswers }) => {
   const addAnswerHandler = async (e) => {
     e.preventDefault();
 
-    try {
-      // Create the answer
-      await answerService.createAnswer(topicId, answer);
-
-      // Refresh the answers
-      const updatedAnswers = await answerService.getAnswersForTopic(topicId);
-      setAnswers(updatedAnswers);
-
+    answerService.createAnswer(topicId, answer)
+    .then(() => answerService.getAnswersForTopic(topicId))
+    .then(updatedAnswers => setAnswers(updatedAnswers))
+    .then(() => {
       console.log('Answer is created:', answer);
       resetAnswerForm();
-    } catch (error) {
-      console.error('Failed to add answer:', error);
-    }
+    })
+    .catch(error => console.error('Failed to add answer:', error));
   };
 
   return (

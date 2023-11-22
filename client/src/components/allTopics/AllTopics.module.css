@@ -277,9 +277,10 @@ body {
     cursor: pointer;
 }
 
-/* End 2nd part*/
-
-/* End Main part*/
+.noTopics {
+    margin: 0 auto;
+    color: #313030;
+}
 
 /* Footer */
 .footer-wrapper {

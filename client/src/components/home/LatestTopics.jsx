@@ -2,24 +2,22 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './LatestTopics.module.css';
+import * as topicService from '../../services/topicService';
 
+// import Loader from '../shared/Loader';
 
 
 const LatestTopics = () => {
   const [latestTopics, setLatestTopics] = useState([]);
+  // const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    // Fetch latest topics
-    fetch('http://localhost:3030/jsonstore/latestTopics')
-      .then((response) => response.json())
-      .then((data) => {
-        const topicsArray = Object.values(data);
-        const latestTopicsData = topicsArray.slice(-3).reverse();
-        setLatestTopics(latestTopicsData);
-      })
-      .catch((error) => {
-        console.error('Error fetching latest topics:', error);
-      });
+    // setIsLoading(true);
+    topicService.getLastThree()
+      .then(result => setLatestTopics(result))
+      .catch(error => console.log(error))
+    // .finally(() => setIsLoading(false));
+
   }, []); // Empty dependency array to fetch topics only once
 
   return (
@@ -29,6 +27,9 @@ const LatestTopics = () => {
           <h1 className={styles.latestTopics}>Latest Topics</h1>
         </div>
         <div className={styles.sectionArticles}>
+
+          {/* {isLoading && < Loader />} */}
+
           {latestTopics.map((topic, index) => (
             <div className={styles.sectionArticle} key={index}>
               <section className={styles.article}>
@@ -53,6 +54,9 @@ const LatestTopics = () => {
               </section>
             </div>
           ))}
+
+          {latestTopics.length === 0 && <h3 className={styles.noTopics}>There is no topics yet.</h3>}
+
         </div>
       </div>
     </div>

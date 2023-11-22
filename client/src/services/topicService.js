@@ -4,7 +4,7 @@ const baseUrl = 'http://localhost:3030/jsonstore';
 export const getAll = async () => {
   const response = await fetch(`${baseUrl}/latestTopics`);
   const result = await response.json();
-  return Object.values(result);
+  return Object.values(result).reverse();
 };
 
 export const getOne = async (topicId) => {
@@ -13,6 +13,14 @@ export const getOne = async (topicId) => {
 
   const result = await response.json();
   return result;
+};
+
+// 22.11. will be corrected later(query string)
+export const getLastThree = async () => {
+  const response = await fetch(`${baseUrl}/latestTopics`);
+  const result = await response.json();
+  const lastThree = Object.values(result).slice(-3).reverse();
+  return lastThree;
 };
 
 export const createTopic = async (topicData) => {
@@ -50,4 +58,8 @@ export const createTopic = async (topicData) => {
   return result;
 };
 
-
+// 22.11.
+export const remove = async (topicId) => {
+  const result = await fetch(`${baseUrl}/${topicId}`);
+  return result;
+};
