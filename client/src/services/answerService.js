@@ -1,37 +1,42 @@
 import { formatDate } from "../utils/dateUtils";
+import * as request from '../library/request';
 
-const baseUrl = "http://localhost:3030/jsonstore"; //here data/jsonstore
+const baseUrl = "http://localhost:3030/data/answers"; 
 
-export const createAnswer = async (topicId, answer) => {
+export const createAnswer = async (topicId, answer, auth, accessToken) => {
   const currentDate = new Date();
   const displayedDate = formatDate(currentDate);
 
+  if (!auth || !auth.accessToken) {
+    throw new Error("User not authenticated. Cannot create answer.");
+  }
+
   const body = {
     topicId,
-    createdAt: displayedDate,
-    updatedAt: displayedDate,
+    userId: auth._id,
+    username: auth.username,
+    _createdOn: displayedDate,
+    _updatedOn: displayedDate,
     answer,
   };
 
-  const response = await fetch(`${baseUrl}/answers`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(body),
-  });
-
-  if (!response.ok) {
-    throw new Error("Answer creation failed!");
-  }
-
-  const result = await response.json();
-  // console.log("Answer is created:", result);
+  const result = await request.post(baseUrl, body);
+  
   return result;
 };
-// todo: check this question mark in url
+
 export const getAnswersForTopic = async (topicId) => {
-  const response = await fetch(`${baseUrl}/answers?topicId=${topicId}`);
-  const result = await response.json();
-  return Object.values(result);
+  const result = await request.get(baseUrl);
+
+  // Filter answers based on the topicId
+  const filteredAnswers = Object.values(result)
+    .filter(answer => answer.topicId === topicId);
+
+  console.log('Filtered Answers for Topic:', filteredAnswers);
+  return filteredAnswers;
 };
+
+
+
+
+

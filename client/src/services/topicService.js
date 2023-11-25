@@ -1,65 +1,43 @@
 import { formatDate } from "../utils/dateUtils";
-const baseUrl = 'http://localhost:3030/jsonstore'; //here data/jsonstore
+import * as request from '../library/request';
+const baseUrl = 'http://localhost:3030/data/latestTopics'; 
 
 export const getAll = async () => {
-  const response = await fetch(`${baseUrl}/latestTopics`);
-  const result = await response.json();
-  return Object.values(result).reverse();
-};
+  const result = await request.get(baseUrl);
+
+  return Object.values(result);
+}
 
 export const getOne = async (topicId) => {
-  const response = await fetch(`${baseUrl}/latestTopics/${topicId}`);
-  // console.log('Server Response:', response);
+  // console.log(topicId);
+  const result = await request.get(`${baseUrl}/${topicId}`);
 
-  const result = await response.json();
   return result;
+}
+
+export const getLastThree = async () => {
+  const result = await request.get((baseUrl));
+  const data = result.slice(-3).reverse();
+  return data;
 };
 
-// 22.11. will be corrected later(query string)
-export const getLastThree = async () => {
-  const response = await fetch(`${baseUrl}/latestTopics`);
-  const result = await response.json();
-  const lastThree = Object.values(result).slice(-3).reverse();
-  return lastThree;
-};
+
 
 export const createTopic = async (topicData) => {
-  const currentDate = new Date(); 
-  const displayedDate = formatDate(currentDate);
+  const result = await request.post(baseUrl, topicData);
 
-  const topicObject = {
-    heading: topicData.heading,
-    question: topicData.question,
-    createdAt: displayedDate,
-    updatedAt: displayedDate,
-    likes: 0,  // Initialize the likes count to 0
-    answers: [],  // Initialize an empty array for answers,
-    _id: topicData._id,
-  };
-
-  const body = {
-    topic: topicObject,  // Wrap the topic data in a 'topic' obj
-  };
-
-  const response = await fetch(`${baseUrl}/latestTopics`, {
-    method: 'POST',
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(body),
-  });
-
-  if (!response.ok) {
-    throw new Error('Topic creation failed!');
-  }
-
-  const result = await response.json();
-  console.log('Topic is created:', result);
   return result;
 };
 
-// 22.11.
+
+
 export const remove = async (topicId) => {
-  const result = await fetch(`${baseUrl}/${topicId}`);
+  const result = await request.remove(`${baseUrl}/${topicId}`);
+
   return result;
 };
+
+export const getMyTopics = async (userId) => {
+  const result = await request.get(`${baseUrl}?where=_ownerId%3D%22${userId}%22&sortBy=_createdOn%20desc`);
+  return result;
+}
