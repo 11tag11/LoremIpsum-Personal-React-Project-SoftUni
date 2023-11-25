@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { formatDate } from '../../utils/dateUtils';
 import styles from './LatestTopics.module.css';
 import * as topicService from '../../services/topicService';
 
@@ -18,8 +19,7 @@ const LatestTopics = () => {
       .catch(error => console.log(error))
     // .finally(() => setIsLoading(false));
 
-  }, []); // Empty dependency array to fetch topics only once
-
+  }, []); 
   return (
     <div className={styles.sectionSiteMain}>
       <div className={styles.container}>
@@ -34,19 +34,19 @@ const LatestTopics = () => {
             <div className={styles.sectionArticle} key={index}>
               <section className={styles.article}>
                 <div className={styles.articleContent}>
-                  <h2 className={styles.articleHeading}>{topic.topic.heading}</h2>
-                  <p className={styles.textArea}>{topic.topic.question}</p>
+                  <h2 className={styles.articleHeading}>{topic.heading}</h2>
+                  <p className={styles.textArea}>{topic.question}</p>
                 </div>
               </section>
               <section className={styles.articleInfo}>
                 <div className={styles.author}>
-                  <p className={styles.authorName}>Creator: {topic.topic.username}</p>
+                  <p className={styles.authorName}>Creator: {topic.author}</p>
                 </div>
-                <p className={styles.articleCreated}>{topic.topic.createdAt}</p>
+                <p className={styles.articleCreated}>{formatDate(topic._createdOn)}</p>
                 <div className={styles.articleComments}>
-                  <p className={styles.comments}>Likes: {topic.topic.likes}</p>
+                  <p className={styles.comments}>Likes: {topic.likes}</p>
                   <p className={styles.readMore}>
-                    <Link to={`/latestTopics/${topic._id}`}>
+                    <Link to={`/details/${topic._id}`}>
                       Read more <i className="fa-solid fa-square-arrow-up-right" />
                     </Link>
                   </p>

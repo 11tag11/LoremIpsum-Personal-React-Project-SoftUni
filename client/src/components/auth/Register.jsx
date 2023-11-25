@@ -1,14 +1,21 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import * as userService from '../../services/userService';
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContext";
 import styles from './Register.module.css';
 
 const Register = () => {
+    const navigate = useNavigate();
+    const { auth, setAuth } = useContext(AuthContext);
+
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const navigate = useNavigate();
+
+    const [errors, setErrors] = useState({});
+    const [hasServerError, setHasServerError] = useState(false);
+    const [serverError, setServerError] = useState({});
 
     const resetRegisterForm = () => {
         setUsername('');
@@ -34,21 +41,25 @@ const Register = () => {
     };
 
     const submitHandler = async (e) => {
+        e.preventDefault();
         const userData = {
             username,
             email,
             password,
         };
 
-        try {
-            await userService.createUser(userData);
-            console.log('Successful registration!');
-            resetRegisterForm();
-        } catch (error) {
-            //Here will add notification message later
-            console.log('Unsuccessful registration!', error);
-        };
-        navigate('/latestTopics');
+        userService.createUser(userData)
+        .then(user => {
+            setAuth(user);
+            navigate('/latestTopics');
+            console.log('Im here');
+        })
+        .catch(error => {
+            setHasServerError(true);
+            setServerError(error.message);
+        });
+
+        resetRegisterForm();
     };
 
     return (

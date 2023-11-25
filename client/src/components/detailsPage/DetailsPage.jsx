@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import DetailsPageAnswers from './DetailsPageAnswers';
 import YourAnswer from './YourAnswer';
 import * as topicService from '../../services/topicService';
-import * as answerService from '../../services/answerService';
+// import * as answerService from '../../services/answerService';
 import styles from './DetailsPage.module.css';
 
 const DetailsPage = () => {
@@ -15,12 +15,14 @@ const DetailsPage = () => {
 
   useEffect(() => {
     topicService.getOne(topicId)
-      .then(result => setTopic(result.topic))
+      .then(result => setTopic(result))
 
-    answerService.getAnswersForTopic(topicId)
-      .then(result => setAnswers(result))
-      .catch(error => console.error('Error fetching topic and answers:', error))
-  }, [topicId]);
+    
+    .catch(error => console.error('Error fetching answers:', error));
+}, [topicId]);
+
+console.log('Topic ID:', topicId);
+console.log('Topic:', topic);
 
   return (
     <div className={styles.details}>
@@ -59,7 +61,7 @@ const DetailsPage = () => {
       </div>
 
       {/* Passes answers to DetailsPageAnswers directly */}
-      <DetailsPageAnswers answers={answers} topicId={topicId} />
+      <DetailsPageAnswers topicId={topicId} />
 
       <YourAnswer
         topicId={topicId}

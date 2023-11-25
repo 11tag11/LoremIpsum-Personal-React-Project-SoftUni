@@ -1,5 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from '../../contexts/AuthContext';
+import { formatDate } from "../../utils/dateUtils";
+
+
 import * as topicService from '../../services/topicService';
 import styles from './CreateTopic.module.css';
 
@@ -8,6 +12,13 @@ const CreateTopic = () => {
     const [heading, setHeading] = useState('');
     const [question, setQuestion] = useState('');
     const navigate = useNavigate();
+
+    //24
+    const { auth } = useContext(AuthContext);
+    useEffect(() => {
+        // Now you can access auth._id, auth.username, etc.
+        console.log('Current User:', auth);
+    }, [auth]);
 
     const resetNewPostForm = () => {
         setHeading('');
@@ -24,18 +35,24 @@ const CreateTopic = () => {
 
     const submitHandler = async (e) => {
         e.preventDefault();
-        // const userId = localStorage.getItem('userId');
+        const currentDate = new Date();
+        const formattedDate  = formatDate(currentDate);
+        console.log('Formatted _createdOn:', formattedDate);
+
         const topicData = {
             heading,
             question,
-            // author: userId,
+            _createdOn: formattedDate,
+            author: auth.username,
             // userId
         };
 
+        console.log('Submitting topic data:', topicData); // Log the topic data
+
         topicService.createTopic(topicData)
-        .then(() => navigate('/allTopics'))
-        .catch (error => console.log('Post did not created!', error)) 
-            // Here will be err notification later
+            .then(() => navigate('/allTopics'))
+            .catch(error => console.log('Post did not created!', error))
+        // Here will be err notification later
         resetNewPostForm();
     };
 

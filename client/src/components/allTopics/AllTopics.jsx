@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import * as topicService from '../../services/topicService';
-import TopicItem from './topicItem/topicItem';
+import TopicItem from './topicItem/TopicItem';
 import styles from './AllTopics.module.css';
 
 
@@ -23,17 +23,17 @@ const AllTopics = () => {
         </div>
         <div className={`${styles.sectionArticles} ${styles.allArticles}`}>
 
-          {topics.map((topic) => {
+          {topics.reverse().map((topic) => {
             // console.log('Topic ID:', topic._id); 
             return (
               <TopicItem
                 _id={topic._id}
                 key={topic._id}
-                heading={topic.topic.heading}
-                question={topic.topic.question}
-                author={topic.topic.author}
-                createdAt={topic.topic.createdAt}
-                likes={topic.topic.likes}
+                heading={topic.heading}
+                question={topic.question}
+                author={topic.author}
+                _createdOn={topic._createdOn}
+                likes={topic.likes}
               />
             );
           })}

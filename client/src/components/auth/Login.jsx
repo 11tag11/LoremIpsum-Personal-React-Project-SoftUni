@@ -1,12 +1,20 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import * as userService from '../../services/userService';
+import { AuthContext } from '../../contexts/AuthContext';
+
 import { useNavigate } from "react-router-dom";
 import styles from './Login.module.css';
 
 const Login = () => {
+    const navigate = useNavigate();
+    const { auth, setAuth } = useContext(AuthContext);
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const navigate = useNavigate();
+
+    const [errors, setErrors] = useState({});
+    const [hasServerError, setHasServerError] = useState(false);
+    const [serverError, setServerError] = useState({});
 
     const resetLoginForm = () => {
         setEmail('');
@@ -21,21 +29,27 @@ const Login = () => {
         setPassword(e.target.value);
     };
 
-    const submitHandler = async (e) => {
+    
+
+    const submitHandler = (e) => {
+        e.preventDefault();
         const userData = {
             email,
             password,
-        };
+        }
+        userService.loginUser(userData)
+            .then(user => {
+                setAuth(user);
+                navigate('/latestTopics');
 
-        try {
-            await userService.loginUser(userData);
-            console.log('Successful login!');
-            resetLoginForm();
-        } catch (error) {
-            //Here will add notification message later
-            console.log('Unsuccessful login!', error);
-        };
-        navigate('/latestTopics');
+                console.log(user);
+            })
+            .catch(error => {
+                setHasServerError(true);
+                setServerError(error.message);
+            });
+
+        resetLoginForm();
     };
 
     return (
