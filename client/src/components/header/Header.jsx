@@ -39,7 +39,7 @@ const Header = () => {
                             {auth ?
                                 <>
                                     <li><Link to="./createTopic">Create Topic</Link></li>
-                                    <li><Link to="./profile">Profile</Link></li>
+                                    <li><Link to="./profile">{auth?.email || 'N/A'}</Link></li>
                                     <li onClick={logoutHandler}><Link>Logout</Link></li>
                                 </> :
 
