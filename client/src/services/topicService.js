@@ -29,7 +29,10 @@ export const createTopic = async (topicData) => {
   return result;
 };
 
-
+export const editTopic = async (topicId, updatedTopicData) => {
+  const result = await request.put(`${baseUrl}/${topicId}`, updatedTopicData);
+  return result;
+};
 
 export const remove = async (topicId) => {
   const result = await request.remove(`${baseUrl}/${topicId}`);
