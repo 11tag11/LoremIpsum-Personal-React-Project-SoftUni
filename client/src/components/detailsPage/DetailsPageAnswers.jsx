@@ -4,9 +4,12 @@ import { formatDate } from '../../utils/dateUtils';
 
 import styles from './DetailsPageAnswers.module.css';
 
-const DetailsPageAnswers = ({ topicId }) => {
+const DetailsPageAnswers = ({ topicState }) => {
     const [answers, setAnswers] = useState([]);
-    console.log(topicId);
+    console.log('Topic State:', topicState);
+
+    const { _id: topicId } = topicState.topic;
+    console.log('Received Topic ID:', topicId);
 
     useEffect(() => {
         answerService.getAnswersForTopic(topicId)
@@ -15,7 +18,7 @@ const DetailsPageAnswers = ({ topicId }) => {
       console.log('Answers:', result);
     })
     .catch(error => console.error('Error fetching answers:', error));
-    }, [topicId]);
+    }, [topicId, topicState]);
 
     
     return (

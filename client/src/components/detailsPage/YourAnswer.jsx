@@ -1,11 +1,18 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
+
+
+import {Link} from 'react-router-dom';
 import * as topicService from '../../services/topicService';
 import * as answerService from '../../services/answerService';
 import { AuthContext } from '../../contexts/AuthContext';
+import { useNavigate } from "react-router-dom";
 import styles from './YourAnswer.module.css';
 
-const YourAnswer = ({ setAnswers }) => {
+const YourAnswer = ({ setTopicState }) => {
+  const navigate = useNavigate();
+  // const history = useHistory();
   const [answer, setAnswer] = useState('');
   const { topicId } = useParams();
   const authContext = useContext(AuthContext);
@@ -22,13 +29,13 @@ const YourAnswer = ({ setAnswers }) => {
 
   useEffect(() => {
     topicService.getOne(topicId)
-      .then(result => setAnswers(result))
+      .then(result => setTopicState((prevState) => ({ ...prevState, topic: result })))
       .catch(error => console.error('Error fetching topic:', error));
 
     answerService.getAnswersForTopic(topicId)
-      .then(result => setAnswers(result))
+      .then(result => setTopicState((prevState) => ({ ...prevState, answers: result })))
       .catch(error => console.error('Error fetching answers:', error)); 
-  }, [topicId, setAnswers]);
+  }, [topicId, setTopicState]);
 
   useEffect(() => {
     // Check if the user is logged in whenever authContext.user changes
@@ -47,7 +54,7 @@ const YourAnswer = ({ setAnswers }) => {
     e.preventDefault();
 
     // Check if the user is logged in
-    if (!authContext.auth) {
+    if (!auth) {
       // Redirect or show a modal for login
       console.log('User is not logged in. Redirect or show login modal.');
       return;
@@ -55,9 +62,15 @@ const YourAnswer = ({ setAnswers }) => {
 
     try {
       await answerService.createAnswer(topicId, answer, auth);
+      // const updatedAnswers = await answerService.getAnswersForTopic(topicId);
+      // setAnswers(updatedAnswers);
+
       const updatedAnswers = await answerService.getAnswersForTopic(topicId);
-      setAnswers(updatedAnswers);
+      setTopicState(prevState => ({ ...prevState, answers: updatedAnswers }));
       resetAnswerForm();
+      navigate(`/details/${topicId}`);
+      // history.push(`/details/${topicId}`);
+
     } catch (error) {
       console.error('Failed to add answer:', error);
     }
@@ -84,6 +97,7 @@ const YourAnswer = ({ setAnswers }) => {
                   />
                 </div>
                 <div className={styles.postButtonContainer}>
+                <Link to={`/details/${topicId}`}>
                   <button
                     type="button"
                     className={styles.newPostButton}
@@ -91,6 +105,7 @@ const YourAnswer = ({ setAnswers }) => {
                   >
                     Post
                   </button>
+                  </Link>
                 </div>
               </div>
             </form>
@@ -98,9 +113,9 @@ const YourAnswer = ({ setAnswers }) => {
         </div>
       </div>
       <div className={styles.goToTop}>
-        <a href="./detailsPage">
+        <Link href="./detailsPage">
           <i className="fa-solid fa-circle-arrow-up" />
-        </a>
+        </Link>
       </div>
     </div>
   );
