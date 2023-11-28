@@ -18,9 +18,10 @@ const YourAnswer = ({ setTopicState }) => {
   const authContext = useContext(AuthContext);
 
   const { auth } = useContext(AuthContext);
+
   useEffect(() => {
     // access auth._id, auth.username, etc.
-    console.log('Current User:', auth);
+    // console.log('Current User:', auth);
   }, [auth]);
 
   const resetAnswerForm = () => {
@@ -37,14 +38,7 @@ const YourAnswer = ({ setTopicState }) => {
       .catch(error => console.error('Error fetching answers:', error)); 
   }, [topicId, setTopicState]);
 
-  useEffect(() => {
-    // Check if the user is logged in whenever authContext.user changes
-    if (authContext.auth) {
-      console.log('User is logged in:', authContext.auth);
-
-      //  add logic here to handle the logged-in user
-    }
-  }, [authContext.auth]);
+ 
 
   const answerChangeHandler = (e) => {
     setAnswer(e.target.value);
@@ -67,9 +61,9 @@ const YourAnswer = ({ setTopicState }) => {
 
       const updatedAnswers = await answerService.getAnswersForTopic(topicId);
       setTopicState(prevState => ({ ...prevState, answers: updatedAnswers }));
+      setAnswer('');
       resetAnswerForm();
       navigate(`/details/${topicId}`);
-      // history.push(`/details/${topicId}`);
 
     } catch (error) {
       console.error('Failed to add answer:', error);

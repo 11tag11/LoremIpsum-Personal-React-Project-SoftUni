@@ -9,9 +9,9 @@ const TopicItem = ({
   question,
   author,
   _createdOn,
-  likes,
+  _updatedOn,
 }) => {
-  const formattedDate = formatDate(_createdOn);
+  // const formattedDate = formatDate(_createdOn, _updatedOn);
   // console.log('_id:', _id);
   // console.log('heading:', heading);
   return (
@@ -26,9 +26,9 @@ const TopicItem = ({
         <div className={styles.author}>
           <p className={styles.authorName}>Creator: {author}</p>
         </div>
-        <p className={styles.articleCreated}>{formattedDate}</p>
+        <p className={styles.articleCreated}>Created: {formatDate(_createdOn)}</p>
         <div className={styles.articleComments}>
-          <p className={styles.comments}>Likes: {likes}</p>
+          <p className={styles.comments}>Updated: {formatDate(_updatedOn)}</p>
           <p className={styles.readMore}>
             <Link to={`/details/${_id}`}>
               Read more <i className="fa-solid fa-square-arrow-up-right" />

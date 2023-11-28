@@ -41,9 +41,9 @@ const DetailsPage = () => {
           <div className={styles.articleContent}>
             <div className={styles.headingLikes}>
               <h2 className={styles.articleHeading}>{topicState.topic.heading}</h2>
-              <div className={styles.circle}>
+              {/* <div className={styles.circle}>
                 <p className={styles.likesCount}>{topicState.topic.likes}</p>
-              </div>
+              </div> */}
             </div>
             <p className={`${styles.textArea} ${styles.authorQuestion}`}>{topicState.topic.question}</p>
           </div>
@@ -55,25 +55,19 @@ const DetailsPage = () => {
             </div>
             <p className={styles.articleCreated}>{formatDate(topicState.topic._createdOn)}</p>
           </div>
-          {auth && auth._id === _ownerId ? (
-          <div className={`${styles.likesDelete} ${styles.right}`}>
-            <Link to={`/edit/${topicId}`} className={styles.edit}>
-              <i className="fa-solid fa-pen-to-square" />
-            </Link>
-            <span className={styles.likes}>
+          {auth && auth._id === _ownerId && (
+            <div className={`${styles.likesDelete} ${styles.right}`}>
+              <Link to={`/edit/${topicId}`} className={styles.edit}>
+                <i className="fa-solid fa-pen-to-square" />
+              </Link>
+              {/* <span className={styles.likes}>
               <i className="fa-solid fa-thumbs-up" />
-            </span>
-            <span onClick={handleDeleteClick} className={styles.delete}>
-              <i className="fa-solid fa-trash" />
-            </span>
-          </div>
-        ) : (
-          <div className={`${styles.likesDelete} ${styles.right}`}>
-            <span className={styles.likes}>
-              <i className="fa-solid fa-thumbs-up" />
-            </span>
-          </div>
-        )}
+            </span> */}
+              <span onClick={handleDeleteClick} className={styles.delete}>
+                <i className="fa-solid fa-trash" />
+              </span>
+            </div>
+          )}
         </section>
       </div>
       <DetailsPageAnswers topicState={topicState} />

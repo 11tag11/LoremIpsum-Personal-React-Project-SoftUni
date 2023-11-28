@@ -42,9 +42,9 @@ const LatestTopics = () => {
                 <div className={styles.author}>
                   <p className={styles.authorName}>Creator: {topic.author}</p>
                 </div>
-                <p className={styles.articleCreated}>{formatDate(topic._createdOn)}</p>
+                <p className={styles.articleCreated}>Created: {formatDate(topic._createdOn)}</p>
                 <div className={styles.articleComments}>
-                  <p className={styles.comments}>Likes: {topic.likes}</p>
+                  <p className={styles.comments}>Updated: {formatDate(topic._updatedOn)}</p>
                   <p className={styles.readMore}>
                     <Link to={`/details/${topic._id}`}>
                       Read more <i className="fa-solid fa-square-arrow-up-right" />

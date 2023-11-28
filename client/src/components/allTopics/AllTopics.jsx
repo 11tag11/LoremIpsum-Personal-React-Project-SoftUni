@@ -33,7 +33,7 @@ const AllTopics = () => {
                 question={topic.question}
                 author={topic.author}
                 _createdOn={topic._createdOn}
-                likes={topic.likes}
+                _updatedOn={topic._updatedOn}
               />
             );
           })}

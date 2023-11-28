@@ -10,10 +10,10 @@ const Profile = () => {
 
     useEffect(() => {
         if (auth) {
-            topicService.getMyTopics(auth._id)
+            topicService.getTopicsForUser(auth._id)
                 .then((result) => {
                     setCreatedTopics(result);
-                    // console.log(result); 
+                    console.log(result); 
                 })
                 .catch((error) => console.log(error));
         }
@@ -33,7 +33,7 @@ const Profile = () => {
                     <section className={styles.userInfo}>
                         <p className={styles.email}>Email: {auth?.email || 'N/A'}</p>
                         <p className={styles.username}>Username: {auth?.username || 'N/A'}</p>
-                        <p className={styles.createdTopics}>Created topics: {(auth?.createdTopics || []).length || 0}</p>
+                        <p className={styles.createdTopics}>Created topics: {createdTopics.length || 0}</p>
                         <p className={styles.answers}>Comments: {auth?.answers || 0}</p>
                     </section>
                 </div>
