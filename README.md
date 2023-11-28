@@ -7,8 +7,8 @@ Steps to follow for local installation and review the application:
 2. Navigate to server folder and use the following command:
 * node server.js - to start the server;
 3. Navigate to client folder and use the following commands:
-* use: npm install - install packages and dependencies;
-* use: npm run dev - run the application in development mode;
+* npm install - install packages and dependencies;
+* npm run dev - run the application in development mode;
 
 Application overview
 (todo add images and description)
