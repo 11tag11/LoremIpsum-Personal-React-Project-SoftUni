@@ -40,7 +40,7 @@ export const remove = async (topicId) => {
   return result;
 };
 
-export const getMyTopics = async (userId) => {
-  const result = await request.get(`${baseUrl}?where=_ownerId%3D%22${userId}%22&sortBy=_createdOn%20desc`);
-  return result;
-}
+export const getTopicsForUser = async (ownerId) => {
+  const result = await request.get(`${baseUrl}?where=_ownerId%3D%22${ownerId}%22`);
+  return Object.values(result);
+};

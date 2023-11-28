@@ -26,16 +26,32 @@ export const createAnswer = async (topicId, answer, auth, accessToken) => {
 };
 
 export const getAnswersForTopic = async (topicId) => {
-  const result = await request.get(baseUrl);
+  const result = await request.get(`${baseUrl}?topicId=${topicId}`);
 
   // Filter answers based on the topicId
   const filteredAnswers = Object.values(result)
     .filter(answer => answer.topicId === topicId);
 
-  console.log('Filtered Answers for Topic:', filteredAnswers);
+  // console.log('Filtered Answers for Topic:', filteredAnswers);
   return filteredAnswers;
 };
 
+export const getAnswerById = async (answerId) => {
+  const result = await request.get(`${baseUrl}/${answerId}`);
+  // console.log(answerId);
+  return result;
+};
+
+export const editAnswer = async (answerId, updatedAnswer) => {
+  const result = await request.put(`${baseUrl}/${answerId}`, updatedAnswer);
+  return result;
+};
+
+export const remove = async (answerId) => {
+  const result = await request.remove(`${baseUrl}/${answerId}`);
+
+  return result;
+};
 
 
 

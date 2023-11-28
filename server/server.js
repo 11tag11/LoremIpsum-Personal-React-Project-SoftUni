@@ -1575,8 +1575,7 @@
           _createdOn: "2023-11-09T11:51:01.725Z",
           _updatedOn: "2023-11-09T11:51:01.725Z",
           author: "GeorgeIvanov11",
-          answers: [],
-          likes: 0,
+          
         
         _id: "2f24f34b-28a7-41c2-a46e-2608165f4786",
       },
@@ -1589,8 +1588,7 @@
           _createdOn: "2023-11-09T11:55:52.824Z",
           _updatedOn: "2023-11-09T11:55:52.824Z",
           author: "GeorgeIvanov11",
-          answers: [],
-          likes: 0,
+          
         
         _id: "f602d683-8451-4a48-9d33-a39478746498",
       },
@@ -1602,8 +1600,7 @@
           _createdOn: "2023-11-09T11:57:00.944Z",
           _updatedOn: "2023-11-09T11:57:00.944Z",
           author: "GeorgeIvanov11",
-          answers: [],
-          likes: 0,
+          
         
         _id: "a5847ba1-844c-4270-a250-7a2e682625f5",
       },
@@ -1616,21 +1613,19 @@
           _createdOn: "2023-11-09T11:58:09.309Z",
           _updatedOn: "2023-11-09T11:58:09.309Z",
           author: "George 01",
-          answers: [],
-          likes: 0,
+          
         
         _id: "eead099e-ca49-4d76-8ffe-874cb55f9513",
       },
       "554ac950-c7b0-465e-8cc3-bd6a5fdda6c2": {
-        _ownerId: "bef3b0fa-208b-402e-b92b-4c4596b114a7",
+        _ownerId: "c3e2648b-e024-4d31-9164-a01ca32cf82e",
         
           heading: "Blob",
           question: "What is blob?",
           _createdOn: "2023-11-09T12:27:13.372Z",
           _updatedOn: "2023-11-09T12:27:13.372Z",
-          author: "George 01",
-          answers: [],
-          likes: 0,
+          author: "GeorgeIvanov11",
+          
         
         _id: "554ac950-c7b0-465e-8cc3-bd6a5fdda6c2",
       },
@@ -1668,6 +1663,9 @@
         "_createdOn": "2023-11-24T10:30:00.000Z",
         "likes": 2
       },
+    },
+    likes: {
+
     },
   };
   var rules$1 = {
