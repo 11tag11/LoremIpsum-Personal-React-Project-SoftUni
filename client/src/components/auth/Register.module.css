@@ -188,6 +188,14 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
+.usernameErrorMessage,
+.emailErrorMessage,
+.passwordErrorMessage,
+.confirmPasswordErrorMessage {
+    font-size: 0.7em;
+    color: #eb3b5a;
+    margin-top: -2em;
+}
 /* End Register form */
 
 /* Footer */
