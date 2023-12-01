@@ -78,7 +78,10 @@ const DetailsPage = () => {
           setTopicState={setTopicState}
         />
       ) : (
-        <p>Please log in to post an answer.</p>
+        <>
+          <p className={styles.loginLink}>Please <Link to={`/login`}>Log In</Link> to your account if you want to answer the topic.</p>
+          <p className={styles.registerLink}>Don't have account? Register here: <Link to={`/register`}>Sign Up</Link></p>
+        </>
       )}
 
       {/* Delete Confirmation Modal */}

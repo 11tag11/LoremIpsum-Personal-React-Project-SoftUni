@@ -281,3 +281,27 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
+
+.loginLink {
+    margin-top: 1em;
+    font-weight: bold;
+    color: #313030;
+    font-size: 1em;
+}
+
+.loginLink a {
+    text-decoration: none;
+    color: #00b894;
+}
+
+.registerLink {
+    margin-top: 0.5em;
+    font-weight: bold;
+    color: #313030;
+    font-size: 1em;
+}
+
+.registerLink a {
+    text-decoration: none;
+    color: #00b894;
+}
