@@ -1,14 +1,19 @@
 import { Link } from 'react-router-dom';
 import * as userService from '../../services/userService';
 import { useNavigate } from "react-router-dom";
-import { useContext } from 'react';
-import  { AuthContext }  from '../../contexts/AuthContext';
-
+import { useContext, useState } from 'react';
+import { AuthContext } from '../../contexts/AuthContext';
+import Search from '../allTopics/Search';
 import styles from './Header.module.css';
+
+const initialValue = {
+    search: '',
+};
 
 const Header = () => {
     const navigate = useNavigate();
     const { auth, setAuth } = useContext(AuthContext);
+    const [searchValue, setSearchValue] = useState(initialValue);
 
     async function logoutHandler(e) {
         e.preventDefault();
@@ -20,7 +25,16 @@ const Header = () => {
         } catch (error) {
             console.log(error);
         }
-    }
+    };
+
+    const handleSearch = () => {
+        // Capture the value of searchValue here
+        const searchTerm = searchValue.search;
+        setSearchValue(initialValue);
+        // Navigate to the /search route with the search term in the state
+        navigate('/search', { state: { searchTerm } });
+    };
+
     return (
         <div className="section-site-header-wrapper">
             <div className={styles.sectionSiteHeader}>
@@ -61,10 +75,22 @@ const Header = () => {
                     <form action="#" className={styles.search}>
                         <p className={styles.inputField}>
                             <i className="fa-solid fa-magnifying-glass"></i>
-                            <input type="text" placeholder="Search" />
+                            <input
+                                type="text"
+                                placeholder="Search"
+                                value={searchValue.search}
+                                onChange={(e) =>
+                                    setSearchValue((state) => ({
+                                        ...state,
+                                        search: e.target.value,
+                                    }))
+                                }
+                            />
                         </p>
                     </form>
-                    <button className={styles.searchButton}>Search</button>
+                    <button className={styles.searchButton} onClick={handleSearch}>
+                        Search
+                    </button>
                 </div>
             </div>
         </div>

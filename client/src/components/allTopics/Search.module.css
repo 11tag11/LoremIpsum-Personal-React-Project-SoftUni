@@ -1,0 +1,35 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=PT+Serif&family=Roboto&display=swap');
+
+.searchResults {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    justify-content: space-between;
+    background-color: #313030;
+    color: #fcf3e7;
+    padding: 0.8em 1.3em;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 0px rgba(49, 49, 48, 0.75);
+    border-bottom: 4px solid #00b894;
+    border-top: 4px solid #00b894;
+}
+
+.search {
+    display: flex;
+    padding: 0.5em;
+}
+
+.search a {
+    color: #fcf3e7;
+    text-decoration: none;
+    padding: 0.3em;
+}
+
+.search a:hover {
+    color: #00b894;
+    text-decoration: none;
+    padding: 0.3em;
+}

@@ -12,7 +12,7 @@ import CreateTopic from './components/createTopic/CreateTopic';
 import DetailsPage from './components/detailsPage/DetailsPage';
 import EditTopic from './components/editTopic/EditTopic';
 import EditAnswer from './components/detailsPage/EditAnswer';
-
+import Search from './components/allTopics/Search';
 import Profile from './components/profile/Profile';
 import PageNotFound from './components/pageNotFound/PageNotFound';
 
@@ -31,6 +31,7 @@ function App() {
             <Route path='/createTopic' element={<CreateTopic />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
+            <Route path="/search" element={<Search />} />
             <Route path='/profile' element={<Profile />} />
             <Route path='/edit/:topicId' element={<EditTopic />} />
             <Route path='/edit/answer/:answerId' element={<EditAnswer />} />
