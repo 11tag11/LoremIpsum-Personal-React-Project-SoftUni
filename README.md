@@ -6,38 +6,38 @@ React.js + Vite used in front-end, and SoftUni Practice Server for back-end serv
 
 1. Home Page:
     * All users can view the home page with navigation and latest topics.
-![Home Page Not Logged In User](Img\Home_not_logged.png)
+![Home Page Not Logged In User](./Img/Home_not_logged.png)
 2. Topics Page:
     * A page displaying all topics, visible to all users.
-![All Topics Page Not Logged In User](Img\AllTopics.png)
+![All Topics Page Not Logged In User](./Img/AllTopics.png)
 3. User Registration:
     * Users can register for an account.
-    ![Not Logged In](Img\Home_top_not_logged.png)
-    ![Logged In](Img\Home_top_logged.png)
+    ![Not Logged In](./Img/Home_top_not_logged.png)
+    ![Logged In](./Img/Home_top_logged.png)
     * Form validation:
         * Username and password must be a minimum of 5 characters.
         * Valid email format is required.
         * Password and confirm password must match.
-    ![Validations](Img\SignUp_Close_validatons.png)
-    ![Validations](Img\Login_validations_close.png)
+    ![Validations](./Img/SignUp_Close_validatons.png)
+    ![Validations](./Img/Login_validations_close.png)
 4. Create New Topic:
     * Registered users can create and post new topics.
-![Create New Topic](Img\Create_topic.png)
+![Create New Topic](./Img/Create_topic.png)
 5. Post Answers:
     * Users can post answers to existing topics, whether they created the topic or not.
-    ![Answers](Img\Answer.png)
+    ![Answers](./Img/Answer.png)
 6. Edit and Delete:
     * Logged-in users have the ability to edit and delete their own topics and answers.
-    ![Edit Answer](Img\EditAnswer.png)
-    ![Edit Topic](Img\EditTopic.png)
-    ![Confirm Delete](Img\ConfirmDeleteClose.png)
+    ![Edit Answer](./Img/EditAnswer.png)
+    ![Edit Topic](./Img/EditTopic.png)
+    ![Confirm Delete](./Img/ConfirmDeleteClose.png)
 7. Search Functionality:
     * Users, both logged in and not, can use the search feature.
     * Search is based on technology names such as React, HTML, JavaScript, etc.
-    ![Search Topics](Img\Search.png)
+    ![Search Topics](./Img/Search.png)
 8. 404 Page:
     * A custom 404 page for handling page-not-found situations.
-    ![404](Img\404.png)
+    ![404](./Img/404.png)
 
 # Steps to follow for local installation and review the application:
 1. Clone the repository: https://github.com/11tag11/LoremIpsum-Personal-React-Project-SoftUni
