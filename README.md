@@ -39,7 +39,7 @@ React.js + Vite used in front-end, and SoftUni Practice Server for back-end serv
     * A custom 404 page for handling page-not-found situations.
     ![404](404.png)
 
-Steps to follow for local installation and review the application:
+# Steps to follow for local installation and review the application:
 1. Clone the repository: https://github.com/11tag11/LoremIpsum-Personal-React-Project-SoftUni
 2. Navigate to server folder and use the following command:
     * node server.js - to start the server;
