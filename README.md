@@ -2,7 +2,7 @@
 LoremIpsum is a single page application (SPA) and represent small discussion forum. 
 React.js + Vite used in front-end, and SoftUni Practice Server for back-end service.
 
-Forum App Features
+# Forum App Features
 
 1. Home Page:
     * All users can view the home page with navigation and latest topics.
@@ -34,7 +34,7 @@ Forum App Features
 7. Search Functionality:
     * Users, both logged in and not, can use the search feature.
     * Search is based on technology names such as React, HTML, JavaScript, etc.
-    ![Search](Search.png)
+    ![Search Topics](Search.png)
 8. 404 Page:
     * A custom 404 page for handling page-not-found situations.
     ![404](404.png)
