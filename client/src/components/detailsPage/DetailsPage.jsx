@@ -14,17 +14,9 @@ const DetailsPage = () => {
   const [topic, setTopic] = useState({});
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        
-        const topicResult = await topicService.getOne(topicId);
-        setTopic(topicResult);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
+    topicService.getOne(topicId)
+      .then(result => setTopic(result))
+      .catch(error => console.error('Error fetching data:', error)) 
   }, [topicId]);
 
   const handleDeleteClick = () => {
@@ -34,8 +26,6 @@ const DetailsPage = () => {
   const handleDeleteCancel = () => {
     setShowDeleteModal(false);
   };
-
-  
 
   return (
     <div className={styles.details}>

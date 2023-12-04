@@ -9,7 +9,7 @@ const EditAnswer = () => {
     const { auth } = useContext(AuthContext);
     const { answerId } = useParams();
     const [answer, setAnswer] = useState('');
-    const [topicId, setTopicId] = useState('');
+    // const [topicId, setTopicId] = useState('');
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const EditAnswer = () => {
         answerService.getAnswerById(answerId)
             .then(result => {
                 setAnswer(result.answer);
-                setTopicId(result.topicId);
+                // setTopicId(result.topicId);
             })
             .catch(error => console.error('Error fetching topic:', error));
     }, [answerId, auth._id]);

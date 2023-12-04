@@ -13,20 +13,9 @@ const DetailsPageAnswers = ({ topicId, onAnswersChange }) => {
   const { auth } = useContext(AuthContext);
 
   useEffect(() => {
-    const fetchAnswers = async () => {
-      try {
-        if (!topicId) {
-          return;
-        }
-
-        const answersResult = await answerService.getAnswersForTopic(topicId);
-        setAnswers(answersResult);
-      } catch (error) {
-        console.error('Error fetching answers:', error);
-      }
-    };
-
-    fetchAnswers();
+    answerService.getAnswersForTopic(topicId)
+      .then(result => setAnswers(result))
+      .catch(error => console.error('Error fetching answers:', error))
   }, [topicId]);
 
   const handleDeleteAnswer = (answerId) => {

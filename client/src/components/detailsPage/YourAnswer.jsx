@@ -38,20 +38,26 @@ const YourAnswer = () => {
   const addAnswerHandler = async (e) => {
     e.preventDefault();
 
-    try {
-      await answerService.createAnswer(topicId, answer, auth);
-
-      // Fetch the updated topic (including answers) after adding the new answer
-    const updatedTopic = await topicService.getOne(topicId);
+    answerService.createAnswer(topicId, answer, auth);
+    const updatedTopic = topicService.getOne(topicId);
     setTopic(updatedTopic);
-
-      resetAnswerForm();
+    resetAnswerForm();
       navigate(`/details/${topicId}`);
 
+    // try {
+    //   await answerService.createAnswer(topicId, answer, auth);
 
-    } catch (error) {
-      console.error('Failed to add answer:', error);
-    }
+    //   // Fetch the updated topic (including answers) after adding the new answer
+    // const updatedTopic = await topicService.getOne(topicId);
+    // setTopic(updatedTopic);
+
+    //   resetAnswerForm();
+    //   navigate(`/details/${topicId}`);
+
+
+    // } catch (error) {
+    //   console.error('Failed to add answer:', error);
+    // }
   };
 
   return (

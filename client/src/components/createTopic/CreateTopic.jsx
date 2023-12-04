@@ -24,9 +24,9 @@ const CreateTopic = () => {
     };
 
     const { auth } = useContext(AuthContext);
-    useEffect(() => {
-        console.log('Current User:', auth);
-    }, [auth]);
+    // useEffect(() => {
+    //     console.log('Current User:', auth);
+    // }, [auth]);
 
     const submitHandler = (values) => {
         const valuesAndAdditionalData = {
