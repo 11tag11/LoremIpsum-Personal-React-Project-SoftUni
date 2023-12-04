@@ -1,0 +1,42 @@
+/* .loaderBack {
+    position: fixed;
+    z-index: 9999999;
+    background: #00b894;
+    width: 50%;
+    height: 50%;
+}
+
+.loader {
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    left: 100;
+    top: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader img {
+    width: 280px;
+} */
+
+.loaderBack {
+    position: top;
+    z-index: 9999999;
+    background: #00b894;
+    width: -150vw; /* Full width of the viewport */
+    height: -150vh; /* Full height of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 100%; /* Adjust the width as needed */
+    /* text-align: center; Center the content horizontally */
+}
+
+.loader img {
+    width: 280px;
+}

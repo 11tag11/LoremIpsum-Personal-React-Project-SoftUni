@@ -5,7 +5,6 @@ import * as topicService from '../../services/topicService';
 import TopicItem from './topicItem/TopicItem';
 import styles from './AllTopics.module.css';
 
-
 const AllTopics = () => {
   const [topics, setTopics] = useState([]);
 

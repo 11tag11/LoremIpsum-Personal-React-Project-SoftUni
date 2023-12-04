@@ -12,8 +12,8 @@ const DeleteTopic = ({ topicId, onClose }) => {
 
     try {
       await topicService.remove(topicId);
-      onClose(); // Close the modal
-      navigate('/allTopics'); // Redirect to all topics or another page
+      onClose(); 
+      navigate('/allTopics'); 
     } catch (error) {
       console.error('Error deleting topic:', error);
     } finally {

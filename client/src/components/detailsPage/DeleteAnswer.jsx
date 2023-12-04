@@ -8,9 +8,11 @@ const DeleteAnswer = ({answerId, onClose, topicId}) => {
     const [isDeleting, setIsDeleting] = useState(false);
 
     const handleDelete = async () => {
+      setIsDeleting(true);
         try {
-            setIsDeleting(true);
+            
             await answerService.remove(answerId);
+            console.log("ans rem");
             onClose();
             navigate(`/details/${topicId}`);
         } catch (error) {

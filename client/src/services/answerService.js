@@ -52,7 +52,3 @@ export const remove = async (answerId) => {
 
   return result;
 };
-
-
-
-

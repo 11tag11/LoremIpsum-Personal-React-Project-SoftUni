@@ -34,7 +34,7 @@ const Profile = () => {
                         <p className={styles.email}>Email: {auth?.email || 'N/A'}</p>
                         <p className={styles.username}>Username: {auth?.username || 'N/A'}</p>
                         <p className={styles.createdTopics}>Created topics: {createdTopics.length || 0}</p>
-                        <p className={styles.answers}>Comments: {auth?.answers || 0}</p>
+                        <p className={styles.answers}>Answers: {auth?.answers || 0}</p>
                     </section>
                 </div>
             </div>

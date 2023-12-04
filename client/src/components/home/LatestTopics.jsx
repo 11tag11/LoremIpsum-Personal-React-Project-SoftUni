@@ -5,21 +5,27 @@ import { formatDate } from '../../utils/dateUtils';
 import styles from './LatestTopics.module.css';
 import * as topicService from '../../services/topicService';
 
-// import Loader from '../shared/Loader';
+import Loader from '../shared/Loader';
 
 
 const LatestTopics = () => {
   const [latestTopics, setLatestTopics] = useState([]);
-  // const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    // setIsLoading(true);
+    setIsLoading(true);
     topicService.getLastThree()
-      .then(result => setLatestTopics(result))
-      .catch(error => console.log(error))
-    // .finally(() => setIsLoading(false));
-
-  }, []); 
+      .then(result => {
+        setLatestTopics(result);
+      })
+      .catch(error => {
+        console.log(error);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  }, []);
+   
   return (
     <div className={styles.sectionSiteMain}>
       <div className={styles.container}>
@@ -28,7 +34,7 @@ const LatestTopics = () => {
         </div>
         <div className={styles.sectionArticles}>
 
-          {/* {isLoading && < Loader />} */}
+          {isLoading && < Loader />}
 
           {latestTopics.map((topic, index) => (
             <div className={styles.sectionArticle} key={index}>

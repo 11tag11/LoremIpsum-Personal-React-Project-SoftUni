@@ -1447,37 +1447,6 @@
         username: "GeorgeIvanov11",
         hashedPassword:
           "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1",
-        // createdTopics: [
-        //     {"2f24f34b-28a7-41c2-a46e-2608165f4786": {
-        //     _ownerId: "c3e2648b-e024-4d31-9164-a01ca32cf82e",
-        //     topic: {
-        //       heading: "What is the MERN Stack?",
-        //       question:
-        //         "The MERN stack is a web development framework made up of the stack of MongoDB, Express.js, React.js, and Nodejs.",
-        //       _createdOn: "2023-11-09T11:51:01.725Z",
-        //       _updatedOn: "2023-11-09T11:51:01.725Z",
-        //       author: "GeorgeIvanov11",
-        //       answers: [],
-        //       likes: 0,
-        //     },
-        //     _id: "2f24f34b-28a7-41c2-a46e-2608165f4786",
-        //   }},
-        //   {
-        //   "f602d683-8451-4a48-9d33-a39478746498": {
-        //     _ownerId: "c3e2648b-e024-4d31-9164-a01ca32cf82e",
-        //     topic: {
-        //       heading: "What is IoT in simple words?",
-        //       question:
-        //         "What is the Internet of Things (IoT)? The term IoT, or Internet of Things, refers to the collective network of connected devices and the technology that facilitates communication between devices and the cloud, as well as between the devices themselves.",
-        //       _createdOn: "2023-11-09T11:55:52.824Z",
-        //       _updatedOn: "2023-11-09T11:55:52.824Z",
-        //       author: "GeorgeIvanov11",
-        //       answers: [],
-        //       likes: 0,
-        //     },
-        //     _id: "f602d683-8451-4a48-9d33-a39478746498",
-        //   },}
-        // ],
       },
     },
     sessions: {},
@@ -1565,7 +1534,9 @@
 
     likes: {},
     
+    
     latestTopics: {
+      
       "2f24f34b-28a7-41c2-a46e-2608165f4786": {
         _ownerId: "c3e2648b-e024-4d31-9164-a01ca32cf82e",
         
@@ -1631,41 +1602,38 @@
       },
     },
     answers: {
-      "a5847ba1-844c-4270-a250-7a2e682625f5": {
-        "userId": "bef3b0fa-208b-402e-b92b-4c4596b114a7",
-        "topicId": "554ac950-c7b0-465e-8cc3-bd6a5fdda6c2",
-        "username": "George 01",
-        "answer": "This is an example answer.",
-        "_createdOn": "2023-11-24T10:00:00.000Z",
-        "likes": 0
-      },
-      "a5847ba1-844c-4270-a250-7a2e682625f6": {
-        "userId": "c3e2648b-e024-4d31-9164-a01ca32cf82e",
-        "topicId": "554ac950-c7b0-465e-8cc3-bd6a5fdda6c2",
-        "username": "GeorgeIvanov11",
-        "answer": "Another example answer.",
-        "_createdOn": "2023-11-24T10:30:00.000Z",
-        "likes": 2
-      },
-      "a5847ba1-844c-4270-a250-7a2e682625f1": {
-        "userId": "bef3b0fa-208b-402e-b92b-4c4596b114a7",
-        "topicId": "eead099e-ca49-4d76-8ffe-874cb55f9513",
-        "username": "George 01",
-        "answer": "Another USER answer.",
-        "_createdOn": "2023-11-24T10:30:00.000Z",
-        "likes": 2
-      },
-      "a5847ba1-844c-4270-a250-7a2e682625f2": {
-        "userId": "bef3b0fa-208b-402e-b92b-4c4596b114a7",
-        "topicId": "eead099e-ca49-4d76-8ffe-874cb55f9513",
-        "username": "George 01",
-        "answer": "Another USER answer 2.",
-        "_createdOn": "2023-11-24T10:30:00.000Z",
-        "likes": 2
-      },
+      // "a5847ba1-844c-4270-a250-7a2e682625f5": {
+      //   "userId": "bef3b0fa-208b-402e-b92b-4c4596b114a7",
+      //   "topicId": "554ac950-c7b0-465e-8cc3-bd6a5fdda6c2",
+      //   "username": "George 01",
+      //   "answer": "This is an example answer.",
+      //   "_createdOn": "2023-11-24T10:00:00.000Z",
+      // },
+      // "a5847ba1-844c-4270-a250-7a2e682625f6": {
+      //   "userId": "c3e2648b-e024-4d31-9164-a01ca32cf82e",
+      //   "topicId": "554ac950-c7b0-465e-8cc3-bd6a5fdda6c2",
+      //   "username": "GeorgeIvanov11",
+      //   "answer": "Another example answer.",
+      //   "_createdOn": "2023-11-24T10:30:00.000Z",
+      // },
+      // "a5847ba1-844c-4270-a250-7a2e682625f1": {
+      //   "userId": "bef3b0fa-208b-402e-b92b-4c4596b114a7",
+      //   "topicId": "eead099e-ca49-4d76-8ffe-874cb55f9513",
+      //   "username": "George 01",
+      //   "answer": "Another USER answer.",
+      //   "_createdOn": "2023-11-24T10:30:00.000Z",
+      // },
+      // "a5847ba1-844c-4270-a250-7a2e682625f2": {
+      //   "userId": "bef3b0fa-208b-402e-b92b-4c4596b114a7",
+      //   "topicId": "eead099e-ca49-4d76-8ffe-874cb55f9513",
+      //   "username": "George 01",
+      //   "answer": "Another USER answer 2.",
+      //   "_createdOn": "2023-11-24T10:30:00.000Z",
+      // },
     },
     likes: {
-
+      
+      
     },
   };
   var rules$1 = {

@@ -10,7 +10,7 @@ import Register from './components/auth/Register';
 import AllTopics from './components/allTopics/AllTopics';
 import CreateTopic from './components/createTopic/CreateTopic';
 import DetailsPage from './components/detailsPage/DetailsPage';
-import EditTopic from './components/editTopic/EditTopic';
+import EditTopic from './components/detailsPage/EditTopic';
 import EditAnswer from './components/detailsPage/EditAnswer';
 import Search from './components/allTopics/Search';
 import Profile from './components/profile/Profile';

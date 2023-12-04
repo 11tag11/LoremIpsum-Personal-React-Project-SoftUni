@@ -1,44 +1,35 @@
+
 import React, { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
-// import { useHistory } from 'react-router-dom';
-
-
 import {Link} from 'react-router-dom';
 import * as topicService from '../../services/topicService';
 import * as answerService from '../../services/answerService';
 import { AuthContext } from '../../contexts/AuthContext';
 import { useNavigate } from "react-router-dom";
+import useForm from '../../hooks/useForm';
 import styles from './YourAnswer.module.css';
 
-const YourAnswer = ({ setTopicState }) => {
+const formInitialState = {
+  answer: '',
+};
+
+const answerValidation = (value) => {
+  if (value.trim() === '') {
+    return 'Answer is required';
+  }
+  return null;
+}
+
+const YourAnswer = () => {
   const navigate = useNavigate();
-  // const history = useHistory();
   const [answer, setAnswer] = useState('');
   const { topicId } = useParams();
-  const authContext = useContext(AuthContext);
-
+  const [topic, setTopic] = useState({})
   const { auth } = useContext(AuthContext);
-
-  useEffect(() => {
-    // access auth._id, auth.username, etc.
-    // console.log('Current User:', auth);
-  }, [auth]);
 
   const resetAnswerForm = () => {
     setAnswer('');
   };
-
-  useEffect(() => {
-    topicService.getOne(topicId)
-      .then(result => setTopicState((prevState) => ({ ...prevState, topic: result })))
-      .catch(error => console.error('Error fetching topic:', error));
-
-    answerService.getAnswersForTopic(topicId)
-      .then(result => setTopicState((prevState) => ({ ...prevState, answers: result })))
-      .catch(error => console.error('Error fetching answers:', error)); 
-  }, [topicId, setTopicState]);
-
- 
 
   const answerChangeHandler = (e) => {
     setAnswer(e.target.value);
@@ -47,23 +38,16 @@ const YourAnswer = ({ setTopicState }) => {
   const addAnswerHandler = async (e) => {
     e.preventDefault();
 
-    // Check if the user is logged in
-    if (!auth) {
-      // Redirect or show a modal for login
-      console.log('User is not logged in. Redirect or show login modal.');
-      return;
-    }
-
     try {
       await answerService.createAnswer(topicId, answer, auth);
-      // const updatedAnswers = await answerService.getAnswersForTopic(topicId);
-      // setAnswers(updatedAnswers);
 
-      const updatedAnswers = await answerService.getAnswersForTopic(topicId);
-      setTopicState(prevState => ({ ...prevState, answers: updatedAnswers }));
-      setAnswer('');
+      // Fetch the updated topic (including answers) after adding the new answer
+    const updatedTopic = await topicService.getOne(topicId);
+    setTopic(updatedTopic);
+
       resetAnswerForm();
       navigate(`/details/${topicId}`);
+
 
     } catch (error) {
       console.error('Failed to add answer:', error);
@@ -78,7 +62,7 @@ const YourAnswer = ({ setTopicState }) => {
             <form action="">
               <div className={`${styles.articleContent} ${styles.userAnswer}`}>
                 <h2 className={`${styles.articleHeading} ${styles.userName} ${styles.yourAnswer}`}>
-                  Your answer
+                {`${auth.username}'s`} answer:
                 </h2>
                 <div className={styles.answerArea}>
                   <textarea
@@ -116,10 +100,6 @@ const YourAnswer = ({ setTopicState }) => {
 };
 
 export default YourAnswer;
-
-
-
-
 
 
 
