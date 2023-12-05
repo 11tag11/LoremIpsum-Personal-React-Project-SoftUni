@@ -33,6 +33,7 @@ const CreateTopic = () => {
             ...values,
             author: auth.username,
             _createdOn: formatDate(new Date().toISOString()),
+            // _updatedOn: formatDate(new Date().toISOString()),
         }
         topicService.createTopic(valuesAndAdditionalData)
             .then(() => navigate('/latestTopics'))

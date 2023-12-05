@@ -3,7 +3,6 @@ import * as userService from '../../services/userService';
 import { useNavigate } from "react-router-dom";
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../contexts/AuthContext';
-import Search from '../allTopics/Search';
 import styles from './Header.module.css';
 
 const initialValue = {

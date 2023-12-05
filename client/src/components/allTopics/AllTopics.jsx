@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import * as topicService from '../../services/topicService';
 import TopicItem from './topicItem/TopicItem';
 import styles from './AllTopics.module.css';
@@ -40,10 +39,7 @@ const AllTopics = () => {
           {topics.length === 0 && <h3 className={styles.noTopics}>There is no topics yet.</h3>}
         </div>
 
-        <div className={styles.goToTop}>
-          {/* correction here, it adds allTopics again... */}
-          <Link to="./allTopics"><i className="fa-solid fa-circle-arrow-up"></i></Link>
-        </div>
+        
       </div>
     </div>
   );

@@ -44,9 +44,6 @@ const Search = () => {
 
   return (
     <div className={styles.siteSearch}>
-      
-
-      {/* Display search results */}
       <div className={styles.searchResults}>
         {searchResults.length > 0 ? (
           <div>
