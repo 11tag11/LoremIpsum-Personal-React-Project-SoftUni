@@ -94,15 +94,3 @@ const DetailsPageAnswers = ({ topicId, onAnswersChange }) => {
 };
 
 export default DetailsPageAnswers;
-
-
-
-
-
-
-
-
-
-
-
-

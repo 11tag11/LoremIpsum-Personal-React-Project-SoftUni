@@ -12,25 +12,14 @@ const DeleteAnswer = ({ answerId, onClose, topicId }) => {
     answerService.remove(answerId);
     console.log("ans rem");
     onClose();
-    navigate(`/details/${topicId}`)
-      // .catch(error => console.error('Error deleting answer', error))
-      // navigate(`/latestTopics`)
+    navigate(`/latestTopics`)
+      
 
     setIsDeleting(false);
 
   };
 
-  //   try {
-
-  //     await answerService.remove(answerId);
-  //     console.log("ans rem");
-  //     onClose();
-  //     navigate(`/details/${topicId}`);
-  // } catch (error) {
-  //     console.error('Error deleting answer', error);
-  // } finally {
-  //     setIsDeleting(false);
-  // }
+  
 
   return (
     <div className={`${styles.modalOverlay} ${isDeleting ? 'show' : ''}`}>

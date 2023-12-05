@@ -1602,34 +1602,34 @@
       },
     },
     answers: {
-      // "a5847ba1-844c-4270-a250-7a2e682625f5": {
-      //   "userId": "bef3b0fa-208b-402e-b92b-4c4596b114a7",
-      //   "topicId": "554ac950-c7b0-465e-8cc3-bd6a5fdda6c2",
-      //   "username": "George 01",
-      //   "answer": "This is an example answer.",
-      //   "_createdOn": "2023-11-24T10:00:00.000Z",
-      // },
-      // "a5847ba1-844c-4270-a250-7a2e682625f6": {
-      //   "userId": "c3e2648b-e024-4d31-9164-a01ca32cf82e",
-      //   "topicId": "554ac950-c7b0-465e-8cc3-bd6a5fdda6c2",
-      //   "username": "GeorgeIvanov11",
-      //   "answer": "Another example answer.",
-      //   "_createdOn": "2023-11-24T10:30:00.000Z",
-      // },
-      // "a5847ba1-844c-4270-a250-7a2e682625f1": {
-      //   "userId": "bef3b0fa-208b-402e-b92b-4c4596b114a7",
-      //   "topicId": "eead099e-ca49-4d76-8ffe-874cb55f9513",
-      //   "username": "George 01",
-      //   "answer": "Another USER answer.",
-      //   "_createdOn": "2023-11-24T10:30:00.000Z",
-      // },
-      // "a5847ba1-844c-4270-a250-7a2e682625f2": {
-      //   "userId": "bef3b0fa-208b-402e-b92b-4c4596b114a7",
-      //   "topicId": "eead099e-ca49-4d76-8ffe-874cb55f9513",
-      //   "username": "George 01",
-      //   "answer": "Another USER answer 2.",
-      //   "_createdOn": "2023-11-24T10:30:00.000Z",
-      // },
+      "a5847ba1-844c-4270-a250-7a2e682625f5": {
+        "userId": "bef3b0fa-208b-402e-b92b-4c4596b114a7",
+        "topicId": "554ac950-c7b0-465e-8cc3-bd6a5fdda6c2",
+        "username": "George 01",
+        "answer": "This is an example answer.",
+        "_createdOn": "2023-11-24T10:00:00.000Z",
+      },
+      "a5847ba1-844c-4270-a250-7a2e682625f6": {
+        "userId": "c3e2648b-e024-4d31-9164-a01ca32cf82e",
+        "topicId": "554ac950-c7b0-465e-8cc3-bd6a5fdda6c2",
+        "username": "GeorgeIvanov11",
+        "answer": "Another example answer.",
+        "_createdOn": "2023-11-24T10:30:00.000Z",
+      },
+      "a5847ba1-844c-4270-a250-7a2e682625f1": {
+        "userId": "bef3b0fa-208b-402e-b92b-4c4596b114a7",
+        "topicId": "eead099e-ca49-4d76-8ffe-874cb55f9513",
+        "username": "George 01",
+        "answer": "Another USER answer.",
+        "_createdOn": "2023-11-24T10:30:00.000Z",
+      },
+      "a5847ba1-844c-4270-a250-7a2e682625f2": {
+        "userId": "bef3b0fa-208b-402e-b92b-4c4596b114a7",
+        "topicId": "eead099e-ca49-4d76-8ffe-874cb55f9513",
+        "username": "George 01",
+        "answer": "Another USER answer 2.",
+        "_createdOn": "2023-11-24T10:30:00.000Z",
+      },
     },
     likes: {
       
