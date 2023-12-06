@@ -1,7 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
-import { TopicProvider } from './contexts/TopicContext';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 import LatestTopics from './components/home/LatestTopics';
@@ -22,7 +21,7 @@ import styles from './components/styles.module.css';
 function App() {
   return (
     <AuthProvider>
-      <TopicProvider>
+      
         <div className={styles.siteWrapper}>
           <Header />
           {/* <Loader /> */}
@@ -42,7 +41,7 @@ function App() {
           </Routes>
           <Footer />
         </div>
-        </TopicProvider>
+        
     </AuthProvider>
   );
 };
