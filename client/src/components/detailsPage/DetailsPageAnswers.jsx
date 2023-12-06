@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 import React, { useEffect, useContext, useState } from 'react';
 import { AuthContext } from '../../contexts/AuthContext';
 import { Link } from 'react-router-dom';
@@ -32,11 +34,9 @@ const DetailsPageAnswers = ({ topicId, onAnswersChange }) => {
     try {
       await answerService.remove(deletingAnswerId);
 
-      // Update the state with the remaining answers
       const updatedAnswers = answers.filter((answer) => answer._id !== deletingAnswerId);
       setAnswers(updatedAnswers);
 
-      // Notify the parent component (DetailsPage) about the change in answers
       onAnswersChange(updatedAnswers);
     } catch (error) {
       console.error('Error deleting answer', error);
@@ -44,6 +44,10 @@ const DetailsPageAnswers = ({ topicId, onAnswersChange }) => {
       setShowDeleteModal(false);
       setDeletingAnswerId(null);
     }
+  };
+
+  const formatTimeAgo = (date) => {
+    return moment(date).fromNow();
   };
 
   return (
@@ -60,7 +64,7 @@ const DetailsPageAnswers = ({ topicId, onAnswersChange }) => {
               </section>
               <section className={`${styles.articleInfo} ${styles.question}`}>
                 <div className={styles.leftInfo}>
-                  <p className={styles.articleCreated}>{formatDate(answer._createdOn)}</p>
+                  <p className={styles.articleCreated}>Created: {formatTimeAgo(answer._createdOn)}</p>
                 </div>
                 <div className={`${styles.likesDelete} ${styles.right}`}>
                   {auth && auth._id === answer.userId && (

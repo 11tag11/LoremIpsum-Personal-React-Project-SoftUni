@@ -1,7 +1,6 @@
 import { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from '../../contexts/AuthContext';
-import { formatDate } from "../../utils/dateUtils";
 import useForm from "../../hooks/useForm";
 import * as topicService from '../../services/topicService';
 import styles from './CreateTopic.module.css';
@@ -24,16 +23,12 @@ const CreateTopic = () => {
     };
 
     const { auth } = useContext(AuthContext);
-    // useEffect(() => {
-    //     console.log('Current User:', auth);
-    // }, [auth]);
 
     const submitHandler = (values) => {
         const valuesAndAdditionalData = {
             ...values,
             author: auth.username,
-            _createdOn: formatDate(new Date().toISOString()),
-            // _updatedOn: formatDate(new Date().toISOString()),
+            _createdOn: new Date().toISOString(),
         }
         topicService.createTopic(valuesAndAdditionalData)
             .then(() => navigate('/latestTopics'))

@@ -111,3 +111,11 @@ body {
     font-size: 0.8em;
     margin-bottom: -2em;
 }
+
+
+.headingErrorMessage,
+.questionErrorMessage {
+    font-size: 0.7em;
+    color: #eb3b5a;
+    margin-top: -2em;
+}

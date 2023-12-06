@@ -314,3 +314,8 @@ body {
     cursor: pointer;
 }
 /* End Go Top */
+.answerErrorMessage {
+    font-size: 0.7em;
+    color: #eb3b5a;
+    margin-top: -1em;
+}

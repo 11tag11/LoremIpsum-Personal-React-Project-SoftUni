@@ -1,7 +1,6 @@
+import moment from 'moment';
 import { Link } from 'react-router-dom';
-import { formatDate } from '../../../utils/dateUtils';
 import styles from './TopicItem.module.css';
-
 
 const TopicItem = ({
   _id,
@@ -11,9 +10,10 @@ const TopicItem = ({
   _createdOn,
   _updatedOn,
 }) => {
-  // const formattedDate = formatDate(_createdOn, _updatedOn);
-  // console.log('_id:', _id);
-  // console.log('heading:', heading);
+
+  const formatTimeAgo = (date) => {
+    return moment(date).fromNow();
+  };
   return (
     <div className={styles.sectionArticle} >
       <section className={styles.article}>
@@ -26,9 +26,8 @@ const TopicItem = ({
         <div className={styles.author}>
           <p className={styles.authorName}>Creator: {author}</p>
         </div>
-        <p className={styles.articleCreated}>Created: {formatDate(_createdOn)}</p>
+        <p className={styles.articleCreated}>Created: {formatTimeAgo(_createdOn)}</p>
         <div className={styles.articleComments}>
-          <p className={styles.comments}>Updated: {formatDate(_updatedOn)}</p>
           <p className={styles.readMore}>
             <Link to={`/details/${_id}`}>
               Read more <i className="fa-solid fa-square-arrow-up-right" />

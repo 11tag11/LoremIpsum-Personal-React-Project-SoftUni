@@ -1,10 +1,10 @@
+import moment from 'moment';
 import React, { useEffect, useContext, useState } from 'react';
 import { AuthContext } from '../../contexts/AuthContext';
 import { useParams, Link } from 'react-router-dom';
 import DetailsPageAnswers from './DetailsPageAnswers';
 import YourAnswer from './YourAnswer';
 import DeleteTopic from '../detailsPage/DeleteTopic';
-import { formatDate } from '../../utils/dateUtils';
 import * as topicService from '../../services/topicService';
 import styles from './DetailsPage.module.css';
 
@@ -27,6 +27,10 @@ const DetailsPage = () => {
     setShowDeleteModal(false);
   };
 
+  const formatTimeAgo = (date) => {
+    return moment(date).fromNow();
+  };
+
   return (
     <div className={styles.details}>
       <div className={styles.sectionArticle}>
@@ -43,7 +47,7 @@ const DetailsPage = () => {
             <div className={styles.author}>
               <p className={styles.authorName}>Author: {topic.author}</p>
             </div>
-            <p className={styles.articleCreated}>{formatDate(topic._createdOn)}</p>
+            <p className={styles.articleCreated}>Created: {formatTimeAgo(topic._createdOn)}</p>
           </div>
           {auth && auth._id === topic._ownerId && (
             <div className={`${styles.likesDelete} ${styles.right}`}>
