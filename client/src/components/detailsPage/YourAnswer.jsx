@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import * as topicService from '../../services/topicService';
+import { useParams } from 'react-router-dom';
+// import * as topicService from '../../services/topicService';
 import * as answerService from '../../services/answerService';
 import { AuthContext } from '../../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
@@ -10,7 +10,6 @@ const YourAnswer = () => {
   const navigate = useNavigate();
   const [answer, setAnswer] = useState('');
   const { topicId } = useParams();
-  const [topic, setTopic] = useState({});
   const [error, setError] = useState('');
   const { auth } = useContext(AuthContext);
 
@@ -33,10 +32,8 @@ const YourAnswer = () => {
     }
 
     answerService.createAnswer(topicId, answer, auth);
-    const updatedTopic = topicService.getOne(topicId);
-    setTopic(updatedTopic);
     resetAnswerForm();
-    navigate(`/latestTopics`);
+    navigate(`/AllTopics`);
     // navigate(`/details/${topicId}`);
   };
 
@@ -75,11 +72,7 @@ const YourAnswer = () => {
           </section>
         </div>
       </div>
-      <div className={styles.goToTop}>
-        <Link href="./detailsPage">
-          <i className="fa-solid fa-circle-arrow-up" />
-        </Link>
-      </div>
+      
     </div>
   );
 };

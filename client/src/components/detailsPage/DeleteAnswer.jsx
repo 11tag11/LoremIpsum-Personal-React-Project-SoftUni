@@ -9,17 +9,18 @@ const DeleteAnswer = ({ answerId, onClose, topicId }) => {
 
   const handleDelete = async () => {
     setIsDeleting(true);
-    answerService.remove(answerId);
-    console.log("ans rem");
-    onClose();
-    navigate(`/latestTopics`)
-      
 
-    setIsDeleting(false);
-
+    try {
+      await answerService.remove(answerId);
+      onClose();
+      navigate('/allTopics');
+    } catch (error) {
+      console.error('Error deleting answer:', error);
+    } finally {
+      setIsDeleting(false);
+    }
   };
 
-  
 
   return (
     <div className={`${styles.modalOverlay} ${isDeleting ? 'show' : ''}`}>

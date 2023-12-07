@@ -13,11 +13,19 @@ const DetailsPage = () => {
   const { auth } = useContext(AuthContext);
   const [topic, setTopic] = useState({});
   const [showDeleteModal, setShowDeleteModal] = useState(false);
+
+  const [answersChanged, setAnswersChanged] = useState(false);
+  const [key, setKey] = useState(0);
   useEffect(() => {
+    console.log('DetailsPage rerendered');
     topicService.getOne(topicId)
       .then(result => setTopic(result))
-      .catch(error => console.error('Error fetching data:', error)) 
-  }, [topicId]);
+      .catch(error => console.error('Error fetching data:', error))
+  }, [topicId, key]);
+
+  const handleAnswersChange = () => {
+    setKey(prevKey => prevKey + 1);
+  };
 
   const handleDeleteClick = () => {
     setShowDeleteModal(true);
@@ -61,9 +69,15 @@ const DetailsPage = () => {
           )}
         </section>
       </div>
-      <DetailsPageAnswers topicId={topicId} auth={auth} />
+      <DetailsPageAnswers
+      key={key}
+        topicId={topicId}
+        auth={auth}
+        onAnswersChange={handleAnswersChange}
+        answersChanged={answersChanged}
+      />
       {auth ? (
-        <YourAnswer topicId={topicId} setTopic={setTopic} />
+        <YourAnswer topicId={topicId} />
 
       ) : (
         <>
