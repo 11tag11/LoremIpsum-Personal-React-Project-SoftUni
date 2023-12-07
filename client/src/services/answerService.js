@@ -6,7 +6,6 @@ const baseUrl = "http://localhost:3030/data/answers";
 export const createAnswer = async (topicId, answer, auth, accessToken) => {
   const currentDate = new Date();
   const displayedDate = formatDate(currentDate);
-
   if (!auth || !auth.accessToken) {
     throw new Error("User not authenticated. Cannot create answer.");
   }
@@ -26,9 +25,10 @@ export const createAnswer = async (topicId, answer, auth, accessToken) => {
 };
 
 export const getAnswersForTopic = async (topicId) => {
+  console.log('OOO',topicId);
   const result = await request.get(`${baseUrl}?topicId=${topicId}`);
 console.log('OOO',result);
-console.log('OOO',topicId);
+console.log('OOO1',topicId);
   // Filter answers based on the topicId
   const filteredAnswers = Object.values(result)
     .filter(answer => answer.topicId === topicId);
@@ -37,22 +37,27 @@ console.log('OOO',topicId);
   return filteredAnswers;
 };
 
-export const getAnswersForUser = async (userId) => {
-  const result = await request.get(`${baseUrl}?userId=${userId}`);
-  return result;
-};
-
-// export const getAnswerById = async (userId) => {
-//   const result = await request.get(`${baseUrl}/${userId}`);
-//   console.log(userId);
+// export const getAnswersForUser = async (userId) => {
+//   const result = await request.get(`${baseUrl}?userId=${userId}`);
 //   return result;
 // };
 
 export const getAnswerById = async (userId) => {
   const result = await request.get(`${baseUrl}/${userId}`);
-  console.log('eee',userId);
+  console.log(userId);
   return result;
 };
+
+export const getAnswersForUser = async (ownerId) => {
+  const result = await request.get(`${baseUrl}?where=_ownerId%3D%22${ownerId}%22`);
+  return Object.values(result);
+};
+
+// export const getAnswerById = async (userId) => {
+//   const result = await request.get(`${baseUrl}/${userId}`);
+//   console.log('eee',userId);
+//   return result;
+// };
 
 export const editAnswer = async (answerId, updatedAnswer) => {
   const result = await request.put(`${baseUrl}/${answerId}`, updatedAnswer);
