@@ -1,7 +1,7 @@
 import { formatDate } from "../utils/dateUtils";
-import * as request from '../library/request';
+import * as request from "../library/request";
 
-const baseUrl = "http://localhost:3030/data/answers"; 
+const baseUrl = "http://localhost:3030/data/answers";
 
 export const createAnswer = async (topicId, answer, auth, accessToken) => {
   const currentDate = new Date();
@@ -20,44 +20,29 @@ export const createAnswer = async (topicId, answer, auth, accessToken) => {
   };
 
   const result = await request.post(baseUrl, body);
-  
   return result;
 };
 
 export const getAnswersForTopic = async (topicId) => {
-  console.log('OOO',topicId);
   const result = await request.get(`${baseUrl}?topicId=${topicId}`);
-console.log('OOO',result);
-console.log('OOO1',topicId);
-  // Filter answers based on the topicId
-  const filteredAnswers = Object.values(result)
-    .filter(answer => answer.topicId === topicId);
 
-  console.log('Filtered Answers for Topic:', filteredAnswers);
+  const filteredAnswers = Object.values(result).filter(
+    (answer) => answer.topicId === topicId
+  );
   return filteredAnswers;
 };
 
-// export const getAnswersForUser = async (userId) => {
-//   const result = await request.get(`${baseUrl}?userId=${userId}`);
-//   return result;
-// };
-
 export const getAnswerById = async (userId) => {
   const result = await request.get(`${baseUrl}/${userId}`);
-  console.log(userId);
   return result;
 };
 
 export const getAnswersForUser = async (ownerId) => {
-  const result = await request.get(`${baseUrl}?where=_ownerId%3D%22${ownerId}%22`);
+  const result = await request.get(
+    `${baseUrl}?where=_ownerId%3D%22${ownerId}%22`
+  );
   return Object.values(result);
 };
-
-// export const getAnswerById = async (userId) => {
-//   const result = await request.get(`${baseUrl}/${userId}`);
-//   console.log('eee',userId);
-//   return result;
-// };
 
 export const editAnswer = async (answerId, updatedAnswer) => {
   const result = await request.put(`${baseUrl}/${answerId}`, updatedAnswer);
@@ -66,6 +51,5 @@ export const editAnswer = async (answerId, updatedAnswer) => {
 
 export const remove = async (answerId) => {
   const result = await request.remove(`${baseUrl}/${answerId}`);
-
   return result;
 };
