@@ -1580,7 +1580,7 @@
         
           heading: "Is it popular to use JS in IoT?",
           question:
-            "Tomfoolery crikey bits and bobs brilliant bamboozled. Tomfoolery crikey bits and bobs brilliant bamboozled. Tomfoolery crikey bits and bobs brilliant bamboozled. Tomfoolery crikey bits and bobs brilliant bamboozled. Tomfoolery crikey bits and bobs brilliant bamboozled. ",
+            "JavaScript's popularity in web development has made it a natural choice for IoT development.",
           _createdOn: "2023-11-09T11:58:09.309Z",
           _updatedOn: "2023-11-09T11:58:09.309Z",
           author: "George 01",
@@ -1591,8 +1591,8 @@
       "554ac950-c7b0-465e-8cc3-bd6a5fdda6c2": {
         _ownerId: "c3e2648b-e024-4d31-9164-a01ca32cf82e",
         
-          heading: "Blob",
-          question: "What is blob?",
+          heading: "What is blob?",
+          question: "Blob storage is a type of cloud storage for unstructured data. A blob which is short for Binary Large Object, is a mass of data in binary form that does not necessarily conform to any file format.",
           _createdOn: "2023-11-09T12:27:13.372Z",
           _updatedOn: "2023-11-09T12:27:13.372Z",
           author: "GeorgeIvanov11",
@@ -1609,25 +1609,19 @@
         "answer": "This is an example answer.",
         "_createdOn": "2023-11-24T10:00:00.000Z",
       },
-      "a5847ba1-844c-4270-a250-7a2e682625f6": {
-        "userId": "c3e2648b-e024-4d31-9164-a01ca32cf82e",
-        "topicId": "554ac950-c7b0-465e-8cc3-bd6a5fdda6c2",
-        "username": "GeorgeIvanov11",
-        "answer": "Another example answer.",
-        "_createdOn": "2023-11-24T10:30:00.000Z",
-      },
+      
       "a5847ba1-844c-4270-a250-7a2e682625f1": {
         "userId": "bef3b0fa-208b-402e-b92b-4c4596b114a7",
         "topicId": "eead099e-ca49-4d76-8ffe-874cb55f9513",
         "username": "George 01",
-        "answer": "Another USER answer.",
+        "answer": "Another user answer.",
         "_createdOn": "2023-11-24T10:30:00.000Z",
       },
       "a5847ba1-844c-4270-a250-7a2e682625f2": {
         "userId": "bef3b0fa-208b-402e-b92b-4c4596b114a7",
         "topicId": "eead099e-ca49-4d76-8ffe-874cb55f9513",
         "username": "George 01",
-        "answer": "Another USER answer 2.",
+        "answer": "Another user answer 2.",
         "_createdOn": "2023-11-24T10:30:00.000Z",
       },
     },
