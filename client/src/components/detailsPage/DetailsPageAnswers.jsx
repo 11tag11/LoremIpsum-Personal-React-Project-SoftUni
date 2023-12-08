@@ -1,14 +1,12 @@
 import moment from 'moment';
-
 import React, { useEffect, useContext, useState } from 'react';
 import { AuthContext } from '../../contexts/AuthContext';
 import { Link } from 'react-router-dom';
 import DeleteAnswer from '../detailsPage/DeleteAnswer';
 import * as answerService from '../../services/answerService';
-import { formatDate } from '../../utils/dateUtils';
 import styles from './DetailsPageAnswers.module.css';
 
-const DetailsPageAnswers = ({ topicId, onAnswersChange }) => {
+const DetailsPageAnswers = ({ topicId }) => {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [deletingAnswerId, setDeletingAnswerId] = useState(null);
   const [answers, setAnswers] = useState([]);
@@ -33,11 +31,8 @@ const DetailsPageAnswers = ({ topicId, onAnswersChange }) => {
   const handleDeleteConfirmation = async () => {
     try {
       await answerService.remove(deletingAnswerId);
-
       const updatedAnswers = answers.filter((answer) => answer._id !== deletingAnswerId);
       setAnswers(updatedAnswers);
-
-      onAnswersChange(updatedAnswers);
     } catch (error) {
       console.error('Error deleting answer', error);
     } finally {
@@ -52,7 +47,7 @@ const DetailsPageAnswers = ({ topicId, onAnswersChange }) => {
 
   return (
     <div className={`${styles.details} ${styles.answersSection}`}>
-      {Array.isArray(answers) && answers.length > 0 ? (
+      {answers.length > 0 ? (
         <>
           {answers.map((answer) => (
             <div className={`${styles.sectionArticle} ${styles.answer}`} key={answer._id}>

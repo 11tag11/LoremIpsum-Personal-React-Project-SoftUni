@@ -22,7 +22,6 @@ const AllTopics = () => {
         <div className={`${styles.sectionArticles} ${styles.allArticles}`}>
 
           {topics.reverse().map((topic) => {
-            // console.log('Topic ID:', topic._id); 
             return (
               <TopicItem
                 _id={topic._id}
@@ -38,8 +37,6 @@ const AllTopics = () => {
 
           {topics.length === 0 && <h3 className={styles.noTopics}>There is no topics yet.</h3>}
         </div>
-
-        
       </div>
     </div>
   );

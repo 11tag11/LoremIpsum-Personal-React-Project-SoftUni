@@ -14,18 +14,11 @@ const DetailsPage = () => {
   const [topic, setTopic] = useState({});
   const [showDeleteModal, setShowDeleteModal] = useState(false);
 
-  const [answersChanged, setAnswersChanged] = useState(false);
-  const [key, setKey] = useState(0);
   useEffect(() => {
-    console.log('DetailsPage rerendered');
     topicService.getOne(topicId)
       .then(result => setTopic(result))
       .catch(error => console.error('Error fetching data:', error))
-  }, [topicId, key]);
-
-  const handleAnswersChange = () => {
-    setKey(prevKey => prevKey + 1);
-  };
+  }, [topicId]);
 
   const handleDeleteClick = () => {
     setShowDeleteModal(true);
@@ -70,19 +63,17 @@ const DetailsPage = () => {
         </section>
       </div>
       <DetailsPageAnswers
-      key={key}
         topicId={topicId}
         auth={auth}
-        onAnswersChange={handleAnswersChange}
-        answersChanged={answersChanged}
       />
       {auth ? (
-        <YourAnswer topicId={topicId} />
-
+        <YourAnswer 
+        topicId={topicId}
+         />
       ) : (
         <>
-          <p className={styles.loginLink}>Please <Link to={`/login`}>Log In</Link> to your account if you want to answer the topic.</p>
-          <p className={styles.registerLink}>Don't have an account? Register here: <Link to={`/register`}>Sign Up</Link></p>
+          <p className={styles.loginLink}>Please <Link to={`/login`}>Sign In</Link> to your account if you want to answer the topic.</p>
+          <p className={styles.registerLink}>Don't have an account? Sign Up here: <Link to={`/register`}>Sign Up</Link></p>
         </>
       )}
       {showDeleteModal && (

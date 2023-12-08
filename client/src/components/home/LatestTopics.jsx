@@ -14,7 +14,6 @@ const LatestTopics = () => {
     topicService.getLastThree()
       .then(result => {
         setLatestTopics(result);
-        // setLatestTopics(result.reverse());
       })
       .catch(error => {
         console.log(error);

@@ -257,12 +257,14 @@ word-break: break-all;
     text-decoration: none;
     color: #9f9e9e;
     font-weight: bold;
+    float: right;
 }
 
 .articleComments .readMore a:hover {
     text-decoration: none;
     color: #00b894;
     font-weight: bold;
+    float: right;
 }
 
 .noTopics {

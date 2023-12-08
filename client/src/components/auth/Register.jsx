@@ -12,7 +12,6 @@ const formInitialState = {
     confirmPassword: '',
 };
 
-
 const Register = () => {
     const navigate = useNavigate();
     const { setAuth } = useContext(AuthContext);

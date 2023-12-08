@@ -8,7 +8,6 @@ const TopicItem = ({
   question,
   author,
   _createdOn,
-  _updatedOn,
 }) => {
 
   const formatTimeAgo = (date) => {

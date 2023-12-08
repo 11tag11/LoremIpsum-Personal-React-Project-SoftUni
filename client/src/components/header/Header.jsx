@@ -27,10 +27,8 @@ const Header = () => {
     };
 
     const handleSearch = () => {
-        // Capture the value of searchValue here
         const searchTerm = searchValue.search;
         setSearchValue(initialValue);
-        // Navigate to the /search route with the search term in the state
         navigate('/search', { state: { searchTerm } });
     };
 
@@ -46,7 +44,6 @@ const Header = () => {
                 <div className={styles.sectionMainNav}>
                     <nav className={styles.mainNav}>
                         <ul>
-
                             <li><Link to="./latestTopics">Home</Link></li>
                             <li><Link to="./allTopics">All Topics</Link></li>
                             {auth ?
@@ -55,13 +52,11 @@ const Header = () => {
                                     <li><Link to="./profile">{auth?.email || 'N/A'}</Link></li>
                                     <li onClick={logoutHandler}><Link>Logout</Link></li>
                                 </> :
-
                                 <>
                                     <li><Link to="./register">Register</Link></li>
                                     <li><Link to="./login">Login</Link></li>
                                 </>
                             }
-
                         </ul>
                     </nav>
                 </div>
@@ -76,7 +71,7 @@ const Header = () => {
                             <i className="fa-solid fa-magnifying-glass"></i>
                             <input
                                 type="text"
-                                placeholder="Search"
+                                placeholder="Search for technologies(e.g., React, JavaScript, CSS)"
                                 value={searchValue.search}
                                 onChange={(e) =>
                                     setSearchValue((state) => ({

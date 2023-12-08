@@ -13,7 +13,6 @@ const Search = () => {
   const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
-    // Set the search term from the location state when the component mounts
     if (location.state && location.state.searchTerm) {
       setSearchValue({ search: location.state.searchTerm });
     }
@@ -29,7 +28,6 @@ const Search = () => {
   };
 
   useEffect(() => {
-    // Fetch search results and update the state when the search term changes
     topicService
       .getAll()
       .then((result) =>
