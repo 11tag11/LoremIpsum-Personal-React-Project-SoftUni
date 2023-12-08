@@ -14,7 +14,6 @@ const DeleteAnswer = ({ answerId, onClose, topicId }) => {
       await answerService.remove(answerId);
       onClose();
       navigate('/allTopics');
-    // navigate(`/details/${topicId}`);
 
     } catch (error) {
       console.error('Error deleting answer:', error);

@@ -3,10 +3,10 @@ import React, { useEffect, useContext, useState } from 'react';
 import { AuthContext } from '../../contexts/AuthContext';
 import { useParams, Link } from 'react-router-dom';
 import DetailsPageAnswers from './DetailsPageAnswers';
-import YourAnswer from './YourAnswer';
 import DeleteTopic from '../detailsPage/DeleteTopic';
 import * as topicService from '../../services/topicService';
 import styles from './DetailsPage.module.css';
+
 
 const DetailsPage = () => {
   const { topicId } = useParams();
@@ -66,16 +66,6 @@ const DetailsPage = () => {
         topicId={topicId}
         auth={auth}
       />
-      {auth ? (
-        <YourAnswer 
-        topicId={topicId}
-         />
-      ) : (
-        <>
-          <p className={styles.loginLink}>Please <Link to={`/login`}>Sign In</Link> to your account if you want to answer the topic.</p>
-          <p className={styles.registerLink}>Don't have an account? Sign Up here: <Link to={`/register`}>Sign Up</Link></p>
-        </>
-      )}
       {showDeleteModal && (
         <DeleteTopic topicId={topicId} onClose={handleDeleteCancel} />
       )}
@@ -84,3 +74,7 @@ const DetailsPage = () => {
 };
 
 export default DetailsPage;
+
+
+
+

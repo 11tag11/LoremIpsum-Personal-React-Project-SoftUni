@@ -1,17 +1,13 @@
 import React, { useState, useContext } from 'react';
-import { useParams } from 'react-router-dom';
-// import * as topicService from '../../services/topicService';
 import * as answerService from '../../services/answerService';
 import { AuthContext } from '../../contexts/AuthContext';
-import { useNavigate } from 'react-router-dom';
 import styles from './YourAnswer.module.css';
 
-const YourAnswer = () => {
-  const navigate = useNavigate();
+const YourAnswer = ({ topicId, onAnswerAdded }) => {
   const [answer, setAnswer] = useState('');
-  const { topicId } = useParams();
-  const [error, setError] = useState('');
   const { auth } = useContext(AuthContext);
+  const [error, setError] = useState('');
+
   const resetAnswerForm = () => {
     setAnswer('');
     setError('');
@@ -32,8 +28,8 @@ const YourAnswer = () => {
 
     answerService.createAnswer(topicId, answer, auth);
     resetAnswerForm();
-    navigate(`/AllTopics`);
-    // navigate(`/details/${topicId}`);
+    // Call that buddy answers list
+    onAnswerAdded(); 
   };
 
   return (
@@ -71,12 +67,15 @@ const YourAnswer = () => {
           </section>
         </div>
       </div>
-      
     </div>
   );
 };
 
 export default YourAnswer;
+
+
+
+
 
 
 

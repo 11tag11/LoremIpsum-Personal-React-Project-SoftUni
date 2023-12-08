@@ -16,7 +16,6 @@ const Profile = () => {
             topicService.getTopicsForUser(auth._id)
                 .then((result) => {
                     setCreatedTopics(result);
-                    console.log(result);
                 })
                 .catch((error) => console.log(error));
         }
