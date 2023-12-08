@@ -1,4 +1,3 @@
-import { formatDate } from "../utils/dateUtils";
 import * as request from '../library/request';
 
 const baseUrl = "http://localhost:3030/users"; 

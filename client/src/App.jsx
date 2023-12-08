@@ -14,9 +14,7 @@ import EditAnswer from './components/detailsPage/EditAnswer';
 import Search from './components/allTopics/Search';
 import Profile from './components/profile/Profile';
 import PageNotFound from './components/pageNotFound/PageNotFound';
-
 import styles from './components/styles.module.css';
-// import Loader from './components/shared/Loader';
 
 function App() {
   return (
@@ -24,7 +22,6 @@ function App() {
       
         <div className={styles.siteWrapper}>
           <Header />
-          {/* <Loader /> */}
           <Routes>
             <Route path="/latestTopics" element={<LatestTopics />} />
             <Route path='/allTopics' element={<AllTopics />} />
@@ -35,7 +32,6 @@ function App() {
             <Route path='/profile' element={<Profile />} />
             <Route path='/edit/:topicId' element={<EditTopic />} />
             <Route path='/edit/answer/:answerId' element={<EditAnswer />} />
-
             <Route path='/details/:topicId' element={<DetailsPage />} />
             <Route path='*' element={<PageNotFound />} />
           </Routes>
