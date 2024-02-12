@@ -40,10 +40,10 @@ const Register = () => {
     };
 
     const userNameValidation = () => {
-        if (values.username.length < 5) {
+        if (values.username.length < 3) {
             setErrors(state => ({
                 ...state,
-                username: 'Username should be at least 5 characters'
+                username: 'Username should be at least 3 characters'
             }));
         } else {
             if (errors.username) {
@@ -143,7 +143,7 @@ const Register = () => {
                     )}
 
                     <input
-                        type="type"
+                        type="password"
                         id="confirmPassword"
                         name="confirmPassword"
                         placeholder="confirm password"
